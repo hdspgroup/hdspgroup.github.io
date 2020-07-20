@@ -29,10 +29,12 @@
   
     
   
-  <meta name="description" content="Laboratorios de Deep Learning correspondientes al periodo de prueba para ingresar al grupo HDSP de la Universidad Industrial de Santander.">
+  <meta name="description" content="Antes de empezar, da click en el boton &ldquo;Open in Colab&rdquo; de arriba. Esto abrirá este notebook de python directamente en Colab. Luego, para poder editar y ejecutar el código, deberas copiar el notebook en Google drive utilizando el boton:
+De esta manera, este notebook quedará almacenado en Google drive, en la carpeta Colab Notebooks
+Introducción HDSP Laboratory: Deep Learning for inverse problem This laboratory is based on the paper Deep Learning Techniques for Inverse Problems in Imaging.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://hdspgroup.github.io/courses/deep-learning-labs/">
+  <link rel="alternate" hreflang="en-us" href="https://hdspgroup.github.io/courses/deep-learning-labs/inverse/">
 
   
 
@@ -94,15 +96,12 @@
   
 
   
-  <link rel="alternate" href="/courses/deep-learning-labs/index.xml" type="application/rss+xml" title="HDSP Group">
-  <link rel="feed" href="/courses/deep-learning-labs/index.xml" type="application/rss+xml" title="HDSP Group">
-  
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="https://hdspgroup.github.io/courses/deep-learning-labs/">
+  <link rel="canonical" href="https://hdspgroup.github.io/courses/deep-learning-labs/inverse/">
 
   
   
@@ -114,12 +113,16 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="HDSP Group">
-  <meta property="og:url" content="https://hdspgroup.github.io/courses/deep-learning-labs/">
-  <meta property="og:title" content="HDSP - Laboratorio de Deep Learning | HDSP Group">
-  <meta property="og:description" content="Laboratorios de Deep Learning correspondientes al periodo de prueba para ingresar al grupo HDSP de la Universidad Industrial de Santander."><meta property="og:image" content="https://hdspgroup.github.io/img/icon-192.png">
+  <meta property="og:url" content="https://hdspgroup.github.io/courses/deep-learning-labs/inverse/">
+  <meta property="og:title" content="Inverse Problems | HDSP Group">
+  <meta property="og:description" content="Antes de empezar, da click en el boton &ldquo;Open in Colab&rdquo; de arriba. Esto abrirá este notebook de python directamente en Colab. Luego, para poder editar y ejecutar el código, deberas copiar el notebook en Google drive utilizando el boton:
+De esta manera, este notebook quedará almacenado en Google drive, en la carpeta Colab Notebooks
+Introducción HDSP Laboratory: Deep Learning for inverse problem This laboratory is based on the paper Deep Learning Techniques for Inverse Problems in Imaging."><meta property="og:image" content="https://hdspgroup.github.io/img/icon-192.png">
   <meta property="twitter:image" content="https://hdspgroup.github.io/img/icon-192.png"><meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2020-06-02T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2020-07-20T00:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2020-07-20T00:00:00&#43;01:00">
   
 
   
@@ -131,7 +134,7 @@
 
 
 
-  <title>HDSP - Laboratorio de Deep Learning | HDSP Group</title>
+  <title>Inverse Problems | HDSP Group</title>
 
 </head>
 
@@ -253,7 +256,7 @@
 <nav class="collapse docs-links" id="docs-nav">
   
   
-  <div class="docs-toc-item active">
+  <div class="docs-toc-item">
     <a class="docs-toc-link" href="/courses/deep-learning-labs/">Vista General</a>
 
   </div>
@@ -270,7 +273,7 @@
         <a href="/courses/deep-learning-labs/concepts2/">Machine Learning II</a>
       </li>
       
-      <li >
+      <li class="active">
         <a href="/courses/deep-learning-labs/inverse/">Inverse Problems</a>
       </li>
       
@@ -306,7 +309,22 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#introducción">Introducción</a></li>
-    <li><a href="#desarrollo-de-los-laboratorios">Desarrollo de los Laboratorios</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#inverse-problem">Inverse problem:</a>
+      <ul>
+        <li><a href="#exercise-1">Exercise 1:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dowload-the-mnist-dataset">Dowload the MNIST DATASET</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
 
@@ -319,37 +337,131 @@
       <article class="article" itemscope itemtype="http://schema.org/Article">
 
         <div class="docs-article-container">
-          <h1 itemprop="name">HDSP - Laboratorio de Deep Learning</h1>
+          <h1 itemprop="name">Inverse Problems</h1>
 
           <div class="article-style" itemprop="articleBody">
-            <h2 id="introducción">Introducción</h2>
-<p>El objetivo de este laboratorio es brindar al estudiante HDSP las herramientas base
-para el desarrollo de algoritmos de aprendizaje profundo (Deep Learning en inglés) que
-le permitan solucionar distintas tareas de visión por computadora como detección y
-clasificación de objetos, así como tambien resolver problemas inversos como la
-recuperación o reconstrucción de imágenes espectrales comprimidas.
-El laboratorio estará dividio en x secciones donde el estudiante deberá
-resolver y/o ejecutar los respectivos ejercicios y responder preguntas o
-analizar los resultados obtenidos al final de cada sección.</p>
-<h2 id="desarrollo-de-los-laboratorios">Desarrollo de los Laboratorios</h2>
-<p>Todos los laboratorios de Deep Learning serán entregados al estudiante HDSP en
-formato notebook de Python a través de la plataforma de <a href="https://colab.research.google.com/">Google Colaboratory</a>.
-La principal razón para realizar los laboratorios en este formato es que Google Colaboratory,
-o simplemente Colab, permite ejecutar y programar en Python directamente desde el navegador. De esta manera
-se facilita la configuración de un entorno para Deep Learning y el accesso gratuito a GPUs para ejecutar los algoritmos
-desarrollados.</p>
-<p>Antes de iniciar cada laboratorio, el estudiante debe dar click en el boton
-<a href=""><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
-lo cual abrirá el notebook, correspondiente al laboratorio, directamente en Colab. Luego, para poder editar y ejecutar
-el código, el estudiante debe copiar el notebook en su Google Drive. Para esto, debe tener abierto el notebook en
-Colab y luego dar click en el boton
-<img src="https://raw.githubusercontent.com/carlosh93/carlosh93.github.io/master/files/notebook_files/copy_drive.png" alt="texto alternativo"></p>
-<p>Una vez completado el anterior procedimiento, el estudiante debe seguir la guía proporcionada donde se abordarán
-temas desde un nivel básico hasta un nivel intermedio. Al final de cada guía el estudiante deberá responder preguntas
-y/o resolver ejercicios. Un vez completado los ejercicios, el estudiante deberá compartir el notebook a su tutor y
-preparar un documento donde se resuma lo aprendido y se analicen los resultados obtenidos.</p>
+            <p><a href="https://colab.research.google.com/github/hdspgroup/hdspgroup.github.io/blob/master/data/Deep_Learning_for_inverse_problems.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
 <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>Antes de empezar, da click en el boton &ldquo;Open in Colab&rdquo; de arriba. Esto abrirá este notebook de python directamente en Colab. Luego, para poder editar y ejecutar el código, deberas copiar el notebook en Google drive utilizando el boton:</p>
+<p><img src="https://raw.githubusercontent.com/carlosh93/carlosh93.github.io/master/files/notebook_files/copy_drive.png" alt="texto alternativo"></p>
+<p>De esta manera, este notebook quedará almacenado en Google drive, en la carpeta <em>Colab Notebooks</em></p>
+<h2 id="introducción">Introducción</h2>
+<h1 id="hdsp-laboratory-deep-learning-for-inverse-problem">HDSP Laboratory: Deep Learning for inverse problem</h1>
+<p>This laboratory is based on the paper <a href="https://arxiv.org/pdf/2005.06001.pdf">Deep Learning Techniques
+for Inverse Problems in Imaging</a>.</p>
+<ol>
+<li>Before starting, please read the document</li>
+</ol>
+<h2 id="inverse-problem">Inverse problem:</h2>
+<p>It is the task of reconstructing an unknown signal $x$ (image, voice, multidimensional data), from projected observation $y$. This observation can be modeled with a forward model as
+\begin{equation}
+y = A(x) + \epsilon<br>
+\end{equation}
+where $A(\cdot)$ is usually non-invertible and ill-posed. Therefore, a unique solution that fits the observations is difficult or impossible without some prior knowledge about the data.</p>
+<h3 id="exercise-1">Exercise 1:</h3>
+<p><strong>Example Inverse problems (Super-resolution)</strong>:</p>
+<p>The super-resolution problem is an inverse problem where the measurements $y$ is a downsampling version of an image $x$. This problem can be expressed as a linear system where
+\begin{equation}
+y = Ax<br>
+\end{equation}</p>
+<p>A visual example of this problem is illustrated as follows.</p>
+<p><img src="https://revistas.unal.edu.co/index.php/ingeinv/article/viewFile/54267/58903/320116" alt="image for superresoluton"></p>
+<p><em>Figure 1: (left) Low-resolution images $y$ (right) High resolution images $x$</em></p>
+<blockquote>
+<p>Assuming a resolution factor of $4$, i.e., $4\times 4$ pixel in the original images are the average of a pixel in the measurements, read an image a made the decimation matrix $A$ to obtain $y$, using $y=Ax$</p>
+</blockquote>
+<pre><code># Read a images (preference a gray-sacle)
+from google.colab import files  
+files.upload()
+
+</code></pre><pre><code>import numpy as np
+import cv2 
+import matplotlib.pyplot as plt
+
+img = cv2.imread('name_image.png') # we can visualize the image
+plt.imshow(img)
+
+#--- we need to vectorize the image x
+
+#Lines for vectorize the image  
+x = 
+
+# --- We need to build the matrix A  (recomentation: We can use np.kron)
+
+# Lines for bould the linear matrix 
+ A =
+
+# ----- sensing model 
+
+y = np.multiply(A,x)
+
+#-------- reshape y as a matrix
+
+# Lines for reshape y 
+Y_matrix = 
+
+plt.imshow(Y_matrix)
+
+</code></pre><h1 id="inverse-problem-examples">Inverse problem examples</h1>
+<p>With the growth of available data, deep learning has helped improve the performance of these problems. An example of these is the following.</p>
+<p><img src="https://d3i71xaburhd42.cloudfront.net/2e88f6c1e560ff4c2823c9bec5d35b9f963a8b0a/3-Figure1-1.png" alt="texto alternativo"></p>
+<p><img src="https://d3i71xaburhd42.cloudfront.net/2e88f6c1e560ff4c2823c9bec5d35b9f963a8b0a/6-Table1-1.png" alt="texto alternativo"></p>
+<h1 id="classification-of-inverse-problem">classification of Inverse Problem</h1>
+<p>The majority of the deep inverse problem can be generalices in the following table
+<img src="https://d3i71xaburhd42.cloudfront.net/2e88f6c1e560ff4c2823c9bec5d35b9f963a8b0a/9-Table2-1.png" alt="texto alternativo"></p>
+<h1 id="forward-model-fully-known-during-training-and-testing">Forward Model Fully Known During Training and Testing</h1>
+<p>when the degradation model is known, for example $A$, in the super-resoution model, an initial estimate can be calculated to return to the image dimensions</p>
+<p>$$\tilde{x}=A^Ty$$</p>
+<p>and this can be used as input of a model</p>
+<h3 id="dowload-the-mnist-dataset">Dowload the MNIST DATASET</h3>
+<pre><code>import tensorflow as tf
+
+mnist = tf.keras.datasets.mnist
+(x_train, x_labels), (x_test, y_labels) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0
+</code></pre><pre><code>Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+11493376/11490434 [==============================] - 0s 0us/step
+</code></pre>
+<p>Build a decimation matrix with a supe-resolution factor of 2, for the MNIST dataset, i.e., the low-resolution image result of $14\times 14$</p>
+<p>do the following operations:</p>
+<ol>
+<li>reshape de data</li>
+<li>y_train = A*x_train</li>
+<li>x_estimate = A*y_train</li>
+<li>reshape de x_estimate as a image</li>
+</ol>
+<pre><code>y_train = 
+x_estimate = 
+</code></pre><ol>
+<li>check that spatial dimensions of $x_estimate$ are $28x28$</li>
+<li>Build a convolutional model, where the input and the output received an image of $28\times 28$</li>
+</ol>
+<pre><code>model = 
+</code></pre><p>Now your model must be training using this estimate as input data and the original image as output data.</p>
+<pre><code>model.compile(optimizer=optimizad, loss='mean_squared_error',metrics=['mse','mae'])
+      
+history = model.fit(x_estimate, x_train, epochs=100, batch_size=FLAGS.batch_size)
+</code></pre><p>Evaluate your model with x_test data, (Notice that you need to do the same process, i.e, obtain the initialization)</p>
+<pre><code>y_test = 
+x_estimate_test = 
+
+x_reconstructed = model.predict(x_estimate_test)
+
+# calculate error metrics
+MSE = 
+MAE = 
+
+</code></pre><h1 id="well-done-you-just-created-your-first-model-to-solve-an-inverse-problem">well done, you just created your first model to solve an inverse problem</h1>
+<p>Now you can improve your model using a network with skip connections</p>
+<p><img src="https://d3i71xaburhd42.cloudfront.net/2e88f6c1e560ff4c2823c9bec5d35b9f963a8b0a/10-Figure7-1.png" alt="texto alternativo"></p>
+<pre><code>model = 
+</code></pre><h1 id="questions">Questions</h1>
+<ol>
+<li>What is a inverse problem?</li>
+<li>What kind of reverse problem was analyzed in the laboratory?</li>
+<li>Why the need to use Deep learning in this problem?</li>
+<li>How can you improve the performance of your model?</li>
+</ol>
 
           </div>
 
@@ -363,6 +475,13 @@ preparar un documento donde se resuma lo aprendido y se analicen los resultados 
 <div class="post-nav">
   
   
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/deep-learning-labs/concepts2/" rel="next">Machine Learning II</a>
+  </div>
+  
+  
 </div>
 
           </div>
@@ -370,7 +489,7 @@ preparar un documento donde se resuma lo aprendido y se analicen los resultados 
         </div>
 
         <div class="body-footer">
-          Last updated on Jun 2, 2020
+          Last updated on Jul 20, 2020
         </div>
 
       </article>
