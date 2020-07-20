@@ -37,7 +37,7 @@ Image(&#39;MLP.PNG&#39;, width=900)
 &lt;/ul&gt;
 &lt;p&gt;En este notebook nos centraremos en la implementación de una red neuronal MLP con aprendizaje supervisionado.&lt;/p&gt;
 &lt;h2 id=&#34;multilayer-perceptron-para-clacificación-de-dígitos&#34;&gt;Multilayer perceptron para clacificación de dígitos.&lt;/h2&gt;
-&lt;p&gt;En este ejemplo vamos a utilizar el conjunto de datos MNIST que es un banco de datos de dígitos numéricos escritos a mano, este dataset consta de 60 mil imágenes de entrenamiento y 10 mil imágenes de prueba, para facilitar la etapa de entrenamiento se trabajara con una version reducidad del dataset de 42 mil imagenes en totoal, de las cuales 33600 serán usadas para entrenamiento y el resto para teste. Para conocer un poco más sobre este banco de datos diríjase a la página oficial  &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34;&gt;MNIST&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En este ejemplo vamos a utilizar el conjunto de datos MNIST que es un banco de datos de dígitos numéricos escritos a mano, este dataset consta de 60 mil imágenes de entrenamiento y 10 mil imágenes de prueba, para facilitar la etapa de entrenamiento se trabajara con una version reducidad del dataset de 42 mil imagenes en totoal, de las cuales 33600 serán usadas para entrenamiento y el resto para teste. Para conocer un poco más sobre este banco de datos diríjase a la página oficial  &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34;&gt;MNIST&lt;/a&gt;. El dataset MNIST utilizado en este laboratorio puede ser descargado del siguiente &lt;a href=&#34;https://github.com/hdspgroup/hdspgroup.github.io/raw/master/data/mnist.csv.zip&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;El objetivo de este ejemplo es hacer una predicción dado un conjunto de datos, en nuestro caso será pasar a la capa de entrada un conjunto de pixeles que representan los números del 0 al 9 y clasificaremos la salida o el digito que corresponda a esos datos de entrada.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#importamos las librerias necesarias para trabajar en este ejemplo
 import numpy as np
@@ -45,8 +45,7 @@ import pandas as pd
 from  sklearn.preprocessing import StandardScaler
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#marcamos una semilla para reproducir siempre los mismos resultados
 np.random.seed(1337)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;El dataset mnist.csv puede ser descargado del siguiente &lt;a href=&#34;https://raw.githubusercontent.com/hdspgroup/hdspgroup.github.io/master/data/mnist.csv&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#leemos el dataset
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#leemos el dataset
 df = pd.read_csv(&#39;/content/drive/My Drive/Colab Notebooks/datasets/mnist.csv&#39;)
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# la siguiente es una tabla que contiene el dataset donde cada fila representa una imágen con un determinado número como se puede observar
 #la primera columna son las etiquetas, o sea el número correspondiente a esa determinada imágen
