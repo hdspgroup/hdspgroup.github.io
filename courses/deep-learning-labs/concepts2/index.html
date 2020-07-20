@@ -300,7 +300,7 @@ Introducción Despúes de conocer como funciona una nuerona artifical, tambien c
           <h1 itemprop="name">Machine Learning II</h1>
 
           <div class="article-style" itemprop="articleBody">
-            <p><a href="https://colab.research.google.com/github/carlosh93/carlosh93.github.io/blob/master/files/introduccion_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+            <p><a href="https://colab.research.google.com/github/hdspgroup/hdspgroup.github.io/blob/master/data/machine_learningII.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
 <!-- raw HTML omitted -->
 <p>Antes de empezar, da click en el boton &ldquo;Open in Colab&rdquo; de arriba. Esto abrirá este notebook de python directamente en Colab. Luego, para poder editar y ejecutar el código, deberas copiar el notebook en Google drive utilizando el boton:</p>
 <p><img src="https://raw.githubusercontent.com/carlosh93/carlosh93.github.io/master/files/notebook_files/copy_drive.png" alt="texto alternativo"></p>
@@ -328,7 +328,8 @@ import pandas as pd
 from  sklearn.preprocessing import StandardScaler
 </code></pre><pre><code>#marcamos una semilla para reproducir siempre los mismos resultados
 np.random.seed(1337)
-</code></pre><pre><code>#leemos el dataset
+</code></pre><p>El dataset mnist.csv puede ser descargado del siguiente <a href="https://raw.githubusercontent.com/hdspgroup/hdspgroup.github.io/master/data/mnist.csv">link</a></p>
+<pre><code>#leemos el dataset
 df = pd.read_csv('/content/drive/My Drive/Colab Notebooks/datasets/mnist.csv')
 </code></pre><pre><code># la siguiente es una tabla que contiene el dataset donde cada fila representa una imágen con un determinado número como se puede observar
 #la primera columna son las etiquetas, o sea el número correspondiente a esa determinada imágen

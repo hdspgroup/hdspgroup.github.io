@@ -17,7 +17,7 @@
       <pubDate>Mon, 20 Jul 2020 00:00:00 +0100</pubDate>
       
       <guid>https://hdspgroup.github.io/courses/deep-learning-labs/concepts2/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/carlosh93/carlosh93.github.io/blob/master/files/introduccion_colab.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/hdspgroup/hdspgroup.github.io/blob/master/data/machine_learningII.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Antes de empezar, da click en el boton &amp;ldquo;Open in Colab&amp;rdquo; de arriba. Esto abrirá este notebook de python directamente en Colab. Luego, para poder editar y ejecutar el código, deberas copiar el notebook en Google drive utilizando el boton:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/carlosh93/carlosh93.github.io/master/files/notebook_files/copy_drive.png&#34; alt=&#34;texto alternativo&#34;&gt;&lt;/p&gt;
@@ -45,7 +45,8 @@ import pandas as pd
 from  sklearn.preprocessing import StandardScaler
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#marcamos una semilla para reproducir siempre los mismos resultados
 np.random.seed(1337)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#leemos el dataset
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;El dataset mnist.csv puede ser descargado del siguiente &lt;a href=&#34;https://raw.githubusercontent.com/hdspgroup/hdspgroup.github.io/master/data/mnist.csv&#34;&gt;link&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#leemos el dataset
 df = pd.read_csv(&#39;/content/drive/My Drive/Colab Notebooks/datasets/mnist.csv&#39;)
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# la siguiente es una tabla que contiene el dataset donde cada fila representa una imágen con un determinado número como se puede observar
 #la primera columna son las etiquetas, o sea el número correspondiente a esa determinada imágen
