@@ -12,6 +12,347 @@
     
     
     <item>
+      <title>Machine Learning II</title>
+      <link>https://hdspgroup.github.io/courses/deep-learning-labs/concepts2/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://hdspgroup.github.io/courses/deep-learning-labs/concepts2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/carlosh93/carlosh93.github.io/blob/master/files/introduccion_colab.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Antes de empezar, da click en el boton &amp;ldquo;Open in Colab&amp;rdquo; de arriba. Esto abrirá este notebook de python directamente en Colab. Luego, para poder editar y ejecutar el código, deberas copiar el notebook en Google drive utilizando el boton:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/carlosh93/carlosh93.github.io/master/files/notebook_files/copy_drive.png&#34; alt=&#34;texto alternativo&#34;&gt;&lt;/p&gt;
+&lt;p&gt;De esta manera, este notebook quedará almacenado en Google drive, en la carpeta &lt;em&gt;Colab Notebooks&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introducción&#34;&gt;Introducción&lt;/h2&gt;
+&lt;p&gt;Despúes de conocer como funciona una nuerona artifical, tambien conocida como unidad central de procesamiento, en este notebook estudiaremos las redes neuronales, multilayer perceptron (MLP), que son la conexion de varios neurones artificiales a lo largo diferentes capas, entre mas capas de neurones interconectadas tenga una red mas posibilidades de aprendizaje de caracteristicas mas complejas tendra. La siguiente figura muestra una red MLP de 4 capas, una de entrada dos ocultas y una de salida.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from IPython.display import Image
+Image(&#39;MLP.PNG&#39;, width=900)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;../figs/machine_learningII_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Todo el proceso de aprendizaje ocurre en las capas de neuronas. La primera capa de entrada o también llamada de distribución es solo un nombre figurativo ya que en realidad no posee ningún tipo de neurona, conteniendo apenas un numero de nodos igual al número de señales de entrada de la red, su única función es representar la distribución de los datos de entrada para cada neurona de la capa siguiente.&lt;/p&gt;
+&lt;p&gt;A continuación le siguen las capas escondidas que pueden estar representadas por una, muchas o inclusive ninguna capa de neuronas, la función principal de estas neuronas es capacitar a la red para extraer características, además de conseguir representar problemas que no sean linealmente separables como los presentados en el notebook anterior.&lt;/p&gt;
+&lt;p&gt;Finalmente contamos con una capa de salida, que contiene necesariamente un numero de neuronas igual al número de señales de la red. Ajustando los valores de los pesos sinápticos, la red puede representar o &amp;ldquo;memorizar&amp;rdquo; las relaciones entre los datos de entrada y los datos de salida, asumiendo así una característica de memoria asociativa. Es así que todo el proceso de aprendizaje ocurre en las capas ocultas o escondidas.&lt;/p&gt;
+&lt;p&gt;El proceso de aprendizaje de una red neuronal puede ser de dos formas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Aprendizaje supe visionado: el cual requiere de un conjunto de datos previamente etiquetados para llegar a una respuesta adecuada, así el algoritmo extraerá una representación del conocimiento a partir de estos ejemplos. Esto es guiar paso a paso a la red para que aprenda lo que se requiere&lt;/li&gt;
+&lt;li&gt;Aprendizaje no sueprvisionado: en este tipo de aprendizaje no se cuenta con datos etiquetados todos se hace por medio de agrupación de patrones para encontrar los que mas se relacionen entre si y conseguir llegar al objetivo.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En este notebook nos centraremos en la implementación de una red neuronal MLP con aprendizaje supervisionado.&lt;/p&gt;
+&lt;h2 id=&#34;multilayer-perceptron-para-clacificación-de-dígitos&#34;&gt;Multilayer perceptron para clacificación de dígitos.&lt;/h2&gt;
+&lt;p&gt;En este ejemplo vamos a utilizar el conjunto de datos MNIST que es un banco de datos de dígitos numéricos escritos a mano, este dataset consta de 60 mil imágenes de entrenamiento y 10 mil imágenes de prueba, para facilitar la etapa de entrenamiento se trabajara con una version reducidad del dataset de 42 mil imagenes en totoal, de las cuales 33600 serán usadas para entrenamiento y el resto para teste. Para conocer un poco más sobre este banco de datos diríjase a la página oficial  &lt;a href=&#34;http://yann.lecun.com/exdb/mnist/&#34;&gt;MNIST&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El objetivo de este ejemplo es hacer una predicción dado un conjunto de datos, en nuestro caso será pasar a la capa de entrada un conjunto de pixeles que representan los números del 0 al 9 y clasificaremos la salida o el digito que corresponda a esos datos de entrada.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#importamos las librerias necesarias para trabajar en este ejemplo
+import numpy as np
+import pandas as pd
+from  sklearn.preprocessing import StandardScaler
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#marcamos una semilla para reproducir siempre los mismos resultados
+np.random.seed(1337)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#leemos el dataset
+df = pd.read_csv(&#39;/content/drive/My Drive/Colab Notebooks/datasets/mnist.csv&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# la siguiente es una tabla que contiene el dataset donde cada fila representa una imágen con un determinado número como se puede observar
+#la primera columna son las etiquetas, o sea el número correspondiente a esa determinada imágen
+df.head()
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;#separamos las imagenes de entrenamiento
+df_train = df.iloc[:33600,:]
+
+#separamos la columna que contiene las etiquetas y normalizamos el resto de columnas para que queden entre 0 y 1
+X_train = df_train.iloc[:,1:].values /255.
+y_train = df_train[&#39;label&#39;].values
+#La siguiente linea es usada para facilitar el proceso de aprendizaje es crear variables dummies donde cada fila representa el número de la imágen en cuestion
+y_train_onehot = pd.get_dummies(df_train[&#39;label&#39;]).values
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#preparamos los atos para teste
+df_test = df.iloc[33600:,:]
+X_test = df_test.iloc[:,1:].values / 255.
+y_test = df_test[&#39;label&#39;].values
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;mlp-de-una-capa&#34;&gt;MLP de una capa&lt;/h2&gt;
+&lt;p&gt;Iniciaremos creando una red con una única capa oculta&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# iniciamos los modulos del framework Keras que facilita la creación de modelos 
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+#creamos el modelo, usaremos la clase sequential del paquete Keras para iniciar con un modelo que tendra tantas capas como querramos en sequencia 
+#recordemos que entre mas capas mejor será el rendimiento de la red
+model = Sequential()
+
+#adicionamos la primera capa a nuestro modelo, esta sera la capa que recibirá los parámetros de entrada 
+# la primera aclaración a tener en cuenta es que en las redes MLP a diferencia de las CNN que son mas avanzadas y que se veran en notebooks posteriores
+# las MLP necesitan recibir los parametros en un único vector de entrada, es por eso que cada imágen que es de 28x28 pixeles es convertida a un solo vector
+# de dimension 784 ( 28x28=784), que serán los argumentos de entrada y se tiene 10 unidades de salida por que seran las etiquetas que van del 0 al 9
+model.add(Dense(input_dim=784, units=10))
+#cada capa tiene asociada una función de activación que es la encargada de definir que neurona se activara y pasara a la etapa siguiente como se vio en el notebook anterior
+model.add(Activation(&#39;softmax&#39;))
+# con la primera capa lista solo resta compilar la red, esto es pasar los algoritmos de aprendizaje necesarios para que realice todo el calculo de pesos y pueda aprender 
+# para eso utilizaremos una función de coste muy utilizada en las tareas de clasificación que es la categorical crossentroy (consultar un poco mas sobre las diferentes funciones de coste),
+# y un algoritmos de aprendizaje basado en el gradiente estocastico sgd ( consultar otros optimizadores)
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;sgd&#39;, metrics=[&#39;accuracy&#39;])
+#finalmente realizmos el entrenamiento de la red, pasando los datos de entranmiento con sus respectivas etiquetas
+model.fit(X_train,y_train_onehot,epochs=10)
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Epoch 1/10
+33600/33600 [==============================] - 1s 44us/step - loss: 0.9546 - accuracy: 0.7783
+Epoch 2/10
+33600/33600 [==============================] - 1s 44us/step - loss: 0.5331 - accuracy: 0.8670
+Epoch 3/10
+33600/33600 [==============================] - 1s 43us/step - loss: 0.4580 - accuracy: 0.8807
+Epoch 4/10
+33600/33600 [==============================] - 1s 43us/step - loss: 0.4209 - accuracy: 0.8871
+Epoch 5/10
+33600/33600 [==============================] - 2s 48us/step - loss: 0.3974 - accuracy: 0.8917
+Epoch 6/10
+33600/33600 [==============================] - 1s 43us/step - loss: 0.3812 - accuracy: 0.8959
+Epoch 7/10
+33600/33600 [==============================] - 1s 43us/step - loss: 0.3687 - accuracy: 0.8988
+Epoch 8/10
+33600/33600 [==============================] - 1s 43us/step - loss: 0.3590 - accuracy: 0.9007
+Epoch 9/10
+33600/33600 [==============================] - 1s 44us/step - loss: 0.3509 - accuracy: 0.9020
+Epoch 10/10
+33600/33600 [==============================] - 1s 43us/step - loss: 0.3442 - accuracy: 0.9043
+
+
+
+
+
+&amp;lt;keras.callbacks.callbacks.History at 0x7f2d6eea4a90&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Como se puede observar se realizarón 10 iteracion (epocas) sobre los datos y se tuvo una precisión de 90% en entrenamiento bastante aceptable para una sola capa de la red y la perdida (loss) fue disminuyendo lo qu quiere decir que en cada iteracion los pesos de la red se fueron ajustando mejor a las etiquetas&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#vamos a ver como se comporta en teste si es capaz de generalizar lo que aprendio
+y_predict = model.predict_classes(X_test)
+print(&amp;quot;\nPrecisión&amp;quot;,np.sum(y_predict == y_test) / float(len(y_test)))
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Precisión 0.9067857142857143
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;€xactamente nuestro modelo quedo bien generalizado y los datos que la red no habia visto en entrenamiento ahora estan siendo bien clasificados&lt;/p&gt;
+&lt;p&gt;#MLP con 2 capas
+En esta parte aumentaremos el número de capas ocultas para ver si el rendimiento de la red mejora con respecto al enterior&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# iniciamos los modulos del framework Keras que facilita la creación de modelos 
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+#creamos el modelo, usaremos la clase sequential del paquete Keras para iniciar con un modelo que tendra tantas capas como querramos en sequencia 
+#recordemos que entre mas capas mejor será el rendimiento de la red
+model = Sequential()
+
+#mantenemos la misma estructura anterior, adicionamos la primera capa a nuestro modelo, esta sera la capa que recibirá los parámetros de entrada solo que ahora esta tendra 100 neuronas 
+model.add(Dense(input_dim=784, units=100))
+#adicionamos la segunda capa oculta que tendra el numero de neuornas igual al numero de clases del dataset
+model.add(Dense(units=10))
+model.add(Activation(&#39;softmax&#39;))
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;sgd&#39;, metrics=[&#39;accuracy&#39;])
+model.fit(X_train,y_train_onehot,epochs=10)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Epoch 1/10
+33600/33600 [==============================] - 2s 70us/step - loss: 0.7145 - accuracy: 0.8166
+Epoch 2/10
+33600/33600 [==============================] - 2s 71us/step - loss: 0.3967 - accuracy: 0.8901
+Epoch 3/10
+33600/33600 [==============================] - 2s 72us/step - loss: 0.3515 - accuracy: 0.9001
+Epoch 4/10
+33600/33600 [==============================] - 2s 68us/step - loss: 0.3297 - accuracy: 0.9065
+Epoch 5/10
+33600/33600 [==============================] - 2s 69us/step - loss: 0.3157 - accuracy: 0.9110
+Epoch 6/10
+33600/33600 [==============================] - 2s 64us/step - loss: 0.3064 - accuracy: 0.9136
+Epoch 7/10
+33600/33600 [==============================] - 2s 68us/step - loss: 0.2993 - accuracy: 0.9155
+Epoch 8/10
+33600/33600 [==============================] - 2s 69us/step - loss: 0.2934 - accuracy: 0.9175
+Epoch 9/10
+33600/33600 [==============================] - 2s 66us/step - loss: 0.2888 - accuracy: 0.9186
+Epoch 10/10
+33600/33600 [==============================] - 2s 63us/step - loss: 0.2849 - accuracy: 0.9195
+
+
+
+
+
+&amp;lt;keras.callbacks.callbacks.History at 0x7f2d761cd748&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Como se puede observar el poner una capa oculta mas aumento la precisión  de 90 a 91 en entrenamiento, es importante notar que a diferencia de la anterior red esta ya inicia con una perdida (loss) mucho menor que la anterior&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#vamos a ver como se comporta en teste si es capaz de generalizar lo que aprendio
+y_predict = model.predict_classes(X_test)
+print(&amp;quot;\nPrecisión&amp;quot;,np.sum(y_predict == y_test) / float(len(y_test)))
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Precisión 0.919047619047619
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;podemos ver que la red esta generalizando bien ya que mantenmos el 91% en teste&lt;/p&gt;
+&lt;h2 id=&#34;mlp-con-3-capas&#34;&gt;MLP con 3 capas&lt;/h2&gt;
+&lt;p&gt;En esta parte aumentaremos el número de capas ocultas para ver si el rendimiento de la red mejora con respecto al enterior. Ahora usaremos 3 capas ocultas, confiando que la precisión del modelo aumente considerablemente&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# iniciamos los modulos del framework Keras que facilita la creación de modelos 
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+#creamos el modelo, usaremos la clase sequential del paquete Keras para iniciar con un modelo que tendra tantas capas como querramos en sequencia 
+#recordemos que entre mas capas mejor será el rendimiento de la red
+model = Sequential()
+
+#mantenemos la misma estructura anterior, adicionamos la primera capa a nuestro modelo, esta sera la capa que recibirá los parámetros de entrada solo que ahora esta tendra 100 neuronas 
+model.add(Dense(input_dim=784, units=100))
+#adicionamos la segunda capa oculta que tendra el numero de neuornas que querramos en este caso pasaremos las mismas neuronas de la capa anterior
+model.add(Dense(units=100))
+#adicionamos la tercera capa oculta que tendra el numero de neuornas igual al numero de clases del dataset
+model.add(Dense(units=10))
+model.add(Activation(&#39;softmax&#39;))
+model.compile(loss=&#39;categorical_crossentropy&#39;, optimizer=&#39;sgd&#39;, metrics=[&#39;accuracy&#39;])
+model.fit(X_train,y_train_onehot,epochs=10)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Epoch 1/10
+33600/33600 [==============================] - 3s 76us/step - loss: 0.6296 - accuracy: 0.8293
+Epoch 2/10
+33600/33600 [==============================] - 3s 77us/step - loss: 0.3565 - accuracy: 0.8977
+Epoch 3/10
+33600/33600 [==============================] - 3s 76us/step - loss: 0.3226 - accuracy: 0.9070
+Epoch 4/10
+33600/33600 [==============================] - 2s 68us/step - loss: 0.3065 - accuracy: 0.9122
+Epoch 5/10
+33600/33600 [==============================] - 2s 71us/step - loss: 0.2964 - accuracy: 0.9146
+Epoch 6/10
+33600/33600 [==============================] - 2s 74us/step - loss: 0.2887 - accuracy: 0.9174
+Epoch 7/10
+33600/33600 [==============================] - 2s 73us/step - loss: 0.2828 - accuracy: 0.9194
+Epoch 8/10
+33600/33600 [==============================] - 3s 74us/step - loss: 0.2787 - accuracy: 0.9214
+Epoch 9/10
+33600/33600 [==============================] - 2s 73us/step - loss: 0.2744 - accuracy: 0.9222
+Epoch 10/10
+33600/33600 [==============================] - 3s 75us/step - loss: 0.2711 - accuracy: 0.9227
+
+
+
+
+
+&amp;lt;keras.callbacks.callbacks.History at 0x7f2d6eadaef0&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#vamos a ver como se comporta en teste si es capaz de generalizar lo que aprendio
+y_predict = model.predict_classes(X_test)
+print(&amp;quot;\nPrecisión&amp;quot;,np.sum(y_predict == y_test) / float(len(y_test)))
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Precisión 0.9166666666666666
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;En este caso, es interesante observar que no siempre entre incrementar el numero de capas ocultas mejora el resultado de salida, muchas veces para mejorar los resultados es interesante jugar con diferentes convinaciones de hiperparametros como las funciones de coste los optimizadores las tasas de aprendizaje entre otras, sientase libre de modificar los codigos de arriba con diferentes conbinaciones para ver si la precisión mejora.&lt;/p&gt;
+&lt;h2 id=&#34;ejercicio-practico&#34;&gt;Ejercicio practico&lt;/h2&gt;
+&lt;p&gt;Como se pudo observar si se aumenta el número de capas ocultas la red mejora, pero no siempre es lo mejor. Muchas veces jugar con combinaciones de hiperparametros y funciones de activación es la mejor opción. Como fue mencionado anteriormente después de cada capa oculta es necesario usar funciones de activación, y las redes anteriores no seguían este concepto. Investigue cuales son las más usadas en la actualidad y mejore las configuraciones anteriores para obtener mejores resultados. El siguiente es un ejemplo de una red con 3 capas ocultas con la misma estructura anterior pero con un nivel de precisión supremamente mayor que paso de 92 a 98%. Su tarea es jugar con el número de épocas el número de neuronas en cada capa oculta y las funciones de activación para conseguir un resultado similar al siguiente.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# NO DIJITE NADA EN ESTA CELDA NI LA EJECUTE, SI LA EJECUTA PERDERA LOS RESULTADOS DE MUESTRA
+#hiperparametros
+N_EPOCH = .     # numero de iteraciones
+N_CLASSES= .     # numero de etiquetas del conjunto de entrenamiento
+N_HIDDEN = .    # número de neurones ocultos 
+
+
+model = Sequential()
+.
+.
+.
+.
+.
+.
+
+model.compile(optimizer=&#39;.&#39;,loss=&#39;categorical_crossentropy&#39;,metrics=[&#39;accuracy&#39;])
+
+model= model.fit(.,.,epochs=.)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Epoch 1/30
+33600/33600 [==============================] - 4s 109us/step - loss: 0.8487 - accuracy: 0.7816
+Epoch 2/30
+33600/33600 [==============================] - 4s 108us/step - loss: 0.3551 - accuracy: 0.8997
+Epoch 3/30
+33600/33600 [==============================] - 3s 99us/step - loss: 0.2957 - accuracy: 0.9152
+Epoch 4/30
+33600/33600 [==============================] - 3s 88us/step - loss: 0.2611 - accuracy: 0.9243
+Epoch 5/30
+33600/33600 [==============================] - 3s 89us/step - loss: 0.2357 - accuracy: 0.9313
+Epoch 6/30
+33600/33600 [==============================] - 3s 92us/step - loss: 0.2137 - accuracy: 0.9389
+Epoch 7/30
+33600/33600 [==============================] - 3s 88us/step - loss: 0.1960 - accuracy: 0.9437
+Epoch 8/30
+33600/33600 [==============================] - 3s 87us/step - loss: 0.1811 - accuracy: 0.9484
+Epoch 9/30
+33600/33600 [==============================] - 3s 91us/step - loss: 0.1675 - accuracy: 0.9513
+Epoch 10/30
+33600/33600 [==============================] - 3s 99us/step - loss: 0.1563 - accuracy: 0.9552
+Epoch 11/30
+33600/33600 [==============================] - 3s 94us/step - loss: 0.1460 - accuracy: 0.9582
+Epoch 12/30
+33600/33600 [==============================] - 3s 101us/step - loss: 0.1368 - accuracy: 0.9613
+Epoch 13/30
+33600/33600 [==============================] - 3s 95us/step - loss: 0.1285 - accuracy: 0.9638
+Epoch 14/30
+33600/33600 [==============================] - 3s 90us/step - loss: 0.1210 - accuracy: 0.9652
+Epoch 15/30
+33600/33600 [==============================] - 3s 96us/step - loss: 0.1136 - accuracy: 0.9682
+Epoch 16/30
+33600/33600 [==============================] - 3s 102us/step - loss: 0.1072 - accuracy: 0.9700
+Epoch 17/30
+33600/33600 [==============================] - 3s 96us/step - loss: 0.1012 - accuracy: 0.9716
+Epoch 18/30
+33600/33600 [==============================] - 3s 95us/step - loss: 0.0958 - accuracy: 0.9738
+Epoch 19/30
+33600/33600 [==============================] - 3s 93us/step - loss: 0.0912 - accuracy: 0.9751
+Epoch 20/30
+33600/33600 [==============================] - 3s 88us/step - loss: 0.0861 - accuracy: 0.9760
+Epoch 21/30
+33600/33600 [==============================] - 3s 95us/step - loss: 0.0820 - accuracy: 0.9779
+Epoch 22/30
+33600/33600 [==============================] - 3s 88us/step - loss: 0.0777 - accuracy: 0.9795
+Epoch 23/30
+33600/33600 [==============================] - 3s 88us/step - loss: 0.0744 - accuracy: 0.9804
+Epoch 24/30
+33600/33600 [==============================] - 3s 93us/step - loss: 0.0705 - accuracy: 0.9812
+Epoch 25/30
+33600/33600 [==============================] - 3s 90us/step - loss: 0.0672 - accuracy: 0.9822
+Epoch 26/30
+33600/33600 [==============================] - 3s 88us/step - loss: 0.0640 - accuracy: 0.9832
+Epoch 27/30
+33600/33600 [==============================] - 3s 94us/step - loss: 0.0615 - accuracy: 0.9842
+Epoch 28/30
+33600/33600 [==============================] - 3s 99us/step - loss: 0.0584 - accuracy: 0.9850
+Epoch 29/30
+33600/33600 [==============================] - 3s 91us/step - loss: 0.0558 - accuracy: 0.9855
+Epoch 30/30
+33600/33600 [==============================] - 4s 105us/step - loss: 0.0535 - accuracy: 0.9862
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#vamos a ver como se comporta en teste si es capaz de generalizar lo que aprendio
+y_predict = model.model.predict_classes(X_test)
+print(&amp;quot;\nPrecisión&amp;quot;,np.sum(y_predict == y_test) / float(len(y_test)))
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;Precisión 0.9678571428571429
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Acontinuación rellene los espacion donde dice DIGITE AQUI con las configuraciones necesarias para alcanzar un resultado similar al anterior&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#hiperparametros
+N_EPOCH = DIGITE AQUI     # numero de iteraciones
+N_CLASSES= DIGITE AQUI    # numero de etiquetas del conjunto de entrenamiento
+N_HIDDEN = DIGITE AQUI   # número de neurones ocultos 
+
+
+model = Sequential()
+model.add(Dense(input_dim=DIGITE AQUI, units=DIGITE AQUI))
+model.add(DIGITE AQUI)    # esta es la funcion de activacion
+model.add(Dense(units=N_HIDDEN))
+model.add(DIGITE AQUI)    # esta es la funcion de activacion
+model.add(Dense(units=N_CLASSES))
+model.add(Activation(&#39;DIGITE AQUI&#39;))
+
+model.compile(optimizer=&#39;DIGITE AQUI&#39;,loss=&#39;categorical_crossentropy&#39;,metrics=[&#39;accuracy&#39;])
+
+model= model.fit(DIGITE AQUI,DIGITE AQUI,epochs=DIGITE AQUI)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;quiz&#34;&gt;QUIZ&lt;/h2&gt;
+&lt;p&gt;1: En un modelo de redes Neuronales con aprendizaje _________________ la red no es entrenada con pares de conjuntos de entrada y salida deseada.&lt;/p&gt;
+&lt;p&gt;a) supervisionado
+b) no supervisionado&lt;/p&gt;
+&lt;p&gt;2: El perceptron de multiples capas es una red con una capa de entrada que posee tantos nodos de entrada como señales de entrada tenga el problema, una o mas capas ocultas de neuronas y una capa de salida con un numero de neuronas iguales al número de señales de salida.&lt;/p&gt;
+&lt;p&gt;a) verdadero
+b) falso&lt;/p&gt;
+&lt;p&gt;3: Las MLP son generalizaciones de la red perceptron y asi como estas son entrenadas de forma _____________ a través de la regla de aprendizaje que minimiza el error.&lt;/p&gt;
+&lt;p&gt;a) supervisionado
+b) no supervisionado&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Google Colaboratory</title>
       <link>https://hdspgroup.github.io/courses/deep-learning-labs/colab/</link>
       <pubDate>Mon, 29 Jun 2020 00:00:00 +0100</pubDate>
