@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hdspgroup.github.io/courses/image-processing/fundamentos/</loc>
+    <lastmod>2020-06-29T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hdspgroup.github.io/courses/deep-learning-labs/</loc>
     <lastmod>2020-06-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hdspgroup.github.io/courses/image-processing/cuantificacion/</loc>
+    <lastmod>2020-06-29T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -23,18 +33,38 @@
   </url>
   
   <url>
+    <loc>https://hdspgroup.github.io/courses/image-processing/transformaciones/</loc>
+    <lastmod>2020-06-29T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hdspgroup.github.io/courses/deep-learning-labs/inverse/</loc>
     <lastmod>2020-07-20T00:00:00+01:00</lastmod>
   </url>
   
   <url>
+    <loc>https://hdspgroup.github.io/courses/optics-labs/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hdspgroup.github.io/</loc>
-    <lastmod>2020-07-20T00:00:00+01:00</lastmod>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://hdspgroup.github.io/courses/</loc>
-    <lastmod>2020-07-20T00:00:00+01:00</lastmod>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hdspgroup.github.io/courses/image-processing/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hdspgroup.github.io/courses/optimization-labs/</loc>
+    <lastmod>2020-09-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
