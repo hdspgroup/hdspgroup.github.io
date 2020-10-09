@@ -45,6 +45,10 @@ y/o resolver ejercicios. Un vez completado los ejercicios, el estudiante deberá
 preparar un documento donde se resuma lo aprendido y se analicen los resultados obtenidos.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;lecturas-recomendadas&#34;&gt;Lecturas Recomendadas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;pdfs/2005.06001.pdf&#34;&gt;Deep Learning Techniques for Inverse Problems in Imaging.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -115,6 +119,11 @@ seguir las indicaciones descritas en los talleres:&lt;/p&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Descarga esta guía en pdf en este &lt;a href=&#34;Plan_PeriodoPrueba_Optica.pdf&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;lecturas-recomendadas&#34;&gt;Lecturas Recomendadas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;pdfs/111430F.pdf&#34;&gt;SPIE: Teaching of optical imaging and aberrations.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;pdfs/cao2016.pdf&#34;&gt;Computational Snapshot Multispectral Cameras.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -133,6 +142,12 @@ ejercicios y responder preguntas o analizar los resultados obtenidos al final de
 &lt;p&gt;El aspirante deberá presentar por cada laboratorio un informe en Látex (plantilla disponible en el repositorio).
 Este informe será revisado por el tutor siguiendo la Rúbrica de Evaluación de Informes de Laboratorio
 y una vez aprobado, el tutor cargará el informe y la rúbrica en la carpeta de Drive del aspirante.&lt;/p&gt;
+&lt;h2 id=&#34;lecturas-recomendadas&#34;&gt;Lecturas Recomendadas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://la.mathworks.com/products/image.html&#34;&gt;MATLAB: Image Processing Toolbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.academia.edu/18324189/Digital_image_processing_using_matlab_gonzalez_&#34;&gt;Digital Image Processing Using MATLAB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.math.hkbu.edu.hk/~zeng/Teaching/math3615/ls.pdf&#34;&gt;An Introduction to Digital Image Processing with MATLAB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
