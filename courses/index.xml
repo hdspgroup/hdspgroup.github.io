@@ -177,6 +177,11 @@ de problemas de optimziación.&lt;/li&gt;
 &lt;li&gt;El estudiante formula un algoritmo siguiendo la estrategia ADMM para la solución de problemas de optimziación.&lt;/li&gt;
 &lt;li&gt;El estudiante programa el algoritmo basado en ADMM en un lenguaje de programación.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;lecturas-recomendadas&#34;&gt;Lecturas Recomendadas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;pdfs/paper_base1.pdf&#34;&gt;The Proximal Gradient Method.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;pdfs/admm_distr_stats.pdf&#34;&gt;Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
