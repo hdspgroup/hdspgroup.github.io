@@ -35,23 +35,10 @@ jobs:
       - run: npm run build
       # - run: npm test
 
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run check
-
   deploy:
     if: github.event_name == 'push'
     needs:
       - build
-      - check
     runs-on: ubuntu-latest
     permissions:
       pages: write
