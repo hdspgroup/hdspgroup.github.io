@@ -1,227 +1,159 @@
 ---
+import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About HDSP',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
   <Hero
     tagline="About us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/hdsp-group-photo-crop.png',
+      alt: 'HDSP research group members',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      High Dimensional Signal Processing <br />
+      <span class="text-accent dark:text-white">Research Group</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      HDSP is an interdisciplinary research group from the Computer Science Department focused on the next generation
+      of high-dimensional signal processing algorithms. The group aims to impact Colombian society while contributing
+      to the worldwide scientific community.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
   <Stats
-    title="Statistics about us"
+    title="HDSP at a glance"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'MinCiencias classification', amount: 'A1' },
+      { title: 'Research laboratories', amount: '2' },
+      { title: 'Core research areas', amount: '4' },
+      { title: 'Home institution', amount: 'UIS' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
+  <Content
+    title="Research mission and infrastructure"
+    tagline="What drives the group"
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
+      src: '~/assets/images/hdsp-laboratories-crop.png',
+      alt: 'HDSP computational and optical laboratories',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Interdisciplinary research',
+        description:
+          'HDSP connects signal processing, imaging, optimization, and deep learning to address complex scientific problems.',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'State-of-the-art laboratories',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'The group operates modern computational and optical laboratories that support research, academic production, and new projects.',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Impact-oriented work',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Its research is designed to create value for Colombian society while maintaining strong international scientific relevance.',
       },
     ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
+  >
+    <Fragment slot="content">
+      <p>
+        Most HDSP research topics involve <strong>optimization techniques</strong> and
+        <strong> deep learning algorithms</strong>. This combination supports the design of new imaging systems, the
+        reconstruction of missing information, and advanced computational methods for high-dimensional data.
+      </p>
+    </Fragment>
+  </Content>
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Research areas"
+    tagline="What we study"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Deep Learning',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'Fundamental research in deep learning enables novel imaging systems to perform high-level tasks such as pose estimation and action recognition in privacy- and safety-sensitive contexts.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Call us',
+        title: 'Spectral Imaging',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'Spectral images are a key tool for precision agriculture because they allow recognition of specific characteristics of vegetation and crops across multiple wavelengths.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Seismic Processing and Design',
+        description:
+          'This line focuses on reconstructing missing seismic data with optimization techniques and deep learning approaches for both 2D and 3D seismic data.',
+        icon: 'tabler:wave-sine',
+      },
+      {
+        title: 'Computational Imaging',
+        description:
+          'The group studies optical coding design and AI-driven reconstruction for tasks such as depth estimation, privacy-preserving imaging, and super-resolution.',
+        icon: 'tabler:camera',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Collaborations and distinctions"
+    tagline="Academic reach"
+    columns={4}
+    items={[
+      {
+        title: 'International collaborations',
+        description:
+          'HDSP maintains an international collaborator network that expands the reach of its research, joint projects, and scientific exchange.',
+        icon: 'tabler:world',
+      },
+      {
+        title: 'International patents',
+        description:
+          'The group highlights patent-oriented results that connect research with technology transfer and practical impact.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'UIS awards',
+        description:
+          'Its trajectory includes institutional recognition through UIS awards and sustained academic excellence.',
+        icon: 'tabler:award',
+      },
+      {
+        title: 'PhDs and top researchers',
+        description:
+          "The poster highlights doctoral training and researcher recognition as part of the group's academic strength.",
+        icon: 'tabler:school',
+      },
+    ]}
+  />
+
+  <Features2
+    title="Contact"
+    tagline="Get in touch"
+    columns={2}
+    items={[
+      {
+        title: 'Research lead',
+        description:
+          'Ph.D Henry Arguello<br /><a class="text-primary hover:underline" href="mailto:henarfu@uis.edu.co">henarfu@uis.edu.co</a>',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Office',
+        description: 'LP 333',
+        icon: 'tabler:map-pin',
       },
     ]}
   />
