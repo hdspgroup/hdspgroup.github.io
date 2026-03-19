@@ -40,6 +40,11 @@ export const principalInvestigator: Person & { interests: string[]; image: strin
       href: 'https://scholar.google.com/citations?user=R7gjbGIAAAAJ&hl=en',
       icon: 'tabler:school',
     },
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/henry-arguello-2905929/',
+      icon: 'tabler:brand-linkedin',
+    },
   ],
 };
 
@@ -94,7 +99,7 @@ export const peopleCategories: PeopleCategory[] = [
     members: [
       {
         name: 'Laura C. Diaz-Delgado',
-        title: 'Computer Science Engineering (8th semester)',
+        title: 'Computer Science Engineering',
         links: [
           {
             label: 'Scholar',
@@ -103,17 +108,17 @@ export const peopleCategories: PeopleCategory[] = [
           },
         ],
       },
-      { name: 'Julio Gutierrez', title: 'Computer Science Engineering (8th semester)' },
-      { name: 'Jose Barrios', title: 'Electronic Engineering (8th semester)' },
-      { name: 'Lamar Rivera', title: 'Physics (9th semester)' },
-      { name: 'Santiago Rodriguez', title: 'Electronic Engineering (8th semester)' },
-      { name: 'Carlos Mogollon', title: 'Electronic Engineering (10th semester)' },
-      { name: 'Nohelia Agudelo', title: 'Electronic Engineering (8th semester)' },
-      { name: 'Javier Quiroga', title: 'Electronic Engineering (8th semester)' },
-      { name: 'Ernesto Vasquez', title: 'Electronic Engineering (4th semester)' },
-      { name: 'Deisy Camacho', title: 'Mathematics (8th semester)' },
-      { name: 'Daniel Diaz', title: 'Electronic Engineering (6th semester)' },
-      { name: 'Juan Diego Cardenas', title: 'Computer Science Engineering (6th semester)' },
+      { name: 'Julio Gutierrez', title: 'Computer Science Engineering' },
+      { name: 'Jose Barrios', title: 'Electronic Engineering' },
+      { name: 'Lamar Rivera', title: 'Physics' },
+      { name: 'Santiago Rodriguez', title: 'Electronic Engineering' },
+      { name: 'Carlos Mogollon', title: 'Electronic Engineering' },
+      { name: 'Nohelia Agudelo', title: 'Electronic Engineering' },
+      { name: 'Javier Quiroga', title: 'Electronic Engineering' },
+      { name: 'Ernesto Vasquez', title: 'Electronic Engineering' },
+      { name: 'Deisy Camacho', title: 'Mathematics' },
+      { name: 'Daniel Diaz', title: 'Electronic Engineering' },
+      { name: 'Juan Diego Cardenas', title: 'Computer Science Engineering' },
     ],
   },
   {
