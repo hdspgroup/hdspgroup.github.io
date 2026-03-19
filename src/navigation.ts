@@ -97,20 +97,20 @@ export const headerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          text: 'Welcome to HDSP',
+          href: getPermalink('welcome-to-hdsp', 'post'),
         },
         {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          text: 'AI Outreach Talk',
+          href: getPermalink('myths-and-realities-of-ai', 'post'),
         },
         {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
+          text: 'Events',
+          href: getPermalink('events', 'category'),
         },
         {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          text: 'HDSP Tag',
+          href: getPermalink('hdsp', 'tag'),
         },
       ],
     },
