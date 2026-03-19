@@ -1,10 +1,10 @@
 ---
 publishDate: 2025-11-19T00:00:00Z
-author: HDSP Group
-title: One-on-One with the Tutors
-excerpt: A mentoring session where HDSP undergraduate members and tutors shared how research work is organized and monitored inside the seedbed.
-image: ~/assets/images/semillero/one_on_one_2.jpg
-category: Events
+author: "HDSP Group"
+title: "One-on-One with the Tutors"
+excerpt: "A mentoring session where HDSP undergraduate members and tutors shared how research work is organized and monitored inside the seedbed."
+image: "~/assets/images/semillero/one_on_one_2.jpg"
+category: "Events"
 tags:
   - outreach
   - mentoring

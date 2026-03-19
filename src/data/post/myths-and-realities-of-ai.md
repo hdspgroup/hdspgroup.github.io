@@ -1,10 +1,10 @@
 ---
 publishDate: 2025-10-27T00:00:00Z
-author: HDSP Group
-title: Outreach Talk: Myths and Realities of Artificial Intelligence
-excerpt: An HDSP outreach talk focused on critical reflection about the real capabilities, limitations, and risks of artificial intelligence.
-image: ~/assets/images/semillero/ai_myths.jpg
-category: Events
+author: "HDSP Group"
+title: "Outreach Talk: Myths and Realities of Artificial Intelligence"
+excerpt: "An HDSP outreach talk focused on critical reflection about the real capabilities, limitations, and risks of artificial intelligence."
+image: "~/assets/images/semillero/ai_myths.jpg"
+category: "Events"
 tags:
   - AI
   - outreach

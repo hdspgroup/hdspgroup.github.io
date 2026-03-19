@@ -1,10 +1,10 @@
 ---
 publishDate: 2025-01-01T00:00:00Z
-author: HDSP Group
-title: Welcome to HDSP!
-excerpt: An introduction to the High Dimensional Signal Processing Research Group and the scientific challenges that motivate its work.
-image: ~/assets/images/semillero/hdsp_2025.jpg
-category: Journal
+author: "HDSP Group"
+title: "Welcome to HDSP!"
+excerpt: "An introduction to the High Dimensional Signal Processing Research Group and the scientific challenges that motivate its work."
+image: "~/assets/images/semillero/hdsp_2025.jpg"
+category: "Journal"
 tags:
   - hdsp
   - signal processing

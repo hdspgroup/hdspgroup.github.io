@@ -1,10 +1,10 @@
 ---
 publishDate: 2025-11-05T00:00:00Z
-author: HDSP Group
-title: Theoretical and Practical Workshop on Reading and Writing Scientific Articles
-excerpt: A six-hour HDSP workshop designed to strengthen scientific reading, literature review, and academic writing skills.
-image: ~/assets/images/semillero/reading_writing_2025.jpg
-category: Events
+author: "HDSP Group"
+title: "Theoretical and Practical Workshop on Reading and Writing Scientific Articles"
+excerpt: "A six-hour HDSP workshop designed to strengthen scientific reading, literature review, and academic writing skills."
+image: "~/assets/images/semillero/reading_writing_2025.jpg"
+category: "Events"
 tags:
   - workshop
   - outreach

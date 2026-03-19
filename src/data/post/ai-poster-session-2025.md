@@ -1,10 +1,10 @@
 ---
 publishDate: 2025-11-07T00:00:00Z
-author: HDSP Group
-title: AI Poster Session 2025
-excerpt: A poster session featuring recent HDSP projects in artificial intelligence, computational optics, seismics, and medical imaging.
-image: ~/assets/images/semillero/posters_2025.png
-category: Events
+author: "HDSP Group"
+title: "AI Poster Session 2025"
+excerpt: "A poster session featuring recent HDSP projects in artificial intelligence, computational optics, seismics, and medical imaging."
+image: "~/assets/images/semillero/posters_2025.png"
+category: "Events"
 tags:
   - AI
   - posters
