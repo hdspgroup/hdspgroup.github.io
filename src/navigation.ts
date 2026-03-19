@@ -90,29 +90,8 @@ export const headerData = {
       ],
     },
     {
-      text: 'Blog',
-      links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Welcome to HDSP',
-          href: getPermalink('welcome-to-hdsp', 'post'),
-        },
-        {
-          text: 'AI Outreach Talk',
-          href: getPermalink('myths-and-realities-of-ai', 'post'),
-        },
-        {
-          text: 'Events',
-          href: getPermalink('events', 'category'),
-        },
-        {
-          text: 'HDSP Tag',
-          href: getPermalink('hdsp', 'tag'),
-        },
-      ],
+      text: 'Events',
+      href: getBlogPermalink(),
     },
     {
       text: 'Widgets',
