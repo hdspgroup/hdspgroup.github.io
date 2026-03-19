@@ -93,10 +93,6 @@ export const headerData = {
       text: 'Events',
       href: getBlogPermalink(),
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
   ],
   actions: [
     {
