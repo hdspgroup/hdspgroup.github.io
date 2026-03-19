@@ -1,0 +1,190 @@
+---
+import { Icon } from 'astro-icon/components';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { peopleCategories, principalInvestigator } from '~/data/people';
+
+const metadata = {
+  title: 'People',
+  ignoreTitleTemplate: true,
+};
+
+const totalMembers =
+  1 +
+  peopleCategories.reduce((count, category) => {
+    return count + category.members.length;
+  }, 0);
+
+const studentResearchers =
+  peopleCategories.find((category) => category.title === 'Doctoral Students')!.members.length +
+  peopleCategories.find((category) => category.title === 'Master Students')!.members.length +
+  peopleCategories.find((category) => category.title === 'Undergraduate Students')!.members.length;
+
+const collaboratorsCount = peopleCategories.find((category) => category.title === 'Collaborators')!.members.length;
+
+const getInitials = (name: string) =>
+  name
+    .split(' ')
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join('')
+    .toUpperCase();
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="People"
+    title={`Meet the <span class="text-primary dark:text-white">HDSP</span> team`}
+    subtitle="Researchers, professors, students, and collaborators working together on high-dimensional signal processing, computational imaging, and interdisciplinary scientific innovation."
+    callToAction={{
+      text: 'Contact HDSP',
+      href: '/contact',
+      icon: 'tabler:mail',
+    }}
+    callToAction2={{
+      text: 'View Events',
+      href: '/events',
+      icon: 'tabler:calendar-event',
+    }}
+  />
+
+  <Stats
+    title="Team overview"
+    stats={[
+      { title: 'People listed', amount: String(totalMembers) },
+      { title: 'Student researchers', amount: String(studentResearchers) },
+      { title: 'Collaborators', amount: String(collaboratorsCount) },
+      { title: 'Categories', amount: String(peopleCategories.length + 1) },
+    ]}
+  />
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
+    <Headline
+      title="Leadership"
+      subtitle="The HDSP Group is led by a research-oriented academic team with strong experience in signal processing, imaging, optimization, and interdisciplinary collaboration."
+      tagline="Principal investigator"
+    />
+
+    <article class="overflow-hidden rounded-[2rem] border border-gray-200 bg-gradient-to-br from-blue-50 via-white to-slate-50 shadow-[0_30px_80px_-45px_rgba(1,97,239,0.45)] dark:border-gray-700 dark:bg-slate-900">
+      <div class="grid gap-0 lg:grid-cols-[320px_minmax(0,1fr)]">
+        <div class="border-b border-gray-200 bg-white/80 p-6 dark:border-gray-700 dark:bg-slate-900/60 lg:border-b-0 lg:border-r">
+          <div class="mx-auto max-w-[260px] overflow-hidden rounded-[1.5rem] border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-slate-800">
+            <Image
+              src={principalInvestigator.image}
+              alt={principalInvestigator.name}
+              width={520}
+              height={520}
+              class="h-full w-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+        <div class="p-8 md:p-10">
+          <div class="flex flex-wrap items-start justify-between gap-6">
+            <div class="max-w-3xl">
+              <p class="mb-3 inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary dark:bg-slate-800">
+                HDSP leadership
+              </p>
+              <h2 class="font-heading text-3xl font-bold tracking-tight text-heading dark:text-white">
+                {principalInvestigator.name}
+              </h2>
+              <p class="mt-3 max-w-3xl text-lg text-muted">{principalInvestigator.title}</p>
+              {principalInvestigator.description && (
+                <p class="mt-5 max-w-3xl text-base leading-7 text-muted">{principalInvestigator.description}</p>
+              )}
+            </div>
+
+            {principalInvestigator.links && principalInvestigator.links.length > 0 && (
+              <div class="flex flex-wrap gap-3">
+                {principalInvestigator.links.map((link) => (
+                  <Button href={link.href} target="_blank" variant="secondary" icon={link.icon}>
+                    {link.label}
+                  </Button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary dark:text-blue-200">
+              Research interests
+            </h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              {principalInvestigator.interests.map((interest) => (
+                <span class="rounded-full border border-blue-200 bg-white px-4 py-2 text-sm text-muted shadow-sm dark:border-slate-700 dark:bg-slate-800">
+                  {interest}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </WidgetWrapper>
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
+    <Headline
+      title="Group members"
+      subtitle="The team is organized across faculty, students, professional support, and collaborating researchers."
+      tagline="By category"
+    />
+
+    <div class="space-y-8">
+      {peopleCategories.map((category) => (
+        <section class="rounded-[2rem] border border-gray-200 bg-white p-6 shadow-[0_25px_70px_-50px_rgba(15,23,42,0.45)] dark:border-gray-700 dark:bg-slate-900 md:p-8">
+          <div class="mb-8 flex flex-wrap items-start justify-between gap-6">
+            <div class="max-w-3xl">
+              <div class="flex items-center gap-4">
+                <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-100 text-primary dark:bg-slate-800">
+                  <Icon name={category.icon} class="h-6 w-6" />
+                </span>
+                <div>
+                  <h2 class="font-heading text-2xl font-bold text-heading dark:text-white">{category.title}</h2>
+                  <p class="mt-1 text-sm uppercase tracking-[0.2em] text-secondary dark:text-blue-200">
+                    {category.members.length} members
+                  </p>
+                </div>
+              </div>
+              <p class="mt-4 text-base leading-7 text-muted">{category.description}</p>
+            </div>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {category.members.map((member) => (
+              <article class="group rounded-[1.5rem] border border-gray-200 bg-slate-50/70 p-5 transition-transform duration-200 hover:-translate-y-0.5 hover:border-blue-300 dark:border-gray-700 dark:bg-slate-950/60">
+                <div class="flex items-start gap-4">
+                  <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-secondary text-sm font-bold text-white shadow-md">
+                    {getInitials(member.name)}
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="font-heading text-lg font-semibold text-heading dark:text-white">{member.name}</h3>
+                    <p class="mt-2 text-sm leading-6 text-muted">{member.title}</p>
+                    {member.description && <p class="mt-3 text-sm leading-6 text-muted">{member.description}</p>}
+                  </div>
+                </div>
+
+                {member.links && member.links.length > 0 && (
+                  <div class="mt-5 flex flex-wrap gap-3 border-t border-gray-200 pt-4 dark:border-gray-700">
+                    {member.links.map((link) => (
+                      <Button href={link.href} target="_blank" variant="link" icon={link.icon}>
+                        {link.label}
+                      </Button>
+                    ))}
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </WidgetWrapper>
+</Layout>
