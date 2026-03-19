@@ -128,7 +128,6 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
     title="At a glance"
     stats={[
       { title: 'Indexed works', amount: String(profile.worksCount) },
-      { title: 'Citations', amount: String(profile.citedByCount) },
       { title: 'Open access works', amount: String(openAccessCount) },
       { title: 'Years covered', amount: String(years.length) },
     ]}
@@ -188,9 +187,6 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
                         {publication.publicationDate && (
                           <p class="text-sm text-muted">{formatDate(publication.publicationDate)}</p>
                         )}
-                        <p class="mt-1 text-sm font-semibold text-primary">
-                          {publication.citedByCount} citation{publication.citedByCount === 1 ? '' : 's'}
-                        </p>
                       </div>
                     </div>
 
@@ -203,11 +199,6 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
                       {publication.bestOaLocation?.pdfUrl && (
                         <Button href={publication.bestOaLocation.pdfUrl} target="_blank" variant="link" icon="tabler:file-type-pdf">
                           PDF
-                        </Button>
-                      )}
-                      {publication.openAlexUrl && (
-                        <Button href={publication.openAlexUrl} target="_blank" variant="link" icon="tabler:database">
-                          OpenAlex
                         </Button>
                       )}
                       {publication.isOpenAccess && (
