@@ -1,0 +1,240 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
+import publicationsData from '~/data/openalex-publications.json';
+
+interface Publication {
+  id: string;
+  title: string;
+  publicationDate: string | null;
+  publicationYear: number | null;
+  citedByCount: number;
+  doi: string | null;
+  doiUrl: string | null;
+  type: string | null;
+  typeCrossref: string | null;
+  isOpenAccess: boolean;
+  authors: string[];
+  authorsCount: number;
+  venue: string | null;
+  venueType: string | null;
+  topics: string[];
+  openAlexUrl: string | null;
+  bestOaLocation?: {
+    landingPageUrl?: string | null;
+    pdfUrl?: string | null;
+  } | null;
+  primaryLocation?: {
+    landingPageUrl?: string | null;
+    pdfUrl?: string | null;
+  } | null;
+}
+
+interface PublicationsDataset {
+  fetchedAt: string;
+  profile: {
+    name: string;
+    worksCount: number;
+    citedByCount: number;
+    openAlexUrl: string | null;
+    orcid: string | null;
+    institutions: string[];
+  };
+  publications: Publication[];
+}
+
+const dataset = publicationsData as PublicationsDataset;
+const publications = dataset.publications ?? [];
+const profile = dataset.profile;
+
+const metadata = {
+  title: 'Publications',
+  description: `Publications indexed in OpenAlex for ${profile.name}.`,
+};
+
+const formatDate = (value: string | null) =>
+  value
+    ? new Date(`${value}T00:00:00Z`).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        timeZone: 'UTC',
+      })
+    : null;
+
+const formatAuthors = (authors: string[], max = 8) => {
+  if (!authors.length) return null;
+  if (authors.length <= max) return authors.join(', ');
+  return `${authors.slice(0, max).join(', ')} +${authors.length - max} more`;
+};
+
+const formatVenue = (publication: Publication) => {
+  const parts = [publication.venue, publication.venueType].filter(Boolean);
+  return parts.length ? parts.join(' | ') : null;
+};
+
+const linkForPublication = (publication: Publication) =>
+  publication.bestOaLocation?.landingPageUrl ||
+  publication.primaryLocation?.landingPageUrl ||
+  publication.doiUrl ||
+  publication.openAlexUrl;
+
+const years = Array.from(new Set(publications.map((publication) => publication.publicationYear).filter(Boolean))).sort(
+  (a, b) => Number(b) - Number(a)
+);
+
+const groupedPublications = years.map((year) => ({
+  year,
+  publications: publications.filter((publication) => publication.publicationYear === year),
+}));
+
+const openAccessCount = publications.filter((publication) => publication.isOpenAccess).length;
+const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Publications"
+    title={`Research output by ${profile.name}`}
+    subtitle={`Weekly updated from OpenAlex. This page currently lists ${publications.length} indexed works connected to the selected author profile.`}
+    callToAction={{
+      text: 'OpenAlex profile',
+      href: profile.openAlexUrl ?? '#',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      icon: 'tabler:external-link',
+    }}
+    callToAction2={profile.orcid
+      ? {
+          text: 'ORCID',
+          href: profile.orcid,
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          icon: 'tabler:id-badge-2',
+        }
+      : undefined}
+  />
+
+  <Stats
+    title="At a glance"
+    stats={[
+      { title: 'Indexed works', amount: String(profile.worksCount) },
+      { title: 'Citations', amount: String(profile.citedByCount) },
+      { title: 'Open access works', amount: String(openAccessCount) },
+      { title: 'Years covered', amount: String(years.length) },
+    ]}
+  />
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
+    <Headline
+      title="Publication list"
+      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}. Last synchronized on ${latestUpdate}.`}
+      tagline="OpenAlex dataset"
+    />
+
+    <div class="space-y-6">
+      {
+        groupedPublications.map(({ year, publications: items }, index) => (
+          <details
+            class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-slate-900"
+            open={index < 3}
+          >
+            <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3">
+              <div>
+                <h2 class="text-2xl font-bold font-heading dark:text-white">{year}</h2>
+                <p class="text-sm text-muted">{items.length} publications</p>
+              </div>
+              <span class="text-sm font-medium text-primary">Toggle year</span>
+            </summary>
+
+            <div class="mt-6 space-y-4">
+              {
+                items.map((publication) => (
+                  <article class="rounded-xl border border-gray-200 p-5 dark:border-gray-700">
+                    <div class="flex flex-wrap items-start justify-between gap-4">
+                      <div class="max-w-4xl">
+                        <h3 class="text-lg font-semibold font-heading dark:text-white">
+                          {linkForPublication(publication) ? (
+                            <a
+                              href={linkForPublication(publication)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="hover:text-primary"
+                            >
+                              {publication.title}
+                            </a>
+                          ) : (
+                            publication.title
+                          )}
+                        </h3>
+                        {formatVenue(publication) && (
+                          <p class="mt-2 text-sm text-muted">{formatVenue(publication)}</p>
+                        )}
+                        {formatAuthors(publication.authors) && (
+                          <p class="mt-2 text-sm text-muted">{formatAuthors(publication.authors)}</p>
+                        )}
+                      </div>
+
+                      <div class="min-w-[150px] text-left md:text-right">
+                        {publication.publicationDate && (
+                          <p class="text-sm text-muted">{formatDate(publication.publicationDate)}</p>
+                        )}
+                        <p class="mt-1 text-sm font-semibold text-primary">
+                          {publication.citedByCount} citation{publication.citedByCount === 1 ? '' : 's'}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap items-center gap-2">
+                      {publication.doiUrl && (
+                        <Button href={publication.doiUrl} target="_blank" variant="link" icon="tabler:link">
+                          DOI
+                        </Button>
+                      )}
+                      {publication.bestOaLocation?.pdfUrl && (
+                        <Button href={publication.bestOaLocation.pdfUrl} target="_blank" variant="link" icon="tabler:file-type-pdf">
+                          PDF
+                        </Button>
+                      )}
+                      {publication.openAlexUrl && (
+                        <Button href={publication.openAlexUrl} target="_blank" variant="link" icon="tabler:database">
+                          OpenAlex
+                        </Button>
+                      )}
+                      {publication.isOpenAccess && (
+                        <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary dark:bg-slate-800">
+                          Open access
+                        </span>
+                      )}
+                    </div>
+
+                    {
+                      publication.topics.length > 0 && (
+                        <div class="mt-4 flex flex-wrap gap-2">
+                          {publication.topics.map((topic) => (
+                            <span class="rounded-full border border-blue-200 px-3 py-1 text-xs text-muted dark:border-slate-700">
+                              {topic}
+                            </span>
+                          ))}
+                        </div>
+                      )
+                    }
+                  </article>
+                ))
+              }
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </WidgetWrapper>
+</Layout>
