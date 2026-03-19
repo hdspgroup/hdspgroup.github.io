@@ -1,79 +1,95 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact HDSP',
+  ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
-
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
+  <HeroText
+    tagline="Contact"
+    title="Get in touch with HDSP"
+    subtitle="You can find the High Dimensional Signal Processing Research Group at Universidad Industrial de Santander in Bucaramanga, Colombia."
+    callToAction={{
+      text: 'Open in Google Maps',
+      href: 'https://maps.app.goo.gl/dhgTk19AFM4if1Wr7',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      icon: 'tabler:map-pin',
     }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    callToAction2={{
+      text: 'Email HDSP',
+      href: 'mailto:hdsp@uis.edu.co',
+      icon: 'tabler:mail',
     }}
-    description="Our support team typically responds within 24 business hours."
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="We are here to help!"
+    title="Contact information"
+    tagline="HDSP research group"
+    columns={2}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
+        title: 'Address',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+          'Carrera 27, Calle 9, Bldg. LP, Of. 333<br />Escuela de Ingenieria de Sistemas e Informatica<br />Universidad Industrial de Santander, 680002<br />Bucaramanga, Colombia',
+        icon: 'tabler:map-pin',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description:
+          '<a class="text-primary hover:underline" href="mailto:hdsp@uis.edu.co">hdsp@uis.edu.co</a><br /><a class="text-primary hover:underline" href="mailto:henarfu@uis.edu.co">henarfu@uis.edu.co</a>',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Phone',
+        description: '607-6344000<br />Ext. 2476 or 2676',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Map',
+        description: 'Open the location directly in Google Maps for directions and campus access.',
+        icon: 'tabler:world',
+        callToAction: {
+          text: 'View map',
+          href: 'https://maps.app.goo.gl/dhgTk19AFM4if1Wr7',
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Online',
+        description:
+          '<a class="text-primary hover:underline" href="https://www.instagram.com/hdspgroup/" target="_blank" rel="noopener noreferrer">Instagram</a><br /><a class="text-primary hover:underline" href="https://github.com/hdspgroup" target="_blank" rel="noopener noreferrer">GitHub</a>',
+        icon: 'tabler:brand-instagram',
       },
     ]}
   />
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
+    <Headline
+      title="Location map"
+      subtitle="Embedded map for the HDSP research group offices at Universidad Industrial de Santander."
+      tagline="Find us"
+    />
+
+    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-lg dark:border-gray-700 dark:bg-slate-900">
+      <iframe
+        title="HDSP research group location map"
+        src="https://www.google.com/maps?q=Carrera%2027%2C%20Calle%209%2C%20Bldg.%20LP%2C%20Of.%20333%2C%20Universidad%20Industrial%20de%20Santander%2C%20Bucaramanga%2C%20Colombia&z=17&output=embed"
+        width="100%"
+        height="480"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </WidgetWrapper>
 </Layout>
