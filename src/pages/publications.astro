@@ -55,6 +55,7 @@ const dataset = publicationsData as PublicationsDataset;
 const publications = (dataset.publications ?? []).filter((publication) => (publication.publicationYear ?? 0) >= 2010);
 const profile = dataset.profile;
 const totals = dataset.totals;
+const scholarProfileUrl = 'https://scholar.google.com/citations?user=R7gjbGIAAAAJ&hl=en';
 const normalizeArguello = (value: string) => value.replaceAll('Argüello', 'Arguello');
 const profileName = normalizeArguello(profile.name);
 
@@ -114,7 +115,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
     subtitle={`Weekly updated.`}
     callToAction={{
       text: 'Google Scholar profile',
-      href: profile.openAlexUrl ?? '#',
+      href: scholarProfileUrl,
       target: '_blank',
       rel: 'noopener noreferrer',
       icon: 'tabler:external-link',
@@ -142,7 +143,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
     <Headline
       title="Publication list"
-      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}. Last synchronized on ${latestUpdate}. `}
+      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}.<br />Last synchronized on ${latestUpdate}.`}
     />
 
     <div class="space-y-6">
