@@ -111,7 +111,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <HeroText
     tagline="Publications"
     title={`Research output by ${profileName}`}
-    subtitle={`Weekly updated. This page lists ${publications.length} works.`}
+    subtitle={`Weekly updated.`}
     callToAction={{
       text: 'Google Scholar profile',
       href: profile.openAlexUrl ?? '#',
@@ -142,8 +142,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
     <Headline
       title="Publication list"
-      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}. Last synchronized on ${latestUpdate}. DOI-backed records: ${totals.doiBackedWorks}.`}
-      tagline="DOI metadata"
+      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}. Last synchronized on ${latestUpdate}. `}
     />
 
     <div class="space-y-6">
