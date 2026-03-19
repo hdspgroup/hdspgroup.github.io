@@ -20,10 +20,12 @@ export type PeopleCategory = {
 
 type PersonSeed = Omit<Person, 'links'> & {
   scholarHref?: string;
+  linkedinHref?: string;
   links?: PersonLink[];
 };
 
 const scholarPlaceholder = 'https://scholar.google.com/';
+const linkedinPlaceholder = 'https://www.linkedin.com/';
 
 const scholarLink = (href: string = scholarPlaceholder): PersonLink => ({
   label: 'Scholar',
@@ -31,9 +33,20 @@ const scholarLink = (href: string = scholarPlaceholder): PersonLink => ({
   icon: 'tabler:school',
 });
 
-const buildPerson = ({ scholarHref = scholarPlaceholder, links = [], ...person }: PersonSeed): Person => ({
+const linkedinLink = (href: string = linkedinPlaceholder): PersonLink => ({
+  label: 'LinkedIn',
+  href,
+  icon: 'tabler:brand-linkedin',
+});
+
+const buildPerson = ({
+  scholarHref = scholarPlaceholder,
+  linkedinHref = linkedinPlaceholder,
+  links = [],
+  ...person
+}: PersonSeed): Person => ({
   ...person,
-  links: [scholarLink(scholarHref), ...links],
+  links: [scholarLink(scholarHref), linkedinLink(linkedinHref), ...links],
 });
 
 export const principalInvestigator: Person & { interests: string[]; image: string } = {
@@ -44,13 +57,7 @@ export const principalInvestigator: Person & { interests: string[]; image: strin
     description:
       'Professor Henry Arguello leads the HDSP Group, focusing on high-dimensional signal processing, compressed sensing, and computational imaging.',
     scholarHref: 'https://scholar.google.com/citations?user=R7gjbGIAAAAJ&hl=en',
-    links: [
-      {
-        label: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/henry-arguello-2905929/',
-        icon: 'tabler:brand-linkedin',
-      },
-    ],
+    linkedinHref: 'https://www.linkedin.com/in/henry-arguello-2905929/',
   }),
   image: '~/assets/images/prof-henry-arguello.jpeg',
   interests: [
@@ -111,6 +118,7 @@ export const peopleCategories: PeopleCategory[] = [
         name: 'Laura C. Diaz-Delgado',
         title: 'Computer Science Engineering',
         scholarHref: 'https://scholar.google.com/citations?user=jAfnVpoAAAAJ&hl=en',
+        linkedinHref: 'https://www.linkedin.com/in/laura-camila-diaz-delgado-689a55209/',
       }),
       buildPerson({ name: 'Julio Gutierrez', title: 'Computer Science Engineering' }),
       buildPerson({ name: 'Jose Barrios', title: 'Electronic Engineering' }),
