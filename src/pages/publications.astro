@@ -12,18 +12,15 @@ interface Publication {
   title: string;
   publicationDate: string | null;
   publicationYear: number | null;
-  citedByCount: number;
   doi: string | null;
   doiUrl: string | null;
   type: string | null;
   typeCrossref: string | null;
-  isOpenAccess: boolean;
   authors: string[];
   authorsCount: number;
   venue: string | null;
   venueType: string | null;
   topics: string[];
-  openAlexUrl: string | null;
   bestOaLocation?: {
     landingPageUrl?: string | null;
     pdfUrl?: string | null;
@@ -36,6 +33,13 @@ interface Publication {
 
 interface PublicationsDataset {
   fetchedAt: string;
+  totals: {
+    openAlexWorks: number;
+    worksWithDoi: number;
+    doiBackedWorks: number;
+    omittedWithoutDoiCount: number;
+    omittedUnavailableMetadataCount: number;
+  };
   profile: {
     name: string;
     worksCount: number;
@@ -48,12 +52,13 @@ interface PublicationsDataset {
 }
 
 const dataset = publicationsData as PublicationsDataset;
-const publications = dataset.publications ?? [];
+const publications = (dataset.publications ?? []).filter((publication) => (publication.publicationYear ?? 0) >= 2010);
 const profile = dataset.profile;
+const totals = dataset.totals;
 
 const metadata = {
   title: 'Publications',
-  description: `Publications indexed in OpenAlex for ${profile.name}.`,
+  description: `Publications for ${profile.name}, discovered in OpenAlex and rendered from DOI metadata.`,
 };
 
 const formatDate = (value: string | null) =>
@@ -80,8 +85,7 @@ const formatVenue = (publication: Publication) => {
 const linkForPublication = (publication: Publication) =>
   publication.bestOaLocation?.landingPageUrl ||
   publication.primaryLocation?.landingPageUrl ||
-  publication.doiUrl ||
-  publication.openAlexUrl;
+  publication.doiUrl;
 
 const years = Array.from(new Set(publications.map((publication) => publication.publicationYear).filter(Boolean))).sort(
   (a, b) => Number(b) - Number(a)
@@ -92,7 +96,6 @@ const groupedPublications = years.map((year) => ({
   publications: publications.filter((publication) => publication.publicationYear === year),
 }));
 
-const openAccessCount = publications.filter((publication) => publication.isOpenAccess).length;
 const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
@@ -105,7 +108,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <HeroText
     tagline="Publications"
     title={`Research output by ${profile.name}`}
-    subtitle={`Weekly updated from OpenAlex. This page currently lists ${publications.length} indexed works connected to the selected author profile.`}
+    subtitle={`Weekly updated from OpenAlex DOI discovery and DOI.org metadata. This page lists ${publications.length} works from 2010 onward connected to the selected author profile.`}
     callToAction={{
       text: 'OpenAlex profile',
       href: profile.openAlexUrl ?? '#',
@@ -127,8 +130,8 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <Stats
     title="At a glance"
     stats={[
-      { title: 'Indexed works', amount: String(profile.worksCount) },
-      { title: 'Open access works', amount: String(openAccessCount) },
+      { title: 'Visible works', amount: String(publications.length) },
+      { title: 'Profile works', amount: String(totals.openAlexWorks ?? profile.worksCount) },
       { title: 'Years covered', amount: String(years.length) },
     ]}
   />
@@ -136,8 +139,8 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
     <Headline
       title="Publication list"
-      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}. Last synchronized on ${latestUpdate}.`}
-      tagline="OpenAlex dataset"
+      subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}. Last synchronized on ${latestUpdate}. DOI-backed records: ${totals.doiBackedWorks}.`}
+      tagline="DOI metadata"
     />
 
     <div class="space-y-6">
@@ -200,11 +203,6 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
                         <Button href={publication.bestOaLocation.pdfUrl} target="_blank" variant="link" icon="tabler:file-type-pdf">
                           PDF
                         </Button>
-                      )}
-                      {publication.isOpenAccess && (
-                        <span class="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary dark:bg-slate-800">
-                          Open access
-                        </span>
                       )}
                     </div>
 

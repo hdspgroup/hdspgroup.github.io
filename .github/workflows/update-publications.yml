@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  update-openalex-publications:
+  update-publications:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: 22
 
-      - name: Refresh OpenAlex dataset
+      - name: Refresh publications dataset
         env:
           OPENALEX_AUTHOR_ID: A5081714132
           OPENALEX_MAILTO: hdsp@uis.edu.co
