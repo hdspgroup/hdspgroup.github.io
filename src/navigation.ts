@@ -119,7 +119,13 @@ export const headerData = {
       href: '#',
     },
   ],
-  actions: [{ text: 'GitHub', href: 'https://github.com/hdspgroup', target: '_blank' }],
+  actions: [
+    {
+      text: 'Scholar',
+      href: 'https://scholar.google.com/citations?user=R7gjbGIAAAAJ&hl=en',
+      target: '_blank',
+    },
+  ],
 };
 
 export const footerData = {
