@@ -55,10 +55,12 @@ const dataset = publicationsData as PublicationsDataset;
 const publications = (dataset.publications ?? []).filter((publication) => (publication.publicationYear ?? 0) >= 2010);
 const profile = dataset.profile;
 const totals = dataset.totals;
+const normalizeArguello = (value: string) => value.replaceAll('Argüello', 'Arguello');
+const profileName = normalizeArguello(profile.name);
 
 const metadata = {
   title: 'Publications',
-  description: `Publications for ${profile.name}.`,
+  description: `Publications for ${profileName}.`,
 };
 
 const formatDate = (value: string | null) =>
@@ -73,8 +75,9 @@ const formatDate = (value: string | null) =>
 
 const formatAuthors = (authors: string[], max = 8) => {
   if (!authors.length) return null;
-  if (authors.length <= max) return authors.join(', ');
-  return `${authors.slice(0, max).join(', ')} +${authors.length - max} more`;
+  const normalizedAuthors = authors.map(normalizeArguello);
+  if (normalizedAuthors.length <= max) return normalizedAuthors.join(', ');
+  return `${normalizedAuthors.slice(0, max).join(', ')} +${normalizedAuthors.length - max} more`;
 };
 
 const formatVenue = (publication: Publication) => {
@@ -107,7 +110,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
 <Layout metadata={metadata}>
   <HeroText
     tagline="Publications"
-    title={`Research output by ${profile.name}`}
+    title={`Research output by ${profileName}`}
     subtitle={`Weekly updated. This page lists ${publications.length} works.`}
     callToAction={{
       text: 'Google Scholar profile',

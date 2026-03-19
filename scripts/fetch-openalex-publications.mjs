@@ -60,10 +60,14 @@ function normalizeVenue(value) {
   return value ?? null;
 }
 
+function normalizeArguello(value) {
+  return typeof value === 'string' ? value.replaceAll('Argüello', 'Arguello') : value;
+}
+
 function formatAuthor(author) {
   if (!author) return null;
-  if (author.literal) return author.literal;
-  return [author.given, author.family].filter(Boolean).join(' ').trim() || null;
+  if (author.literal) return normalizeArguello(author.literal);
+  return normalizeArguello([author.given, author.family].filter(Boolean).join(' ').trim() || null);
 }
 
 function extractDateParts(record) {
@@ -114,7 +118,7 @@ function extractLandingPageUrl(metadata, doi) {
 function normalizeAuthorProfile(author) {
   return {
     id: author.id,
-    name: author.display_name ?? 'Unknown author',
+    name: normalizeArguello(author.display_name ?? 'Unknown author'),
     worksCount: author.works_count ?? 0,
     citedByCount: author.cited_by_count ?? 0,
     openAlexUrl: author.id ?? null,

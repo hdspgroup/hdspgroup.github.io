@@ -1,10 +1,10 @@
 {
   "source": "DOI.org metadata with OpenAlex DOI discovery",
   "authorId": "A5081714132",
-  "fetchedAt": "2026-03-19T02:47:32.376Z",
+  "fetchedAt": "2026-03-19T02:58:43.815Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
-    "name": "Henry Argüello",
+    "name": "Henry Arguello",
     "worksCount": 500,
     "citedByCount": 4457,
     "openAlexUrl": "https://openalex.org/A5081714132",
@@ -8263,7 +8263,7 @@
       "authors": [
         "H. García",
         "C. V. Correa",
-        "H. Argüello"
+        "H. Arguello"
       ],
       "authorsCount": 3,
       "primaryLocation": {
