@@ -58,7 +58,7 @@ const totals = dataset.totals;
 
 const metadata = {
   title: 'Publications',
-  description: `Publications for ${profile.name}, discovered in OpenAlex and rendered from DOI metadata.`,
+  description: `Publications for ${profile.name}.`,
 };
 
 const formatDate = (value: string | null) =>
@@ -108,9 +108,9 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <HeroText
     tagline="Publications"
     title={`Research output by ${profile.name}`}
-    subtitle={`Weekly updated from OpenAlex DOI discovery and DOI.org metadata. This page lists ${publications.length} works from 2010 onward connected to the selected author profile.`}
+    subtitle={`Weekly updated. This page lists ${publications.length} works.`}
     callToAction={{
-      text: 'OpenAlex profile',
+      text: 'Google Scholar profile',
       href: profile.openAlexUrl ?? '#',
       target: '_blank',
       rel: 'noopener noreferrer',
