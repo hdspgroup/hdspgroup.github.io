@@ -19,9 +19,10 @@ const appStoreDownloadLink = 'https://github.com/arthelokyo/astrowind';
 
 const googlePlayImg = '~/assets/images/google-play.png';
 const googlePlayDownloadLink = 'https://github.com/arthelokyo/astrowind';
+const directorAppLogo = '~/assets/images/director-app-logo.jpg';
 
 const metadata = {
-  title: 'Mobile App Homepage',
+  title: 'Director App',
 };
 ---
 
@@ -49,23 +50,19 @@ const metadata = {
   <!-- Hero2 Widget ******************* -->
 
   <Hero2
-    tagline="Mobile App Web Demo"
+    tagline="Director App"
     image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'AstroWind Hero Image',
+      src: directorAppLogo,
+      alt: 'Director App logo',
     }}
   >
     <Fragment slot="title">
-      <span class="text-accent dark:text-white">AstroWind App</span>: <br /> professional websites <span
-        class="hidden xl:inline">made easy</span
-      >
+      <span class="text-accent dark:text-white">Director App</span>: <br /> an HDSP research group application
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Unlock boundless creativity at your fingertips: your gateway to innovative design.
-      </span>
-      Download now and embark on a journey to elevate your projects like never before.
+      Director App is part of the HDSP Research Group ecosystem and showcases the group's applied work in mobile
+      technologies.
     </Fragment>
 
     <div slot="actions" class="flex max-w-sm gap-4">
