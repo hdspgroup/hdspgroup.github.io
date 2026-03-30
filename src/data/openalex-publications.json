@@ -1,25 +1,26 @@
 {
   "source": "DOI.org metadata with OpenAlex DOI discovery",
   "authorId": "A5081714132",
-  "fetchedAt": "2026-03-23T09:04:32.554Z",
+  "fetchedAt": "2026-03-30T09:19:53.874Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 500,
-    "citedByCount": 4462,
+    "worksCount": 499,
+    "citedByCount": 4467,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
       "Industrial University of Santander",
       "Universidad de Santander",
-      "University of Santander"
+      "University of Santander",
+      "Universidad De Santander"
     ]
   },
   "totals": {
-    "openAlexWorks": 500,
+    "openAlexWorks": 499,
     "worksWithDoi": 466,
     "doiBackedWorks": 463,
-    "omittedWithoutDoiCount": 34,
+    "omittedWithoutDoiCount": 33,
     "omittedUnavailableMetadataCount": 3
   },
   "publications": [
