@@ -1,12 +1,12 @@
 {
   "source": "DOI.org metadata with OpenAlex DOI discovery",
   "authorId": "A5081714132",
-  "fetchedAt": "2026-03-30T09:19:53.874Z",
+  "fetchedAt": "2026-04-06T09:15:46.243Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 499,
-    "citedByCount": 4467,
+    "citedByCount": 4478,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -4742,6 +4742,34 @@
       "topics": []
     },
     {
+      "id": "https://openalex.org/W3213897796",
+      "title": "Cascaded Convolutional Generator Networks For Solving Imaging Inverse Problems",
+      "publicationDate": "2021-09-15",
+      "publicationYear": 2021,
+      "doi": "10.1109/stsiva53688.2021.9591668",
+      "doiUrl": "https://doi.org/10.1109/stsiva53688.2021.9591668",
+      "type": "proceedings-article",
+      "typeCrossref": "proceedings-article",
+      "authors": [
+        "Christian Arcos",
+        "Jorge Bacca",
+        "Juan M. Ramirez",
+        "Henry Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva53688.2021.9591668",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9591664/9591665/09591668.pdf?arnumber=9591668"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva53688.2021.9591668",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9591664/9591665/09591668.pdf?arnumber=9591668"
+      },
+      "venue": "2021 XXIII Symposium on Image, Signal Processing and Artificial Vision (STSIVA)",
+      "venueType": "proceedings-article",
+      "topics": []
+    },
+    {
       "id": "https://openalex.org/W3211855338",
       "title": "Compressive Spectral Video via Spectral-Amplitude Coding",
       "publicationDate": "2021-09-15",
@@ -4824,34 +4852,6 @@
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.1109/stsiva53688.2021.9592019",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9591664/9591665/09592019.pdf?arnumber=9592019"
-      },
-      "venue": "2021 XXIII Symposium on Image, Signal Processing and Artificial Vision (STSIVA)",
-      "venueType": "proceedings-article",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W3213897796",
-      "title": "Cascaded Convolutional Generator Networks For Solving Imaging Inverse Problems",
-      "publicationDate": "2021-09-15",
-      "publicationYear": 2021,
-      "doi": "10.1109/stsiva53688.2021.9591668",
-      "doiUrl": "https://doi.org/10.1109/stsiva53688.2021.9591668",
-      "type": "proceedings-article",
-      "typeCrossref": "proceedings-article",
-      "authors": [
-        "Christian Arcos",
-        "Jorge Bacca",
-        "Juan M. Ramirez",
-        "Henry Arguello"
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva53688.2021.9591668",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9591664/9591665/09591668.pdf?arnumber=9591668"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva53688.2021.9591668",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9591664/9591665/09591668.pdf?arnumber=9591668"
       },
       "venue": "2021 XXIII Symposium on Image, Signal Processing and Artificial Vision (STSIVA)",
       "venueType": "proceedings-article",
