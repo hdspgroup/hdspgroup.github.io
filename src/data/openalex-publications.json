@@ -1,19 +1,19 @@
 {
   "source": "DOI.org metadata with OpenAlex DOI discovery",
   "authorId": "A5081714132",
-  "fetchedAt": "2026-04-13T10:00:43.943Z",
+  "fetchedAt": "2026-04-20T10:03:22.660Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 499,
-    "citedByCount": 4489,
+    "citedByCount": 4496,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
       "Industrial University of Santander",
       "Universidad de Santander",
-      "University of Santander",
-      "Universidad De Santander"
+      "Universidad De Santander",
+      "University of Santander"
     ]
   },
   "totals": {
@@ -24,6 +24,34 @@
     "omittedUnavailableMetadataCount": 3
   },
   "publications": [
+    {
+      "id": "https://openalex.org/W4417080742",
+      "title": "UTOPY: Unrolling Algorithm Learning via Fidelity Homotopy for Inverse Problems",
+      "publicationDate": "2025-12-14",
+      "publicationYear": 2025,
+      "doi": "10.1109/camsap66162.2025.11423864",
+      "doiUrl": "https://doi.org/10.1109/camsap66162.2025.11423864",
+      "type": "proceedings-article",
+      "typeCrossref": "proceedings-article",
+      "authors": [
+        "Roman Jacome",
+        "Romario Gualdrón-Hurtado",
+        "Leon Suarez-Rodriguez",
+        "Henry Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/camsap66162.2025.11423864",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11423857/11423858/11423864.pdf?arnumber=11423864"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/camsap66162.2025.11423864",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11423857/11423858/11423864.pdf?arnumber=11423864"
+      },
+      "venue": "2025 IEEE 10th International Workshop on Computational Advances in Multi-Sensor Adaptive Processing (CAMSAP)",
+      "venueType": "proceedings-article",
+      "topics": []
+    },
     {
       "id": "https://openalex.org/W4417081420",
       "title": "DICE: Diffusion Consensus Equilibrium for Sparse-view CT Reconstruction",
@@ -620,31 +648,6 @@
       "topics": []
     },
     {
-      "id": "https://openalex.org/W4417080742",
-      "title": "UTOPY: Unrolling Algorithm Learning via Fidelity Homotopy for Inverse Problems",
-      "publicationDate": "2025-01-01",
-      "publicationYear": 2025,
-      "doi": "10.48550/ARXIV.2509.14394",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2509.14394",
-      "type": "article",
-      "typeCrossref": "article",
-      "authors": [
-        "Roman Jacome",
-        "Romario Gualdrón-Hurtado",
-        "Leon Suarez-Rodriguez",
-        "Henry Arguello"
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "https://arxiv.org/abs/2509.14394",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "arXiv",
-      "venueType": "article",
-      "topics": []
-    },
-    {
       "id": "https://openalex.org/W4407126457",
       "title": "Poststack Seismic Data Preconditioning via Dynamic Guided Learning",
       "publicationDate": "2025-01-01",
@@ -722,33 +725,6 @@
       "topics": []
     },
     {
-      "id": "https://openalex.org/W4406345348",
-      "title": "Physically Guided Deep Unsupervised Inversion for 1-D Magnetotelluric Models",
-      "publicationDate": "2025-01-01",
-      "publicationYear": 2025,
-      "doi": "10.1109/lgrs.2025.3528767",
-      "doiUrl": "https://doi.org/10.1109/lgrs.2025.3528767",
-      "type": "journal-article",
-      "typeCrossref": "journal-article",
-      "authors": [
-        "Paul Goyes-Peñafiel",
-        "Umair Bin Waheed",
-        "Henry Arguello"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/lgrs.2025.3528767",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/8859/10764750/10839036.pdf?arnumber=10839036"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/lgrs.2025.3528767",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/8859/10764750/10839036.pdf?arnumber=10839036"
-      },
-      "venue": "IEEE Geoscience and Remote Sensing Letters",
-      "venueType": "journal-article",
-      "topics": []
-    },
-    {
       "id": "https://openalex.org/W4407948297",
       "title": "CDDIP: Constrained Diffusion-Driven Deep Image Prior for Seismic Data Reconstruction",
       "publicationDate": "2025-01-01",
@@ -770,6 +746,33 @@
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.1109/lgrs.2025.3545860",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx8/8859/10764750/10904451.pdf?arnumber=10904451"
+      },
+      "venue": "IEEE Geoscience and Remote Sensing Letters",
+      "venueType": "journal-article",
+      "topics": []
+    },
+    {
+      "id": "https://openalex.org/W4406345348",
+      "title": "Physically Guided Deep Unsupervised Inversion for 1-D Magnetotelluric Models",
+      "publicationDate": "2025-01-01",
+      "publicationYear": 2025,
+      "doi": "10.1109/lgrs.2025.3528767",
+      "doiUrl": "https://doi.org/10.1109/lgrs.2025.3528767",
+      "type": "journal-article",
+      "typeCrossref": "journal-article",
+      "authors": [
+        "Paul Goyes-Peñafiel",
+        "Umair Bin Waheed",
+        "Henry Arguello"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/lgrs.2025.3528767",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/8859/10764750/10839036.pdf?arnumber=10839036"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/lgrs.2025.3528767",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/8859/10764750/10839036.pdf?arnumber=10839036"
       },
       "venue": "IEEE Geoscience and Remote Sensing Letters",
       "venueType": "journal-article",
