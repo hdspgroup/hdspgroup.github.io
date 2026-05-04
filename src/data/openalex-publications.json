@@ -1,7 +1,7 @@
 {
   "source": "DOI.org metadata with OpenAlex DOI discovery",
   "authorId": "A5081714132",
-  "fetchedAt": "2026-04-27T10:22:32.620Z",
+  "fetchedAt": "2026-05-04T10:18:27.328Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
@@ -12,8 +12,8 @@
     "institutions": [
       "Industrial University of Santander",
       "Universidad de Santander",
-      "University of Santander",
-      "Universidad De Santander"
+      "Universidad De Santander",
+      "University of Santander"
     ]
   },
   "totals": {
