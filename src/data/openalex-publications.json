@@ -1,19 +1,19 @@
 {
   "source": "DOI.org metadata with OpenAlex DOI discovery",
   "authorId": "A5081714132",
-  "fetchedAt": "2026-05-04T10:18:27.328Z",
+  "fetchedAt": "2026-05-11T11:29:55.834Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 499,
-    "citedByCount": 4503,
+    "citedByCount": 4509,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
       "Industrial University of Santander",
       "Universidad de Santander",
-      "Universidad De Santander",
-      "University of Santander"
+      "University of Santander",
+      "Universidad De Santander"
     ]
   },
   "totals": {
@@ -198,6 +198,34 @@
       "topics": []
     },
     {
+      "id": "https://openalex.org/W4414272222",
+      "title": "End-to-End Optimized DOE for Spatial Classification in Agricultural Imaging",
+      "publicationDate": "2025-08-27",
+      "publicationYear": 2025,
+      "doi": "10.1109/stsiva66383.2025.11156815",
+      "doiUrl": "https://doi.org/10.1109/stsiva66383.2025.11156815",
+      "type": "proceedings-article",
+      "typeCrossref": "proceedings-article",
+      "authors": [
+        "Sebastian Ardila Leal",
+        "Pablo Gómez",
+        "Hans García",
+        "Henry Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva66383.2025.11156815",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11156184/11156244/11156815.pdf?arnumber=11156815"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva66383.2025.11156815",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11156184/11156244/11156815.pdf?arnumber=11156815"
+      },
+      "venue": "2025 XXV Symposium of Image, Signal Processing, and Artificial Vision (STSIVA)",
+      "venueType": "proceedings-article",
+      "topics": []
+    },
+    {
       "id": "https://openalex.org/W4414272113",
       "title": "DistillPool: Knowledge Distillation Techniques for Single-Pixel Imaging",
       "publicationDate": "2025-08-27",
@@ -307,34 +335,6 @@
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.1109/stsiva66383.2025.11156301",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11156184/11156244/11156301.pdf?arnumber=11156301"
-      },
-      "venue": "2025 XXV Symposium of Image, Signal Processing, and Artificial Vision (STSIVA)",
-      "venueType": "proceedings-article",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4414272222",
-      "title": "End-to-End Optimized DOE for Spatial Classification in Agricultural Imaging",
-      "publicationDate": "2025-08-27",
-      "publicationYear": 2025,
-      "doi": "10.1109/stsiva66383.2025.11156815",
-      "doiUrl": "https://doi.org/10.1109/stsiva66383.2025.11156815",
-      "type": "proceedings-article",
-      "typeCrossref": "proceedings-article",
-      "authors": [
-        "Sebastian Ardila Leal",
-        "Pablo Gómez",
-        "Hans García",
-        "Henry Arguello"
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva66383.2025.11156815",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11156184/11156244/11156815.pdf?arnumber=11156815"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/stsiva66383.2025.11156815",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11156184/11156244/11156815.pdf?arnumber=11156815"
       },
       "venue": "2025 XXV Symposium of Image, Signal Processing, and Artificial Vision (STSIVA)",
       "venueType": "proceedings-article",
