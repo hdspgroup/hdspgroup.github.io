@@ -9,6 +9,9 @@ const DOI_CONCURRENCY = Number(process.env.DOI_CONCURRENCY ?? 4);
 const MAILTO = process.env.OPENALEX_MAILTO ?? '';
 const API_KEY = process.env.OPENALEX_API_KEY ?? '';
 const USER_AGENT = process.env.OPENALEX_USER_AGENT ?? 'hdspgroup-publications-sync/1.0';
+const SCHOLAR_AUTHOR_ID = process.env.GOOGLE_SCHOLAR_AUTHOR_ID ?? 'R7gjbGIAAAAJ';
+const SERPAPI_API_KEY = process.env.SERPAPI_API_KEY ?? '';
+const SERPAPI_MAX_ARTICLES = Math.min(Number(process.env.SERPAPI_MAX_ARTICLES ?? 100), 100);
 
 function buildUrl(base, params = {}) {
   const url = new URL(base);
@@ -45,9 +48,57 @@ async function fetchJson(url, headers = {}, attempt = 0) {
   return response.json();
 }
 
+async function fetchText(url, headers = {}, attempt = 0) {
+  const response = await fetch(url, {
+    headers: {
+      'User-Agent': USER_AGENT,
+      ...headers,
+    },
+  });
+
+  if (response.status === 429 && attempt < 3) {
+    await sleep(1000 * (attempt + 1));
+    return fetchText(url, headers, attempt + 1);
+  }
+
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`Request failed (${response.status} ${response.statusText}): ${body.slice(0, 500)}`);
+  }
+
+  return response.text();
+}
+
 function normalizeDoi(doiValue) {
   if (!doiValue) return null;
   return String(doiValue).replace(/^https?:\/\/doi\.org\//i, '').trim() || null;
+}
+
+function decodeHtmlEntities(value) {
+  return String(value ?? '')
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)))
+    .replace(/&#x([a-f0-9]+);/gi, (_, code) => String.fromCharCode(Number.parseInt(code, 16)))
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
+function htmlToText(value) {
+  return decodeHtmlEntities(String(value ?? '').replace(/<[^>]*>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function normalizeText(value) {
+  return String(value ?? '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
 }
 
 function normalizeTitle(value) {
@@ -62,6 +113,37 @@ function normalizeVenue(value) {
 
 function normalizeArguello(value) {
   return typeof value === 'string' ? value.replaceAll('Argüello', 'Arguello') : value;
+}
+
+function splitScholarAuthors(value) {
+  return String(value ?? '')
+    .split(/\s*,\s*/)
+    .map((author) => normalizeArguello(author.trim()))
+    .filter(Boolean);
+}
+
+function parseScholarYear(article) {
+  const directYear = Number(article?.year);
+  if (Number.isInteger(directYear)) return directYear;
+
+  const match = String(article?.publication ?? '').match(/\b(19|20)\d{2}\b/g);
+  return match?.length ? Number(match[match.length - 1]) : null;
+}
+
+function cleanScholarPublication(value, year) {
+  const publication = String(value ?? '').trim();
+  if (!publication) return null;
+
+  return publication
+    .replace(new RegExp(`\\s*,?\\s*${year}\\s*$`), '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function scholarUrl(pathname) {
+  if (!pathname) return null;
+  if (pathname.startsWith('http://') || pathname.startsWith('https://')) return pathname;
+  return `https://scholar.google.com${pathname.startsWith('/') ? '' : '/'}${pathname}`;
 }
 
 function formatAuthor(author) {
@@ -168,6 +250,121 @@ function normalizePublication(openalexWork, doiMetadata) {
   };
 }
 
+function normalizeScholarPublication(article) {
+  const year = parseScholarYear(article);
+  const title = normalizeTitle(article?.title) ?? 'Untitled work';
+  const authors = splitScholarAuthors(article?.authors);
+  const landingPageUrl = article?.link ?? null;
+
+  return {
+    id: article?.citation_id ? `google-scholar:${article.citation_id}` : `google-scholar:${normalizeText(title)}`,
+    title,
+    publicationDate: null,
+    publicationYear: year,
+    doi: null,
+    doiUrl: null,
+    type: 'scholar-article',
+    typeCrossref: null,
+    authors,
+    authorsCount: authors.length,
+    primaryLocation: {
+      landingPageUrl,
+      pdfUrl: null,
+    },
+    bestOaLocation: null,
+    venue: cleanScholarPublication(article?.publication, year),
+    venueType: null,
+    topics: [],
+    source: 'google_scholar',
+  };
+}
+
+function parseScholarProfileHtml(html) {
+  if (/unusual traffic|recaptcha|\/sorry\//i.test(html)) {
+    throw new Error('Google Scholar returned a verification page instead of the author profile.');
+  }
+
+  return Array.from(html.matchAll(/<tr class="gsc_a_tr">([\s\S]*?)<\/tr>/g))
+    .map(([, row]) => {
+      const titleMatch = row.match(
+        /<a\b(?=[^>]*\bclass="[^"]*\bgsc_a_at\b[^"]*")(?=[^>]*\bhref="([^"]+)")[^>]*>([\s\S]*?)<\/a>/
+      );
+      if (!titleMatch) return null;
+
+      const href = decodeHtmlEntities(titleMatch[1]);
+      const title = htmlToText(titleMatch[2]);
+      const details = Array.from(row.matchAll(/<div class="gs_gray">([\s\S]*?)<\/div>/g)).map((match) =>
+        htmlToText(match[1])
+      );
+      const year = row.match(/<span[^>]*class="[^"]*\bgsc_a_hc\b[^"]*"[^>]*>(\d{4})<\/span>/)?.[1] ?? null;
+      const citationId = href.match(/[?&]citation_for_view=([^&"]+)/)?.[1] ?? null;
+
+      return {
+        title,
+        link: scholarUrl(href),
+        citation_id: citationId ? decodeHtmlEntities(citationId) : null,
+        authors: details[0] ?? '',
+        publication: details[1] ?? '',
+        year,
+      };
+    })
+    .filter(Boolean);
+}
+
+function publicationKeys(publication) {
+  const keys = [];
+  const doi = normalizeDoi(publication.doi);
+  const title = normalizeText(publication.title);
+
+  if (doi) keys.push(`doi:${doi.toLowerCase()}`);
+  if (title) keys.push(`title:${title}`);
+
+  return keys;
+}
+
+function mergePublicationDetails(existing, incoming) {
+  const incomingYear = incoming.publicationYear ?? 0;
+  const existingYear = existing.publicationYear ?? 0;
+  const preferIncomingDetails = incoming.source === 'google_scholar' && incomingYear >= existingYear;
+  const base = preferIncomingDetails ? incoming : existing;
+  const supplemental = preferIncomingDetails ? existing : incoming;
+
+  return {
+    ...base,
+    doi: base.doi ?? supplemental.doi ?? null,
+    doiUrl: base.doiUrl ?? supplemental.doiUrl ?? null,
+    bestOaLocation: base.bestOaLocation ?? supplemental.bestOaLocation ?? null,
+    primaryLocation: {
+      landingPageUrl: base.primaryLocation?.landingPageUrl ?? supplemental.primaryLocation?.landingPageUrl ?? null,
+      pdfUrl: base.primaryLocation?.pdfUrl ?? supplemental.primaryLocation?.pdfUrl ?? null,
+    },
+    topics: base.topics?.length ? base.topics : supplemental.topics ?? [],
+  };
+}
+
+function mergePublications(openAlexPublications, scholarPublications) {
+  const merged = new Map();
+
+  for (const publication of [...openAlexPublications, ...scholarPublications]) {
+    const keys = publicationKeys(publication);
+    const existing = keys.map((key) => merged.get(key)).find(Boolean);
+
+    if (!existing) {
+      keys.forEach((key) => merged.set(key, publication));
+      continue;
+    }
+
+    const next = mergePublicationDetails(existing, publication);
+    publicationKeys(next).forEach((key) => merged.set(key, next));
+  }
+
+  return Array.from(new Set(merged.values())).sort((a, b) => {
+    const dateA = a.publicationDate ?? '';
+    const dateB = b.publicationDate ?? '';
+    return dateA < dateB ? 1 : dateA > dateB ? -1 : a.title.localeCompare(b.title);
+  });
+}
+
 async function fetchAuthorProfile() {
   const url = buildUrl(`https://api.openalex.org/authors/${AUTHOR_ID}`, {
     mailto: MAILTO,
@@ -206,6 +403,44 @@ async function fetchAllOpenAlexWorks() {
   return Array.from(new Map(works.map((work) => [work.id, work])).values());
 }
 
+async function fetchScholarPublications() {
+  if (SERPAPI_API_KEY) {
+    const url = buildUrl('https://serpapi.com/search.json', {
+      engine: 'google_scholar_author',
+      author_id: SCHOLAR_AUTHOR_ID,
+      hl: 'en',
+      sort: 'pubdate',
+      num: SERPAPI_MAX_ARTICLES,
+      api_key: SERPAPI_API_KEY,
+    });
+
+    const payload = await fetchJson(url);
+
+    if (payload.error) {
+      throw new Error(`SerpApi Google Scholar request failed: ${payload.error}`);
+    }
+
+    return (payload.articles ?? []).map(normalizeScholarPublication).filter((publication) => publication.publicationYear);
+  }
+
+  console.log('SERPAPI_API_KEY is not configured. Using Google Scholar public profile fallback.');
+
+  const url = buildUrl('https://scholar.google.com/citations', {
+    user: SCHOLAR_AUTHOR_ID,
+    hl: 'en',
+    cstart: 0,
+    pagesize: SERPAPI_MAX_ARTICLES,
+    sortby: 'pubdate',
+  });
+
+  const html = await fetchText(url, {
+    'User-Agent': 'Mozilla/5.0 hdspgroup-publications-sync/1.0',
+    Accept: 'text/html,application/xhtml+xml',
+  });
+
+  return parseScholarProfileHtml(html).map(normalizeScholarPublication).filter((publication) => publication.publicationYear);
+}
+
 async function fetchDoiMetadata(doi) {
   const citationUrl = buildUrl('https://citation.doi.org/metadata', { doi });
 
@@ -239,7 +474,11 @@ async function mapInBatches(items, concurrency, mapper) {
 }
 
 async function main() {
-  const [profile, works] = await Promise.all([fetchAuthorProfile(), fetchAllOpenAlexWorks()]);
+  const [profile, works, scholarPublications] = await Promise.all([
+    fetchAuthorProfile(),
+    fetchAllOpenAlexWorks(),
+    fetchScholarPublications(),
+  ]);
 
   const worksWithDoi = works.filter((work) => normalizeDoi(work.doi));
   const worksWithoutDoiCount = works.length - worksWithDoi.length;
@@ -256,23 +495,27 @@ async function main() {
     }
   });
 
-  const cleanedPublications = publications.filter(Boolean).sort((a, b) => {
+  const doiBackedPublications = publications.filter(Boolean).sort((a, b) => {
     const dateA = a.publicationDate ?? '';
     const dateB = b.publicationDate ?? '';
     return dateA < dateB ? 1 : dateA > dateB ? -1 : 0;
   });
+  const cleanedPublications = mergePublications(doiBackedPublications, scholarPublications);
 
   const data = {
-    source: 'DOI.org metadata with OpenAlex DOI discovery',
+    source: 'DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync',
     authorId: AUTHOR_ID,
+    scholarAuthorId: SCHOLAR_AUTHOR_ID,
     fetchedAt: new Date().toISOString(),
     profile,
     totals: {
       openAlexWorks: works.length,
       worksWithDoi: worksWithDoi.length,
-      doiBackedWorks: cleanedPublications.length,
+      doiBackedWorks: doiBackedPublications.length,
+      scholarWorks: scholarPublications.length,
+      mergedWorks: cleanedPublications.length,
       omittedWithoutDoiCount: worksWithoutDoiCount,
-      omittedUnavailableMetadataCount: worksWithDoi.length - cleanedPublications.length,
+      omittedUnavailableMetadataCount: worksWithDoi.length - doiBackedPublications.length,
     },
     publications: cleanedPublications,
   };
@@ -281,7 +524,8 @@ async function main() {
   await mkdir(path.dirname(absoluteOutputPath), { recursive: true });
   await writeFile(absoluteOutputPath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 
-  console.log(`Saved ${cleanedPublications.length} DOI-backed publications to ${OUTPUT_PATH}`);
+  console.log(`Saved ${cleanedPublications.length} merged publications to ${OUTPUT_PATH}`);
+  console.log(`Google Scholar publications merged: ${scholarPublications.length}`);
   console.log(`Omitted works without DOI: ${worksWithoutDoiCount}`);
 }
 

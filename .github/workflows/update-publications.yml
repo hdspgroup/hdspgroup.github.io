@@ -29,6 +29,8 @@ jobs:
           OPENALEX_AUTHOR_ID: A5081714132
           OPENALEX_MAILTO: hdsp@uis.edu.co
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          GOOGLE_SCHOLAR_AUTHOR_ID: R7gjbGIAAAAJ
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
         run: node ./scripts/fetch-openalex-publications.mjs
 
       - name: Commit updated dataset
