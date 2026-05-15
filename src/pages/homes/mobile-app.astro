@@ -1,0 +1,19 @@
+---
+const directorAppPath = '/homes/director-app';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${directorAppPath}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={directorAppPath} />
+    <title>Redirecting to DIRECTOR App</title>
+    <script is:inline>{`window.location.replace('${directorAppPath}');`}</script>
+  </head>
+  <body>
+    <script is:inline>{`window.location.replace('${directorAppPath}');`}</script>
+    <a href={directorAppPath}>DIRECTOR App</a>
+  </body>
+</html>
