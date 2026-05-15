@@ -7,7 +7,7 @@ export const headerData = {
       links: [
         {
           text: 'DIRECTOR App',
-          href: getPermalink('/homes/mobile-app'),
+          href: getPermalink('/homes/director-app'),
         },
       ],
     },

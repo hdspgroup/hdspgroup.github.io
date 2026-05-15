@@ -1,0 +1,51 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://github.com/arthelokyo/astrowind';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://github.com/arthelokyo/astrowind';
+const directorAppLogo = '~/assets/images/director-app-logo.jpg';
+
+const metadata = {
+  title: 'DIRECTOR App',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    tagline="DIRECTOR App"
+    image={{
+      src: directorAppLogo,
+      alt: 'DIRECTOR App logo',
+    }}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white">DIRECTOR App</span>: <br /> an HDSP app
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      DIRECTOR App is part of the HDSP Research Group ecosystem. It provides a user-friendly interface to access and explore the group's research output, projects, and news.
+    </Fragment>
+
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+  </Hero2>
+</Layout>
