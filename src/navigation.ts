@@ -12,25 +12,20 @@ export const headerData = {
       ],
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'About us',
-          href: getPermalink('/'),
-        },
-        {
-          text: 'People',
-          href: getPermalink('/people'),
-        },
-        {
-          text: 'Publications',
-          href: getPermalink('/publications'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-      ],
+      text: 'About us',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'People',
+      href: getPermalink('/people'),
+    },
+    {
+      text: 'Publications',
+      href: getPermalink('/publications'),
+    },
+    {
+      text: 'Contact',
+      href: getPermalink('/contact'),
     },
     {
       text: 'Events',
