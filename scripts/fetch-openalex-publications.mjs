@@ -11,7 +11,9 @@ const API_KEY = process.env.OPENALEX_API_KEY ?? '';
 const USER_AGENT = process.env.OPENALEX_USER_AGENT ?? 'hdspgroup-publications-sync/1.0';
 const SCHOLAR_AUTHOR_ID = process.env.GOOGLE_SCHOLAR_AUTHOR_ID ?? 'R7gjbGIAAAAJ';
 const SERPAPI_API_KEY = process.env.SERPAPI_API_KEY ?? '';
-const SERPAPI_MAX_ARTICLES = Math.min(Number(process.env.SERPAPI_MAX_ARTICLES ?? 100), 100);
+const SCHOLAR_PAGE_SIZE = Math.min(Number(process.env.GOOGLE_SCHOLAR_PAGE_SIZE ?? 100), 100);
+const SCHOLAR_MAX_ARTICLES = Number(process.env.GOOGLE_SCHOLAR_MAX_ARTICLES ?? 2000);
+const SCHOLAR_PAGE_DELAY_MS = Number(process.env.GOOGLE_SCHOLAR_PAGE_DELAY_MS ?? 750);
 
 function buildUrl(base, params = {}) {
   const url = new URL(base);
@@ -311,6 +313,38 @@ function parseScholarProfileHtml(html) {
     .filter(Boolean);
 }
 
+async function fetchScholarPublicProfileArticles() {
+  const articles = [];
+
+  for (let cstart = 0; cstart < SCHOLAR_MAX_ARTICLES; cstart += SCHOLAR_PAGE_SIZE) {
+    const pageSize = Math.min(SCHOLAR_PAGE_SIZE, SCHOLAR_MAX_ARTICLES - cstart);
+    const url = buildUrl('https://scholar.google.com/citations', {
+      user: SCHOLAR_AUTHOR_ID,
+      hl: 'en',
+      cstart,
+      pagesize: pageSize,
+      sortby: 'pubdate',
+    });
+
+    const html = await fetchText(url, {
+      'User-Agent': 'Mozilla/5.0 hdspgroup-publications-sync/1.0',
+      Accept: 'text/html,application/xhtml+xml',
+    });
+    const batch = parseScholarProfileHtml(html);
+    articles.push(...batch);
+
+    console.log(`Fetched ${batch.length} Google Scholar articles from offset ${cstart}.`);
+
+    if (batch.length < pageSize) {
+      break;
+    }
+
+    await sleep(SCHOLAR_PAGE_DELAY_MS);
+  }
+
+  return articles;
+}
+
 function publicationKeys(publication) {
   const keys = [];
   const doi = normalizeDoi(publication.doi);
@@ -410,7 +444,7 @@ async function fetchScholarPublications() {
       author_id: SCHOLAR_AUTHOR_ID,
       hl: 'en',
       sort: 'pubdate',
-      num: SERPAPI_MAX_ARTICLES,
+      num: SCHOLAR_PAGE_SIZE,
       api_key: SERPAPI_API_KEY,
     });
 
@@ -424,21 +458,8 @@ async function fetchScholarPublications() {
   }
 
   console.log('SERPAPI_API_KEY is not configured. Using Google Scholar public profile fallback.');
-
-  const url = buildUrl('https://scholar.google.com/citations', {
-    user: SCHOLAR_AUTHOR_ID,
-    hl: 'en',
-    cstart: 0,
-    pagesize: SERPAPI_MAX_ARTICLES,
-    sortby: 'pubdate',
-  });
-
-  const html = await fetchText(url, {
-    'User-Agent': 'Mozilla/5.0 hdspgroup-publications-sync/1.0',
-    Accept: 'text/html,application/xhtml+xml',
-  });
-
-  return parseScholarProfileHtml(html).map(normalizeScholarPublication).filter((publication) => publication.publicationYear);
+  return fetchScholarPublicProfileArticles()
+    .then((articles) => articles.map(normalizeScholarPublication).filter((publication) => publication.publicationYear));
 }
 
 async function fetchDoiMetadata(doi) {
