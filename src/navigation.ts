@@ -3,15 +3,6 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
-      links: [
-        {
-          text: 'DIRECTOR App',
-          href: getPermalink('/homes/director-app'),
-        },
-      ],
-    },
-    {
       text: 'About us',
       href: getPermalink('/'),
     },
@@ -30,6 +21,10 @@ export const headerData = {
     {
       text: 'Events',
       href: getBlogPermalink(),
+    },
+    {
+      text: 'DIRECTOR App',
+      href: getPermalink('/homes/director-app'),
     },
   ],
   actions: [
