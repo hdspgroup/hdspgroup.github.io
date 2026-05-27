@@ -51,7 +51,7 @@ const metadata = {
       {
         title: 'Interdisciplinary research',
         description:
-          'HDSP connects signal processing, imaging, optimization, and deep learning to address complex scientific problems.',
+          'HDSP connects signal processing, imaging, optimization, and artificial intelligence to address complex scientific problems.',
       },
       {
         title: 'State-of-the-art laboratories',
@@ -68,40 +68,88 @@ const metadata = {
     <Fragment slot="content">
       <p>
         Most HDSP research topics involve <strong>optimization techniques</strong> and
-        <strong> deep learning algorithms</strong>. This combination supports the design of new imaging systems, the
+        <strong> artificial intelligence algorithms</strong>. This combination supports the design of new imaging systems, the
         reconstruction of missing information, and advanced computational methods for high-dimensional data.
+      </p>
+      <p>
+        The group develops computational methods that transform complex measurements into useful information for science,
+        engineering, health, agriculture, and geophysics. Its work connects mathematical models, optical and computational
+        sensing, and AI-based inference to solve problems where data are large, incomplete, noisy, or difficult to acquire.
       </p>
     </Fragment>
   </Content>
 
   <Features2
     title="Research areas"
+    subtitle="Artificial Intelligence is the group's largest research axis and connects the rest of the areas through learning-based models, optimization, and data-driven sensing."
     tagline="What we study"
-    columns={2}
+    columns={4}
+    classes={{
+      items: {
+        container: 'lg:auto-rows-fr',
+        description:
+          'leading-relaxed [&_mark]:bg-transparent [&_mark]:font-semibold [&_mark]:text-default [&_mark]:underline [&_mark]:decoration-primary/40 [&_mark]:decoration-2 [&_mark]:underline-offset-4 dark:[&_mark]:text-white dark:[&_mark]:decoration-blue-300/50',
+      },
+    }}
     items={[
       {
-        title: 'Deep Learning',
+        title: 'Artificial Intelligence',
         description:
-          'Fundamental research in deep learning enables novel imaging systems to perform high-level tasks such as pose estimation and action recognition in privacy- and safety-sensitive contexts.',
+          'HDSP develops <mark>AI models</mark> for high-dimensional signals, images, and sensor data. The group works on <mark>learning-based reconstruction</mark>, <mark>classification</mark>, privacy-preserving task learning, and intelligent imaging systems for pose estimation, action recognition, and decision support.',
         icon: 'tabler:brain',
+        image: {
+          src: '~/assets/images/ai-magazine.png',
+          alt: 'Artificial intelligence optical layer and computational decoder diagram',
+        },
+        classes: {
+          panel:
+            'sm:col-span-2 lg:row-span-2 bg-primary text-white border-primary p-8 md:p-10 lg:min-h-[360px] shadow-[0_18px_45px_rgba(1,97,239,0.24)] dark:bg-primary dark:text-white dark:border-primary',
+          imageWrap: '-mx-8 -mt-8 mb-8 rounded-t-lg bg-[#f4e9eb] p-3 md:-mx-10 md:-mt-10',
+          image: 'h-36 !object-contain object-center sm:h-44 md:h-52',
+          icon: 'h-16 w-16 text-white',
+          title: 'text-3xl md:text-4xl text-white',
+          description:
+            'max-w-3xl text-white/85 md:text-lg [&_mark]:text-white [&_mark]:decoration-white/70 dark:[&_mark]:text-white',
+        },
       },
       {
         title: 'Spectral Imaging',
         description:
-          'Spectral images are a key tool for precision agriculture because they allow recognition of specific characteristics of vegetation and crops across multiple wavelengths.',
+          'The group designs <mark>spectral imaging systems</mark> that capture information across multiple wavelengths for <mark>precision agriculture</mark>, material analysis, crop monitoring, and visual patterns that standard RGB cameras cannot observe.',
         icon: 'tabler:leaf',
+        image: {
+          src: '~/assets/images/Grupos-HDSP-UIS-5.jpeg',
+          alt: 'HDSP optical laboratory equipment for spectral imaging research',
+        },
       },
       {
         title: 'Seismic Processing and Design',
         description:
-          'This line focuses on reconstructing missing seismic data with optimization techniques and deep learning approaches for both 2D and 3D seismic data.',
+          'HDSP combines <mark>optimization</mark> and <mark>artificial intelligence</mark> for 2D and 3D seismic data, recovering missing information, improving subsurface imaging, and designing more efficient sensing strategies for geophysical exploration.',
         icon: 'tabler:wave-sine',
+        image: {
+          src: '~/assets/images/seismic-reconstruction.png',
+          alt: 'Seismic reconstruction workflow with neural network and physics-guided loss',
+        },
+        classes: {
+          imageWrap: 'bg-white',
+          image: 'object-center',
+        },
       },
       {
         title: 'Computational Imaging',
         description:
-          'The group studies optical coding design and AI-driven reconstruction for tasks such as depth estimation, privacy-preserving imaging, and super-resolution.',
+          'This area connects <mark>optical coding</mark>, inverse problems, and AI-driven reconstruction for computational cameras, coded sensing systems, depth estimation, <mark>privacy-preserving imaging</mark>, super-resolution, and task-oriented visual analysis.',
         icon: 'tabler:camera',
+        image: {
+          src: '~/assets/images/computational-imaging.png',
+          alt: 'Computational imaging system with optical coding and digital decoding',
+        },
+        classes: {
+          panel: 'lg:col-span-2',
+          imageWrap: 'bg-black',
+          image: '!object-contain object-center hover:scale-100',
+        },
       },
     ]}
   />
