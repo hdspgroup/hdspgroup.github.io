@@ -19,26 +19,20 @@ const {
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
-  <div class="flex flex-wrap justify-center -m-4 text-center">
+  <div class="grid gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
     {
       stats &&
         stats.map(({ amount, title, icon }) => (
-          <div class="p-4 md:w-1/4 sm:w-1/2 w-full min-w-[220px] text-center md:border-r md:last:border-none dark:md:border-slate-500 intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
+          <div class="tech-panel p-6 text-center intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
             {icon && (
-              <div class="flex items-center justify-center mx-auto mb-4 text-primary">
+              <div class="flex h-12 w-12 items-center justify-center mx-auto mb-4 rounded-lg border border-primary/20 bg-primary/10 text-primary">
                 <Icon name={icon} class="w-10 h-10" />
               </div>
             )}
             {amount && (
-              <div class="font-heading text-primary text-[2.6rem] font-bold dark:text-white lg:text-5xl xl:text-6xl">
-                {amount}
-              </div>
+              <div class="font-heading text-primary text-[2.6rem] font-bold lg:text-5xl xl:text-6xl">{amount}</div>
             )}
-            {title && (
-              <div class="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
-                {title}
-              </div>
-            )}
+            {title && <div class="text-sm font-semibold uppercase text-muted lg:text-base">{title}</div>}
           </div>
         ))
     }

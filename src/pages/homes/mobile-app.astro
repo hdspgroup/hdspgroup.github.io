@@ -1,5 +1,6 @@
 ---
 const directorAppPath = '/homes/director-app';
+const redirectScript = `window.location.replace('${directorAppPath}');`;
 ---
 
 <!doctype html>
@@ -10,10 +11,10 @@ const directorAppPath = '/homes/director-app';
     <meta name="robots" content="noindex" />
     <link rel="canonical" href={directorAppPath} />
     <title>Redirecting to DIRECTOR App</title>
-    <script is:inline>{`window.location.replace('${directorAppPath}');`}</script>
+    <script is:inline set:html={redirectScript} />
   </head>
   <body>
-    <script is:inline>{`window.location.replace('${directorAppPath}');`}</script>
+    <script is:inline set:html={redirectScript} />
     <a href={directorAppPath}>DIRECTOR App</a>
   </body>
 </html>

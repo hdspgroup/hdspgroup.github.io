@@ -45,6 +45,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/hdspgroup' },
   ],
   footNote: `
-    Source code on <a class="text-blue-600 underline dark:text-muted" href="https://github.com/hdspgroup">GitHub</a> · All rights reserved.
+    Source code on <a class="text-primary underline" href="https://github.com/hdspgroup">GitHub</a> · All rights reserved.
   `,
 };
