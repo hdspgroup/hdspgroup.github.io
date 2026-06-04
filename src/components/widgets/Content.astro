@@ -41,47 +41,40 @@ const {
       subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
     }}
   />
-  <div class="mx-auto max-w-7xl p-4 md:px-8">
-    <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
-        {content && <div class="tech-panel mb-12 p-6 text-lg leading-8 dark:text-slate-300" set:html={content} />}
+  <div class="mx-auto max-w-6xl p-4 md:px-8">
+    <div class="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+      <div class={`self-stretch ${isReversed ? 'lg:order-2' : ''}`}>
+        {
+          content && (
+            <div
+              class="tech-panel h-full p-6 text-base leading-7 dark:text-slate-300 md:p-8 md:text-lg md:leading-8 [&_p+p]:mt-4"
+              set:html={content}
+            />
+          )
+        }
 
         {
           callToAction && (
-            <div class="mt-[-40px] mb-8 text-primary">
+            <div class="mt-4 text-primary">
               <Button variant="link" {...callToAction} />
             </div>
           )
         }
-
-        <ItemGrid
-          items={items}
-          columns={columns}
-          defaultIcon="tabler:check"
-          classes={{
-            container: `gap-y-4 md:gap-y-8`,
-            panel: 'max-w-none',
-            title: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
-            description: 'text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
-            icon: 'flex h-7 w-7 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary p-1',
-            action: 'text-lg font-medium leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
-          }}
-        />
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div aria-hidden="true" class={`self-stretch ${isReversed ? 'lg:order-1' : ''}`}>
         {
           image && (
-            <div class="tech-panel relative m-auto max-w-4xl p-2">
+            <div class="tech-panel relative h-full p-2">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto w-full rounded-md saturate-[1.08] contrast-[1.05]"
-                  width={500}
-                  height={500}
-                  widths={[400, 768]}
-                  sizes="(max-width: 768px) 100vw, 432px"
-                  layout="responsive"
+                  class="h-full min-h-[320px] w-full rounded-md object-cover saturate-[1.08] contrast-[1.05]"
+                  width={720}
+                  height={520}
+                  widths={[400, 720, 960]}
+                  sizes="(max-width: 1024px) 100vw, 520px"
+                  layout="cover"
                   {...image}
                 />
               )}
@@ -90,5 +83,19 @@ const {
         }
       </div>
     </div>
+    <ItemGrid
+      items={items}
+      columns={columns ?? 3}
+      defaultIcon="tabler:check"
+      classes={{
+        container: 'mt-6 gap-4 md:grid-cols-3 md:gap-6',
+        panel: 'tech-panel h-full max-w-none p-5',
+        title: 'text-base font-semibold leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+        description: 'text-justify hyphens-auto [text-align-last:left] text-sm leading-6 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
+        icon:
+          'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary p-1.5',
+        action: 'text-base font-semibold leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
+      }}
+    />
   </div>
 </WidgetWrapper>

@@ -150,10 +150,19 @@
 
 @keyframes tech-line-pass {
   0% {
-    transform: translateX(-120%);
+    background-position:
+      -55% 0,
+      0 0;
+  }
+  50% {
+    background-position:
+      50% 0,
+      0 0;
   }
   100% {
-    transform: translateX(120%);
+    background-position:
+      155% 0,
+      0 0;
   }
 }
 
@@ -313,11 +322,16 @@
   }
 
   .tech-hero-background img {
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
     object-fit: cover;
+    object-position: center center;
     filter: saturate(1.08) contrast(1.08);
     transform: scale(1.04);
+    transform-origin: center center;
   }
 
   .tech-hero-media::before {
@@ -388,11 +402,25 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-    height: 1px;
+    bottom: 0;
+    z-index: 3;
+    height: 3px;
     pointer-events: none;
-    background: linear-gradient(90deg, transparent, rgb(0 209 255 / 65%), transparent);
-    animation: tech-line-pass 8s ease-in-out infinite;
+    background:
+      linear-gradient(90deg, transparent, rgb(0 209 255 / 0%), rgb(0 209 255 / 78%), rgb(83 240 179 / 58%), transparent),
+      linear-gradient(90deg, transparent, rgb(0 209 255 / 24%), rgb(83 240 179 / 20%), rgb(0 209 255 / 24%), transparent);
+    background-repeat: no-repeat;
+    background-size:
+      44% 100%,
+      100% 100%;
+    background-position:
+      -55% 0,
+      0 0;
+    box-shadow:
+      0 0 18px rgb(0 209 255 / 24%),
+      0 0 32px rgb(83 240 179 / 12%);
+    opacity: 1;
+    animation: tech-line-pass 7s ease-in-out infinite;
   }
 
   .tech-section > div:not([aria-hidden='true']) {

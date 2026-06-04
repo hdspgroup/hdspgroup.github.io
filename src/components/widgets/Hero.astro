@@ -28,7 +28,7 @@ const {
     image && typeof image !== 'string' && (
       <div class="tech-hero-background" aria-hidden="true">
         <Image
-          class="w-full h-full object-cover"
+          class="block h-full w-full object-cover object-center"
           widths={[768, 1024, 1600, 2400]}
           sizes="100vw"
           loading="eager"
@@ -59,7 +59,7 @@ const {
         {
           title && (
             <h1
-              class="text-5xl md:text-7xl lg:text-8xl font-bold leading-none tracking-normal mb-6 font-heading text-heading dark:text-white intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
+              class="text-5xl md:text-7xl lg:text-8xl font-bold leading-none tracking-normal mb-8 md:mb-10 font-heading text-heading dark:text-white intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
               set:html={title}
             />
           )

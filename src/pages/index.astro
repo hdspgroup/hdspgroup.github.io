@@ -25,8 +25,8 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      HDSP is an interdisciplinary research group from the Computer Science Department focused on the next generation of
-      high-dimensional signal processing algorithms.
+      From Colombia to the world, HDSP advances artificial intelligence, inverse problems, and computational optics to
+      transform complex data into scientific discovery and high-impact innovation.
     </Fragment>
   </Hero>
 
@@ -35,7 +35,7 @@ const metadata = {
     stats={[
       { title: 'MinCiencias classification', amount: 'A1' },
       { title: 'Research laboratories', amount: '2' },
-      { title: 'Core research areas', amount: '4' },
+      { title: 'Core research areas', amount: '6' },
       { title: 'Home institution', amount: 'UIS' },
     ]}
   />
@@ -67,80 +67,68 @@ const metadata = {
   >
     <Fragment slot="content">
       <p>
-        Most HDSP research topics involve <strong>optimization techniques</strong> and
-        <strong> artificial intelligence algorithms</strong>. This combination supports the design of new imaging
-        systems, the reconstruction of missing information, and advanced computational methods for high-dimensional
-        data.
+        The HDSP Research Group in <strong>Algorithm Design and Multidimensional Data Processing</strong>, led by Prof.
+        Henry Arguello, conducts internationally oriented research in <strong>artificial intelligence</strong>, inverse
+        problems, and computational optics. Its work integrates advanced mathematics, null-space modeling, coded optics,
+        and AI agents to design algorithms capable of recovering information from incomplete, noisy, or indirect
+        measurements.
       </p>
       <p>
-        The group develops computational methods that transform complex measurements into useful information for
-        science, engineering, health, agriculture, and geophysics. Its work connects mathematical models, optical and
-        computational sensing, and AI-based inference to solve problems where data are large, incomplete, noisy, or
-        difficult to acquire.
+        These advances impact geophysics, communications, health, and precision agriculture, advancing cutting-edge
+        technology from Colombia with global reach to address scientific challenges with human benefit.
       </p>
     </Fragment>
   </Content>
 
   <Features2
     title="Research areas"
-    subtitle="Artificial Intelligence is the group's largest research axis and connects the rest of the areas through learning-based models, optimization, and data-driven sensing."
+    subtitle="Artificial Intelligence is the group's largest research axis and connects the rest of the areas through learning-based models, optimization, physics-aware reasoning, and high-dimensional data analysis."
     tagline="What we study"
     columns={4}
     classes={{
       items: {
-        container: 'lg:auto-rows-fr',
+        container: 'md:grid-cols-2 lg:grid-cols-6 lg:items-start',
         description:
-          'leading-relaxed [&_mark]:bg-transparent [&_mark]:font-semibold [&_mark]:text-default [&_mark]:underline [&_mark]:decoration-primary/40 [&_mark]:decoration-2 [&_mark]:underline-offset-4 dark:[&_mark]:text-white dark:[&_mark]:decoration-blue-300/50',
+          'text-justify hyphens-auto [text-align-last:left] leading-relaxed [&_mark]:bg-transparent [&_mark]:font-semibold [&_mark]:text-default [&_mark]:underline [&_mark]:decoration-primary/40 [&_mark]:decoration-2 [&_mark]:underline-offset-4 dark:[&_mark]:text-white dark:[&_mark]:decoration-blue-300/50',
       },
     }}
     items={[
       {
         title: 'Artificial Intelligence',
         description:
-          'HDSP develops <mark>AI models</mark> for high-dimensional signals, images, and sensor data. The group works on <mark>learning-based reconstruction</mark>, <mark>classification</mark>, privacy-preserving task learning, and intelligent imaging systems for pose estimation, action recognition, and decision support.',
+          'Artificial Intelligence combines <mark>numerical optimization</mark>, machine learning, data processing, and physical-mathematical principles to extract patterns, make inferences, and support decision-making in complex real-world problems. Beyond purely data-driven approaches, this line develops AI schemes that incorporate <mark>physical, mathematical, and structural relationships</mark> from the phenomena under study, enabling more interpretable, robust, and adaptable models for limited, noisy, or heterogeneous data. It focuses on fundamental methods for multimodal data analysis and high-level information extraction, with applications in computational optics, geophysical imaging, remote sensing, medical imaging, and related areas.',
         icon: 'tabler:brain',
         image: {
           src: '~/assets/images/ai-magazine.png',
           alt: 'Artificial intelligence optical layer and computational decoder diagram',
         },
         classes: {
-          panel: 'tech-panel sm:col-span-2 lg:row-span-2 p-8 md:p-10 lg:min-h-[360px]',
+          panel: 'tech-panel sm:col-span-2 lg:col-span-6 p-8 md:p-10 lg:min-h-[360px]',
           imageWrap: '-mx-8 -mt-8 mb-8 rounded-t-lg bg-[#081426] p-3 md:-mx-10 md:-mt-10',
           image: 'h-36 !object-contain object-center sm:h-44 md:h-52',
           icon: 'h-16 w-16 rounded-lg border border-secondary/30 bg-secondary/10 p-3 text-secondary',
           title: 'text-3xl md:text-4xl text-heading dark:text-white',
           description:
-            'max-w-3xl text-muted md:text-lg dark:text-slate-300 [&_mark]:text-heading [&_mark]:decoration-primary/70 dark:[&_mark]:text-white',
+            'w-full max-w-none text-muted md:text-lg dark:text-slate-300 [&_mark]:text-heading [&_mark]:decoration-primary/70 dark:[&_mark]:text-white',
         },
       },
       {
         title: 'Spectral Imaging',
         description:
-          'The group designs <mark>spectral imaging systems</mark> that capture information across multiple wavelengths for <mark>precision agriculture</mark>, material analysis, crop monitoring, and visual patterns that standard RGB cameras cannot observe.',
+          'Spectral Imaging combines <mark>optical design</mark>, data acquisition, signal processing, and computational algorithms to capture and interpret visual information beyond conventional intensity and color. These systems measure scene responses across multiple wavelengths, revealing physical, chemical, and material properties that standard images cannot observe. This line addresses the design, implementation, and characterization of optical and computational systems for spectral data acquisition, supporting high-level tasks such as <mark>classification</mark>, detection, identification, and material or object characterization.',
         icon: 'tabler:leaf',
         image: {
           src: '~/assets/images/Grupos-HDSP-UIS-5.jpeg',
           alt: 'HDSP optical laboratory equipment for spectral imaging research',
         },
-      },
-      {
-        title: 'Seismic Processing and Design',
-        description:
-          'HDSP combines <mark>optimization</mark> and <mark>artificial intelligence</mark> for 2D and 3D seismic data, recovering missing information, improving subsurface imaging, and designing more efficient sensing strategies for geophysical exploration.',
-        icon: 'tabler:wave-sine',
-        image: {
-          src: '~/assets/images/seismic-reconstruction.png',
-          alt: 'Seismic reconstruction workflow with neural network and physics-guided loss',
-        },
         classes: {
-          imageWrap: 'bg-white/80 dark:bg-white/5',
-          image: 'object-center',
+          panel: 'lg:col-span-2',
         },
       },
       {
         title: 'Computational Imaging',
         description:
-          'This area connects <mark>optical coding</mark>, inverse problems, and AI-driven reconstruction for computational cameras, coded sensing systems, depth estimation, <mark>privacy-preserving imaging</mark>, super-resolution, and task-oriented visual analysis.',
+          'Computational Imaging combines <mark>optical design</mark>, signal processing, and computational algorithms to capture, reconstruct, and interpret visual information beyond the limits of conventional photography. Instead of producing a directly faithful image of the scene, computational imaging systems co-design capture hardware and reconstruction algorithms to extract information that would otherwise remain inaccessible, including depth, spectrum, light field, temporal dynamics, and physical properties of materials.',
         icon: 'tabler:camera',
         image: {
           src: '~/assets/images/computational-imaging.png',
@@ -152,6 +140,51 @@ const metadata = {
           image: '!object-contain object-center hover:scale-100',
         },
       },
+      {
+        title: 'Seismic Processing and Design',
+        description:
+          'Seismic Processing and Design integrates data acquisition, physical-mathematical modeling, signal processing, and <mark>artificial intelligence</mark> to reconstruct and interpret subsurface information from indirect measurements. Instead of depending only on dense and regular acquisition geometries, this line explores computational strategies and physics-guided models that operate under sparse, irregular, or incomplete sampling. Through inversion algorithms, neural networks, and advanced reconstruction methods, it aims to image the subsurface, characterize geological structures, improve seismic interpretation, and extract relevant information from limited or complex data.',
+        icon: 'tabler:wave-sine',
+        image: {
+          src: '~/assets/images/seismic-reconstruction.png',
+          alt: 'Seismic reconstruction workflow with neural network and physics-guided loss',
+        },
+        classes: {
+          panel: 'lg:col-span-2',
+          imageWrap: 'bg-white/80 dark:bg-white/5',
+          image: 'object-center',
+        },
+      },
+      {
+        title: 'Multidimensional Data Processing',
+        description:
+          'Multidimensional Data Processing combines advanced signal processing, <mark>artificial intelligence</mark>, mathematical representation, and computational algorithms to analyze, reconstruct, and interpret information contained in high-dimensional data. This line addresses complex data with multiple spatial, temporal, spectral, or structural dimensions, including images, video, signals, spectral data, and high-dimensional arrays. Its goal is to design and implement methods for representation, compression, reconstruction, and relevant information extraction, supporting classification, detection, estimation, prediction, and decision-making tasks.',
+        icon: 'tabler:chart-dots-3',
+        image: {
+          src: '~/assets/images/multidimensional-data-processing.png',
+          alt: 'Multidimensional data processing workflow with signals, data cubes, and AI analysis',
+        },
+        classes: {
+          panel: 'lg:col-span-3',
+          imageWrap: 'bg-[#030b18]',
+          image: 'object-center',
+        },
+      },
+      {
+        title: 'Artificial Intelligence Agents',
+        description:
+          'Artificial Intelligence Agents are <mark>autonomous computational systems</mark> capable of making decisions through interaction with their environment. During training, an agent observes the current state, uses a deep neural network to choose actions aligned with a long-term goal, receives a new state and a reward or penalty, and adjusts its behavior to <mark>maximize future accumulated rewards</mark>. After training, agents can predict how an environment may evolve from observations and select decisions that best serve the task. Their applications include robotics, videogames, autonomous vehicles, recommender systems, virtual assistants, and <mark>optimization models</mark> for logistics, finance, medicine, and industrial automation.',
+        icon: 'tabler:robot',
+        image: {
+          src: '~/assets/images/artificial-intelligence-agents.png',
+          alt: 'Artificial intelligence agents interacting with autonomous systems and decision-making environments',
+        },
+        classes: {
+          panel: 'lg:col-span-3',
+          imageWrap: 'bg-[#030b18]',
+          image: 'object-center',
+        },
+      },
     ]}
   />
 
@@ -159,6 +192,11 @@ const metadata = {
     title="Collaborations and distinctions"
     tagline="Academic reach"
     columns={4}
+    classes={{
+      items: {
+        description: 'text-justify hyphens-auto [text-align-last:left]',
+      },
+    }}
     items={[
       {
         title: 'International collaborations',
