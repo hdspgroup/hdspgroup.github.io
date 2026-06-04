@@ -18,9 +18,9 @@ metadata:
   openGraph:
     site_name: HDSP Research Group
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/social-preview.png'
         width: 1200
-        height: 628
+        height: 630
     type: website
   twitter:
     handle: null
