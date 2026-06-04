@@ -58,10 +58,11 @@ const totals = dataset.totals;
 const scholarProfileUrl = 'https://scholar.google.com/citations?user=R7gjbGIAAAAJ&hl=en';
 const normalizeArguello = (value: string) => value.replaceAll('Argüello', 'Arguello');
 const profileName = normalizeArguello(profile.name);
+const profileDisplayName = `Professor ${profileName}`;
 
 const metadata = {
   title: 'Publications',
-  description: `Publications for ${profileName}.`,
+  description: `Publications for ${profileDisplayName}.`,
 };
 
 const formatDate = (value: string | null) =>
@@ -109,7 +110,7 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
 <Layout metadata={metadata}>
   <HeroText
     tagline="Publications"
-    title={`Research output by ${profileName}`}
+    title={`Research output by ${profileDisplayName}`}
     subtitle={`Weekly updated.`}
     callToAction={{
       text: 'Google Scholar profile',
@@ -135,10 +136,11 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
       { title: 'Visible works', amount: String(publications.length) },
       { title: 'Profile works', amount: String(totals.openAlexWorks ?? profile.worksCount) },
       { title: 'Years covered', amount: String(years.length) },
+      { title: 'Works with DOI', amount: String(totals.worksWithDoi ?? totals.doiBackedWorks) },
     ]}
   />
 
-  <WidgetWrapper containerClass="max-w-7xl mx-auto pt-0 md:pt-0 lg:pt-0">
+  <WidgetWrapper containerClass="max-w-7xl mx-auto">
     <Headline
       title="Publication list"
       subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}.<br />Last synchronized on ${latestUpdate}.`}

@@ -22,34 +22,18 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 ---
 
 <article
-  class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ${image ? 'md:grid-cols-2' : ''}`}
+  class={`tech-panel mx-auto grid max-w-5xl overflow-hidden p-0 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ${
+    image ? 'lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]' : ''
+  }`}
 >
   {
     image &&
       (link ? (
-        <a class="tech-panel relative block group p-2" href={link ?? 'javascript:void(0)'}>
-          <div class="relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden rounded-md bg-gray-900">
-            {image && (
-              <Image
-                src={image}
-                class="absolute inset-0 object-cover w-full h-full mb-6 rounded-md bg-gray-900 transition duration-300 group-hover:scale-[1.03]"
-                widths={[400, 900]}
-                width={900}
-                sizes="(max-width: 900px) 400px, 900px"
-                alt={post.title}
-                aspectRatio="16:9"
-                loading="lazy"
-                decoding="async"
-              />
-            )}
-          </div>
-        </a>
-      ) : (
-        <div class="tech-panel relative h-0 pb-[56.25%] md:pb-[75%] md:h-72 lg:pb-[56.25%] overflow-hidden p-2">
-          {image && (
+        <a class="group relative block h-full bg-[#030b18] p-2" href={link ?? 'javascript:void(0)'}>
+          <div class="relative h-64 overflow-hidden rounded-md bg-[#030b18] sm:h-80 lg:h-full lg:min-h-[320px]">
             <Image
               src={image}
-              class="absolute inset-2 object-cover w-[calc(100%-1rem)] h-[calc(100%-1rem)] mb-6 rounded-md bg-gray-900"
+              class="h-full w-full rounded-md bg-[#030b18] object-cover transition duration-300 group-hover:scale-[1.03]"
               widths={[400, 900]}
               width={900}
               sizes="(max-width: 900px) 400px, 900px"
@@ -58,42 +42,61 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
               loading="lazy"
               decoding="async"
             />
-          )}
+          </div>
+        </a>
+      ) : (
+        <div class="relative h-64 overflow-hidden bg-[#030b18] p-2 sm:h-80 lg:h-full lg:min-h-[320px]">
+          <Image
+            src={image}
+            class="h-full w-full rounded-md bg-[#030b18] object-cover"
+            widths={[400, 900]}
+            width={900}
+            sizes="(max-width: 900px) 400px, 900px"
+            alt={post.title}
+            aspectRatio="16:9"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       ))
   }
-  <div class="mt-2">
+
+  <div class="flex flex-col justify-center p-6 md:p-8">
     <header>
-      <div class="mb-1">
-        <span class="text-sm">
-          <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
-          <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
-          {
-            post.author && (
-              <>
-                {' '}
-                · <Icon name="tabler:user" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
-                <span>{post.author.replaceAll('-', ' ')}</span>
-              </>
-            )
-          }
-          {
-            post.category && (
-              <>
-                {' '}
-                ·{' '}
-                <a class="hover:underline" href={getPermalink(post.category.slug, 'category')}>
-                  {post.category.title}
-                </a>
-              </>
-            )
-          }
+      <div class="mb-4 flex flex-wrap items-center gap-2 text-sm text-muted">
+        <span
+          class="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/10 px-3 py-1 font-semibold text-primary"
+        >
+          <Icon name="tabler:clock" class="h-4 w-4" />
+          <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
         </span>
+
+        {
+          post.author && (
+            <span class="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-1">
+              <Icon name="tabler:user" class="h-4 w-4 text-primary" />
+              <span>{post.author.replaceAll('-', ' ')}</span>
+            </span>
+          )
+        }
+
+        {
+          post.category && (
+            <a
+              class="inline-flex items-center gap-1.5 rounded-lg border border-secondary/20 bg-secondary/10 px-3 py-1 font-semibold text-secondary hover:text-primary"
+              href={getPermalink(post.category.slug, 'category')}
+            >
+              <Icon name="tabler:calendar-event" class="h-4 w-4" />
+              {post.category.title}
+            </a>
+          )
+        }
       </div>
-      <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
+
+      <h2 class="mb-3 font-heading text-2xl font-bold leading-tight text-heading dark:text-white sm:text-3xl">
         {
           link ? (
-            <a class="inline-block hover:text-primary transition ease-in duration-200" href={link}>
+            <a class="inline-block transition duration-200 ease-in hover:text-primary" href={link}>
               {post.title}
             </a>
           ) : (
@@ -103,7 +106,12 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       </h2>
     </header>
 
-    {post.excerpt && <p class="flex-grow text-muted dark:text-slate-400 text-lg">{post.excerpt}</p>}
+    {
+      post.excerpt && (
+        <p class="text-justify text-base leading-7 text-muted dark:text-slate-400 md:text-lg">{post.excerpt}</p>
+      )
+    }
+
     {
       post.tags && Array.isArray(post.tags) ? (
         <footer class="mt-5">
