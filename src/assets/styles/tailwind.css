@@ -397,8 +397,8 @@
     opacity: 0.55;
   }
 
-  .tech-section::after {
-    content: '';
+  .tech-section::after,
+  .tech-hero-divider {
     position: absolute;
     left: 0;
     right: 0;
@@ -421,6 +421,10 @@
       0 0 32px rgb(83 240 179 / 12%);
     opacity: 1;
     animation: tech-line-pass 7s ease-in-out infinite;
+  }
+
+  .tech-section::after {
+    content: '';
   }
 
   .tech-section > div:not([aria-hidden='true']) {
@@ -549,6 +553,10 @@
     color: rgb(2 8 23);
     background: linear-gradient(135deg, rgb(0 209 255), rgb(83 240 179));
     box-shadow: 0 10px 32px rgb(0 209 255 / 22%);
+  }
+
+  .dark .tech-panel .tech-kicker {
+    color: rgb(2 8 23);
   }
 
   .tech-chip {
