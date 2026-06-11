@@ -20,14 +20,14 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 <article
   class="mb-6 transition intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade"
 >
-  <div class="tech-panel relative md:h-64 bg-gray-900 p-2 mb-6">
+  <div class="tech-panel relative mb-6 bg-white/80 p-2 dark:bg-gray-900 md:h-64">
     {
       image &&
         (link ? (
           <a href={link}>
             <Image
               src={image}
-              class="w-full md:h-full rounded-md bg-gray-900 transition duration-300 hover:scale-[1.03]"
+              class="w-full rounded-md bg-white/80 transition duration-300 hover:scale-[1.03] dark:bg-gray-900 md:h-full"
               widths={[400, 900]}
               width={400}
               sizes="(max-width: 900px) 400px, 900px"
@@ -41,7 +41,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         ) : (
           <Image
             src={image}
-            class="w-full md:h-full rounded-md bg-gray-900"
+            class="w-full rounded-md bg-white/80 dark:bg-gray-900 md:h-full"
             widths={[400, 900]}
             width={400}
             sizes="(max-width: 900px) 400px, 900px"

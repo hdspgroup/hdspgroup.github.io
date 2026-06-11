@@ -133,10 +133,18 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <Stats
     title="At a glance"
     stats={[
-      { title: 'Visible works', amount: String(publications.length) },
-      { title: 'Profile works', amount: String(totals.openAlexWorks ?? profile.worksCount) },
-      { title: 'Years covered', amount: String(years.length) },
-      { title: 'Works with DOI', amount: String(totals.worksWithDoi ?? totals.doiBackedWorks) },
+      { title: 'Visible works', amount: String(publications.length), classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-red' } },
+      {
+        title: 'Profile works',
+        amount: String(totals.openAlexWorks ?? profile.worksCount),
+        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-yellow' },
+      },
+      { title: 'Years covered', amount: String(years.length), classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-green' } },
+      {
+        title: 'Works with DOI',
+        amount: String(totals.worksWithDoi ?? totals.doiBackedWorks),
+        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-blue' },
+      },
     ]}
   />
 
@@ -146,21 +154,21 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
       subtitle={`Primary institution: ${profile.institutions[0] ?? 'Not available'}.<br />Last synchronized on ${latestUpdate}.`}
     />
 
-    <div class="space-y-6">
+    <div class="space-y-5">
       {
         groupedPublications.map(({ year, publications: items }, index) => (
-          <details class="border-t border-primary/20 py-6" open={index < 3}>
+          <details class="border-t border-primary/20 py-5" open={index < 3}>
             <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3">
               <div>
-                <h2 class="text-2xl font-bold font-heading dark:text-white">{year}</h2>
+                <h2 class="text-xl font-bold font-heading dark:text-white">{year}</h2>
                 <p class="text-sm text-muted">{items.length} publications</p>
               </div>
               <span class="text-sm font-semibold text-primary">Toggle year</span>
             </summary>
 
-            <div class="mt-6 space-y-4">
+            <div class="mt-5 space-y-3">
               {items.map((publication) => (
-                <article class="tech-panel p-5">
+                <article class="tech-panel p-4">
                   <div class="flex flex-wrap items-start justify-between gap-4">
                     <div class="max-w-4xl">
                       <h3 class="text-lg font-semibold font-heading dark:text-white">

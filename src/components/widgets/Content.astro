@@ -37,17 +37,17 @@ const {
     tagline={tagline}
     classes={{
       container: 'max-w-xl sm:mx-auto lg:max-w-2xl',
-      title: 'text-4xl md:text-5xl font-bold tracking-normal mb-4 font-heading',
-      subtitle: 'max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400',
+      title: 'text-2xl md:text-3xl font-bold tracking-normal mb-3 font-heading',
+      subtitle: 'max-w-2xl mx-auto sm:text-center text-base md:text-lg text-muted dark:text-slate-400',
     }}
   />
-  <div class="mx-auto max-w-6xl p-4 md:px-8">
-    <div class="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+  <div class="mx-auto max-w-6xl p-2 md:px-4">
+    <div class="grid gap-5 lg:grid-cols-2 lg:items-stretch">
       <div class={`self-stretch ${isReversed ? 'lg:order-2' : ''}`}>
         {
           content && (
             <div
-              class="tech-panel h-full p-6 text-base leading-7 dark:text-slate-300 md:p-8 md:text-lg md:leading-8 [&_p+p]:mt-4"
+              class="tech-panel h-full p-5 text-base leading-7 dark:text-slate-300 md:p-6 [&_p+p]:mt-4"
               set:html={content}
             />
           )
@@ -69,7 +69,7 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="h-full min-h-[320px] w-full rounded-md object-cover saturate-[1.08] contrast-[1.05]"
+                  class="h-full min-h-[260px] w-full rounded-md object-cover saturate-[1.08] contrast-[1.05]"
                   width={720}
                   height={520}
                   widths={[400, 720, 960]}
@@ -88,12 +88,12 @@ const {
       columns={columns ?? 3}
       defaultIcon="tabler:check"
       classes={{
-        container: 'mt-6 gap-4 md:grid-cols-3 md:gap-6',
-        panel: 'tech-panel h-full max-w-none p-5',
+        container: 'mt-5 gap-4 md:grid-cols-3 md:gap-5',
+        panel: 'tech-panel h-full max-w-none p-4',
         title: 'text-base font-semibold leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
-        description: 'text-justify hyphens-auto [text-align-last:left] text-sm leading-6 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
-        icon:
-          'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary p-1.5',
+        description:
+          'text-justify hyphens-auto [text-align-last:left] text-sm leading-6 text-muted dark:text-slate-400 ml-2 rtl:ml-0 rtl:mr-2',
+        icon: 'flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary p-1.5',
         action: 'text-base font-semibold leading-6 dark:text-white ml-2 rtl:ml-0 rtl:mr-2',
       }}
     />

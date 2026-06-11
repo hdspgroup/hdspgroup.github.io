@@ -3,8 +3,11 @@ import hdspLogo from '~/assets/images/hdsplogo.svg';
 ---
 
 <span
-  class="flex items-center gap-3 rounded-lg border border-primary/30 bg-[#071527cc] px-2.5 py-1.5 shadow-[0_10px_30px_rgba(0,0,0,0.18)] backdrop-blur dark:bg-white/5"
+  class="flex items-center gap-2.5 rounded-lg border border-primary/20 bg-white/80 px-2 py-1.5 shadow-[0_10px_24px_rgba(49,58,72,0.09)] backdrop-blur dark:border-primary/30 dark:bg-white/5 dark:shadow-[0_10px_30px_rgba(0,0,0,0.18)]"
 >
-  <img src={hdspLogo.src} alt="HDSP logo" class="h-10 md:h-9 w-auto" />
-  <span class="text-xl md:text-lg font-bold text-white whitespace-nowrap"> HDSP </span>
+  <img src={hdspLogo.src} alt="HDSP logo" class="h-9 md:h-8 w-auto" />
+  <span class="leading-none">
+    <span class="block text-lg md:text-base font-bold text-heading whitespace-nowrap dark:text-white">HDSP</span>
+    <span class="hidden text-[0.62rem] font-semibold uppercase text-muted md:block">Research Group</span>
+  </span>
 </span>

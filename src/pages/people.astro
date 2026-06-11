@@ -57,10 +57,22 @@ const getInitials = (name: string) =>
   <Stats
     title="Team overview"
     stats={[
-      { title: 'People listed', amount: String(totalMembers) },
-      { title: 'Student researchers', amount: String(studentResearchers) },
-      { title: 'Collaborators', amount: String(collaboratorsCount) },
-      { title: 'Categories', amount: String(peopleCategories.length + 1) },
+      { title: 'People listed', amount: String(totalMembers), classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-red' } },
+      {
+        title: 'Student researchers',
+        amount: String(studentResearchers),
+        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-yellow' },
+      },
+      {
+        title: 'Collaborators',
+        amount: String(collaboratorsCount),
+        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-green' },
+      },
+      {
+        title: 'Categories',
+        amount: String(peopleCategories.length + 1),
+        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-blue' },
+      },
     ]}
   />
 
@@ -72,10 +84,10 @@ const getInitials = (name: string) =>
     />
 
     <article class="tech-panel overflow-hidden">
-      <div class="grid gap-0 lg:grid-cols-[320px_minmax(0,1fr)]">
-        <div class="border-b border-primary/20 bg-white/45 p-6 dark:bg-white/5 lg:border-b-0 lg:border-r">
+      <div class="grid gap-0 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <div class="border-b border-primary/20 bg-white/45 p-5 dark:bg-white/5 lg:border-b-0 lg:border-r">
           <div
-            class="mx-auto max-w-[260px] overflow-hidden rounded-lg border border-primary/20 bg-white/60 shadow-lg dark:bg-white/5"
+            class="mx-auto max-w-[220px] overflow-hidden rounded-lg border border-primary/20 bg-white/60 shadow-lg dark:bg-white/5"
           >
             <Image
               src={principalInvestigator.image}
@@ -89,17 +101,17 @@ const getInitials = (name: string) =>
           </div>
         </div>
 
-        <div class="p-8 md:p-10">
-          <div class="flex flex-wrap items-start justify-between gap-6">
+        <div class="p-5 md:p-6">
+          <div class="flex flex-wrap items-start justify-between gap-5">
             <div class="max-w-3xl">
-              <p class="tech-kicker mb-4">HDSP leadership</p>
-              <h2 class="font-heading text-3xl font-bold tracking-normal text-heading dark:text-white">
+              <p class="tech-kicker mb-3">HDSP leadership</p>
+              <h2 class="font-heading text-2xl font-bold tracking-normal text-heading dark:text-white">
                 {principalInvestigator.name}
               </h2>
-              <p class="mt-3 max-w-3xl text-lg text-muted dark:text-slate-300">{principalInvestigator.title}</p>
+              <p class="mt-2 max-w-3xl text-base text-muted dark:text-slate-300">{principalInvestigator.title}</p>
               {
                 principalInvestigator.description && (
-                  <p class="mt-5 max-w-3xl text-base leading-7 text-muted dark:text-slate-300">
+                  <p class="mt-4 max-w-3xl text-sm leading-6 text-muted dark:text-slate-300">
                     {principalInvestigator.description}
                   </p>
                 )
@@ -119,10 +131,10 @@ const getInitials = (name: string) =>
             }
           </div>
 
-          <div class="mt-8">
+          <div class="mt-6">
             <h3 class="text-sm font-semibold uppercase text-secondary">Research interests</h3>
-            <div class="mt-4 flex flex-wrap gap-3">
-              {principalInvestigator.interests.map((interest) => <span class="tech-chip px-4 py-2">{interest}</span>)}
+            <div class="mt-3 flex flex-wrap gap-2">
+              {principalInvestigator.interests.map((interest) => <span class="tech-chip px-3 py-1.5">{interest}</span>)}
             </div>
           </div>
         </div>
@@ -137,41 +149,41 @@ const getInitials = (name: string) =>
       tagline="By category"
     />
 
-    <div class="space-y-8">
+    <div class="space-y-6">
       {
         peopleCategories.map((category) => (
-          <section class="border-t border-primary/20 py-8 md:py-10">
-            <div class="mb-8 flex flex-wrap items-start justify-between gap-6">
+          <section class="border-t border-primary/20 py-6 md:py-8">
+            <div class="mb-5 flex flex-wrap items-start justify-between gap-5">
               <div class="max-w-3xl">
-                <div class="flex items-center gap-4">
-                  <span class="inline-flex h-12 w-12 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary">
-                    <Icon name={category.icon} class="h-6 w-6" />
+                <div class="flex items-center gap-3">
+                  <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-primary/20 bg-primary/10 text-primary">
+                    <Icon name={category.icon} class="h-5 w-5" />
                   </span>
                   <div>
-                    <h2 class="font-heading text-2xl font-bold text-heading dark:text-white">{category.title}</h2>
+                    <h2 class="font-heading text-xl font-bold text-heading dark:text-white">{category.title}</h2>
                     <p class="mt-1 text-sm uppercase text-secondary">{category.members.length} members</p>
                   </div>
                 </div>
-                <p class="mt-4 text-base leading-7 text-muted">{category.description}</p>
+                <p class="mt-3 text-sm leading-6 text-muted">{category.description}</p>
               </div>
             </div>
 
             <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {category.members.map((member) => (
-                <article class="tech-panel group p-5 transition-transform duration-200 hover:-translate-y-1">
-                  <div class="flex items-start gap-4">
-                    <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-secondary text-sm font-bold text-slate-950 shadow-md">
+                <article class="tech-panel group p-4 transition-transform duration-200 hover:-translate-y-1">
+                  <div class="flex items-start gap-3">
+                    <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[linear-gradient(90deg,rgb(255_38_0)_0_10%,transparent_10%_15%,rgb(255_251_0)_15%_25%,transparent_25%_30%,rgb(45_174_54)_30%_40%,transparent_40%_45%,rgb(4_51_255)_45%_58%,transparent_58%_100%),rgb(4_51_255)] bg-[length:100%_3px,100%_100%] bg-[position:0_0,0_0] bg-no-repeat text-xs font-bold text-white shadow-md [text-shadow:0_1px_2px_rgb(0_0_0_/_65%)]">
                       {getInitials(member.name)}
                     </div>
                     <div class="min-w-0">
-                      <h3 class="font-heading text-lg font-semibold text-heading dark:text-white">{member.name}</h3>
+                      <h3 class="font-heading text-base font-semibold text-heading dark:text-white">{member.name}</h3>
                       <p class="mt-2 text-sm leading-6 text-muted">{member.title}</p>
                       {member.description && <p class="mt-3 text-sm leading-6 text-muted">{member.description}</p>}
                     </div>
                   </div>
 
                   {member.links && member.links.length > 0 && (
-                    <div class="mt-5 flex flex-wrap gap-3 border-t border-primary/20 pt-4">
+                    <div class="mt-4 flex flex-wrap gap-2 border-t border-primary/20 pt-3">
                       {member.links.map((link) => (
                         <Button href={link.href} target="_blank" variant="link" icon={link.icon}>
                           {link.label}

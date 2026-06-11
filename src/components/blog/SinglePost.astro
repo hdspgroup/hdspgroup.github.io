@@ -18,7 +18,7 @@ export interface Props {
 const { post, url } = Astro.props;
 ---
 
-<section class="py-8 sm:py-16 lg:py-20 mx-auto">
+<section class="py-8 sm:py-12 lg:py-14 mx-auto">
   <article>
     <header
       class={post.image
@@ -60,7 +60,7 @@ const { post, url } = Astro.props;
       </div>
 
       <h1
-        class="px-4 sm:px-6 max-w-3xl mx-auto text-4xl md:text-5xl font-bold leading-tight tracking-normal font-heading"
+        class="px-4 sm:px-6 max-w-3xl mx-auto text-3xl md:text-4xl font-bold leading-tight tracking-normal font-heading"
       >
         {post.title}
       </h1>
@@ -75,7 +75,7 @@ const { post, url } = Astro.props;
           <div class="tech-panel max-w-full lg:max-w-[900px] mx-auto mb-6 p-2">
             <Image
               src={post.image}
-              class="w-full rounded-md bg-gray-900"
+              class="w-full rounded-md bg-white/80 dark:bg-gray-900"
               widths={[400, 900]}
               sizes="(max-width: 900px) 400px, 900px"
               alt={post?.excerpt || ''}
@@ -93,7 +93,7 @@ const { post, url } = Astro.props;
       }
     </header>
     <div
-      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md lg:prose-xl dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tight prose-headings:tracking-normal prose-headings:font-bold prose-a:text-primary dark:prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg mt-8 prose-headings:scroll-mt-[80px] prose-li:my-0"
+      class="mx-auto px-6 sm:px-6 max-w-3xl prose prose-md dark:prose-invert dark:prose-headings:text-slate-300 prose-headings:font-heading prose-headings:leading-tight prose-headings:tracking-normal prose-headings:font-bold prose-a:text-primary dark:prose-a:text-primary prose-img:rounded-lg prose-img:shadow-lg mt-6 prose-headings:scroll-mt-[80px] prose-li:my-0"
     >
       <slot />
     </div>

@@ -20,23 +20,26 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      High Dimensional Signal Processing <br />
-      <span class="text-primary">Research Group</span>
+      High Dimensional <br />
+      Signal Processing <br />
+      Research Group
     </Fragment>
 
     <Fragment slot="subtitle">
-      From Colombia to the world, HDSP advances artificial intelligence, inverse problems, and computational optics to
-      transform complex data into scientific discovery and high-impact innovation.
+      <strong class="font-semibold text-default/90 dark:text-white">
+        From Colombia to the world, HDSP advances artificial intelligence, inverse problems, and computational optics to
+        transform complex data into scientific discovery and high-impact innovation.
+      </strong>
     </Fragment>
   </Hero>
 
   <Stats
     title="HDSP at a glance"
     stats={[
-      { title: 'MinCiencias classification', amount: 'A1' },
-      { title: 'Research laboratories', amount: '2' },
-      { title: 'Core research areas', amount: '6' },
-      { title: 'Home institution', amount: 'UIS' },
+      { title: 'MinCiencias classification', amount: 'A1', classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-red' } },
+      { title: 'Research laboratories', amount: '2', classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-yellow' } },
+      { title: 'Core research areas', amount: '6', classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-green' } },
+      { title: 'Home institution', amount: 'UIS', classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-blue' } },
     ]}
   />
 
@@ -103,13 +106,13 @@ const metadata = {
           alt: 'Artificial intelligence optical layer and computational decoder diagram',
         },
         classes: {
-          panel: 'tech-panel sm:col-span-2 lg:col-span-6 p-8 md:p-10 lg:min-h-[360px]',
-          imageWrap: '-mx-8 -mt-8 mb-8 rounded-t-lg bg-[#081426] p-3 md:-mx-10 md:-mt-10',
-          image: 'h-36 !object-contain object-center sm:h-44 md:h-52',
-          icon: 'h-16 w-16 rounded-lg border border-secondary/30 bg-secondary/10 p-3 text-secondary',
-          title: 'text-3xl md:text-4xl text-heading dark:text-white',
+          panel: 'tech-panel sm:col-span-2 lg:col-span-6 p-5 md:p-6 lg:min-h-[300px]',
+          imageWrap: '-mx-5 -mt-5 mb-5 rounded-t-lg bg-white/80 p-3 md:-mx-6 md:-mt-6 dark:bg-[#081426]',
+          image: 'h-32 !object-contain object-center sm:h-36 md:h-44',
+          icon: 'h-12 w-12 rounded-lg border border-secondary/30 bg-secondary/10 p-2.5 text-secondary',
+          title: 'text-2xl md:text-3xl text-heading dark:text-white',
           description:
-            'w-full max-w-none text-muted md:text-lg dark:text-slate-300 [&_mark]:text-heading [&_mark]:decoration-primary/70 dark:[&_mark]:text-white',
+            'w-full max-w-none text-muted md:text-base dark:text-slate-300 [&_mark]:text-heading [&_mark]:decoration-primary/70 dark:[&_mark]:text-white',
         },
       },
       {
@@ -136,7 +139,7 @@ const metadata = {
         },
         classes: {
           panel: 'lg:col-span-2',
-          imageWrap: 'bg-black',
+          imageWrap: 'bg-white/80 dark:bg-black',
           image: '!object-contain object-center hover:scale-100',
         },
       },
@@ -166,7 +169,7 @@ const metadata = {
         },
         classes: {
           panel: 'lg:col-span-3',
-          imageWrap: 'bg-[#030b18]',
+          imageWrap: 'bg-white/80 dark:bg-[#030b18]',
           image: 'object-center',
         },
       },
@@ -181,7 +184,7 @@ const metadata = {
         },
         classes: {
           panel: 'lg:col-span-3',
-          imageWrap: 'bg-[#030b18]',
+          imageWrap: 'bg-white/80 dark:bg-[#030b18]',
           image: 'object-center',
         },
       },

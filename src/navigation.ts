@@ -5,26 +5,32 @@ export const headerData = {
     {
       text: 'About us',
       href: getPermalink('/'),
+      icon: 'tabler:sparkles',
     },
     {
       text: 'People',
       href: getPermalink('/people'),
+      icon: 'tabler:users-group',
     },
     {
       text: 'Publications',
       href: getPermalink('/publications'),
+      icon: 'tabler:file-analytics',
     },
     {
       text: 'Contact',
       href: getPermalink('/contact'),
+      icon: 'tabler:map-pin',
     },
     {
       text: 'Events',
       href: getBlogPermalink(),
+      icon: 'tabler:calendar-event',
     },
     {
       text: 'DIRECTOR App',
       href: getPermalink('/homes/director-app'),
+      disabled: true,
     },
   ],
   actions: [

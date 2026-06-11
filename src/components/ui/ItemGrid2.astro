@@ -21,7 +21,7 @@ const {
   items && items.length > 0 && (
     <div
       class={twMerge(
-        `grid gap-8 gap-x-12 sm:gap-y-8 ${
+        `grid gap-5 gap-x-8 sm:gap-y-6 ${
           columns === 4
             ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
             : columns === 3
@@ -44,7 +44,7 @@ const {
           {image?.src && (
             <div class={twMerge('-mx-6 -mt-6 mb-6 overflow-hidden rounded-t-lg', itemClasses?.imageWrap)}>
               <Image
-                class={twMerge('h-40 w-full object-cover transition duration-300 hover:scale-105', itemClasses?.image)}
+                class={twMerge('h-36 w-full object-cover transition duration-300 hover:scale-105', itemClasses?.image)}
                 width={640}
                 height={360}
                 widths={[320, 480, 640, 960]}
@@ -57,7 +57,7 @@ const {
           {(icon || defaultIcon) && (
             <Icon name={icon || defaultIcon} class={twMerge('mb-2 w-10 h-10', defaultIconClass, itemClasses?.icon)} />
           )}
-          <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+          <div class={twMerge('text-lg font-bold', titleClass, itemClasses?.title)}>{title}</div>
           {description && (
             <p class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)} set:html={description} />
           )}

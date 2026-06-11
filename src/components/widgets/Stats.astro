@@ -22,16 +22,26 @@ const {
   <div class="grid gap-4 text-center sm:grid-cols-2 lg:grid-cols-4">
     {
       stats &&
-        stats.map(({ amount, title, icon }) => (
-          <div class="tech-panel p-6 text-center intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
+        stats.map(({ amount, title, icon, classes: statClasses = {} }) => (
+          <div class="tech-panel p-5 text-center intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade intersect-quarter">
             {icon && (
               <div class="flex h-12 w-12 items-center justify-center mx-auto mb-4 rounded-lg border border-primary/20 bg-primary/10 text-primary">
                 <Icon name={icon} class="w-10 h-10" />
               </div>
             )}
-            {amount && (
-              <div class="font-heading text-primary text-[2.6rem] font-bold lg:text-5xl xl:text-6xl">{amount}</div>
-            )}
+            {
+              amount && (
+                <div
+                  class:list={[
+                    'font-heading text-3xl font-bold lg:text-4xl',
+                    { 'text-primary': !statClasses.amount },
+                    statClasses.amount,
+                  ]}
+                >
+                  {amount}
+                </div>
+              )
+            }
             {title && <div class="text-sm font-semibold uppercase text-muted lg:text-base">{title}</div>}
           </div>
         ))

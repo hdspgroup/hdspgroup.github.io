@@ -22,18 +22,18 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
 ---
 
 <article
-  class={`tech-panel mx-auto grid max-w-5xl overflow-hidden p-0 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ${
+  class={`tech-panel event-list-card mx-auto grid max-w-5xl overflow-hidden p-0 intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade ${
     image ? 'lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]' : ''
   }`}
 >
   {
     image &&
       (link ? (
-        <a class="group relative block h-full bg-[#030b18] p-2" href={link ?? 'javascript:void(0)'}>
-          <div class="relative h-64 overflow-hidden rounded-md bg-[#030b18] sm:h-80 lg:h-full lg:min-h-[320px]">
+        <a class="group relative block h-full bg-white/80 p-2 dark:bg-[#030b18]" href={link ?? 'javascript:void(0)'}>
+          <div class="relative h-64 overflow-hidden rounded-md bg-white/80 dark:bg-[#030b18] sm:h-80 lg:h-full lg:min-h-[320px]">
             <Image
               src={image}
-              class="h-full w-full rounded-md bg-[#030b18] object-cover transition duration-300 group-hover:scale-[1.03]"
+              class="h-full w-full rounded-md bg-white/80 object-cover transition duration-300 group-hover:scale-[1.03] dark:bg-[#030b18]"
               widths={[400, 900]}
               width={900}
               sizes="(max-width: 900px) 400px, 900px"
@@ -45,10 +45,10 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
           </div>
         </a>
       ) : (
-        <div class="relative h-64 overflow-hidden bg-[#030b18] p-2 sm:h-80 lg:h-full lg:min-h-[320px]">
+        <div class="relative h-64 overflow-hidden bg-white/80 p-2 dark:bg-[#030b18] sm:h-80 lg:h-full lg:min-h-[320px]">
           <Image
             src={image}
-            class="h-full w-full rounded-md bg-[#030b18] object-cover"
+            class="h-full w-full rounded-md bg-white/80 object-cover dark:bg-[#030b18]"
             widths={[400, 900]}
             width={900}
             sizes="(max-width: 900px) 400px, 900px"
@@ -61,20 +61,18 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       ))
   }
 
-  <div class="flex flex-col justify-center p-6 md:p-8">
+  <div class="flex flex-col justify-center p-5 md:p-6">
     <header>
       <div class="mb-4 flex flex-wrap items-center gap-2 text-sm text-muted">
-        <span
-          class="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/10 px-3 py-1 font-semibold text-primary"
-        >
+        <span class="event-date-chip inline-flex items-center gap-1.5 rounded-lg border px-3 py-1 font-semibold">
           <Icon name="tabler:clock" class="h-4 w-4" />
           <time datetime={String(post.publishDate)}>{getFormattedDate(post.publishDate)}</time>
         </span>
 
         {
           post.author && (
-            <span class="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary/5 px-3 py-1">
-              <Icon name="tabler:user" class="h-4 w-4 text-primary" />
+            <span class="event-author-chip inline-flex items-center gap-1.5 rounded-lg border px-3 py-1">
+              <Icon name="tabler:user" class="h-4 w-4" />
               <span>{post.author.replaceAll('-', ' ')}</span>
             </span>
           )
@@ -83,7 +81,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         {
           post.category && (
             <a
-              class="inline-flex items-center gap-1.5 rounded-lg border border-secondary/20 bg-secondary/10 px-3 py-1 font-semibold text-secondary hover:text-primary"
+              class="event-category-chip inline-flex items-center gap-1.5 rounded-lg border px-3 py-1 font-semibold"
               href={getPermalink(post.category.slug, 'category')}
             >
               <Icon name="tabler:calendar-event" class="h-4 w-4" />
@@ -93,10 +91,10 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
         }
       </div>
 
-      <h2 class="mb-3 font-heading text-2xl font-bold leading-tight text-heading dark:text-white sm:text-3xl">
+      <h2 class="mb-3 font-heading text-xl font-bold leading-tight text-heading dark:text-white sm:text-2xl">
         {
           link ? (
-            <a class="inline-block transition duration-200 ease-in hover:text-primary" href={link}>
+            <a class="event-title-link inline-block transition duration-200 ease-in" href={link}>
               {post.title}
             </a>
           ) : (
@@ -115,7 +113,7 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
     {
       post.tags && Array.isArray(post.tags) ? (
         <footer class="mt-5">
-          <PostTags tags={post.tags} />
+          <PostTags tags={post.tags} class="event-tags text-sm" />
         </footer>
       ) : (
         <Fragment />
