@@ -57,21 +57,21 @@ const getInitials = (name: string) =>
   <Stats
     title="Team overview"
     stats={[
-      { title: 'People listed', amount: String(totalMembers), classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-red' } },
+      { title: 'People listed', amount: String(totalMembers), classes: { amount: 'text-hdsp-logo-stat text-primary' } },
       {
         title: 'Student researchers',
         amount: String(studentResearchers),
-        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-yellow' },
+        classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
       {
         title: 'Collaborators',
         amount: String(collaboratorsCount),
-        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-green' },
+        classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
       {
         title: 'Categories',
         amount: String(peopleCategories.length + 1),
-        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-blue' },
+        classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
     ]}
   />

@@ -133,17 +133,17 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <Stats
     title="At a glance"
     stats={[
-      { title: 'Visible works', amount: String(publications.length), classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-red' } },
+      { title: 'Visible works', amount: String(publications.length), classes: { amount: 'text-hdsp-logo-stat text-primary' } },
       {
         title: 'Profile works',
         amount: String(totals.openAlexWorks ?? profile.worksCount),
-        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-yellow' },
+        classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
-      { title: 'Years covered', amount: String(years.length), classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-green' } },
+      { title: 'Years covered', amount: String(years.length), classes: { amount: 'text-hdsp-logo-stat text-primary' } },
       {
         title: 'Works with DOI',
         amount: String(totals.worksWithDoi ?? totals.doiBackedWorks),
-        classes: { amount: 'text-hdsp-logo-stat text-hdsp-logo-blue' },
+        classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
     ]}
   />
