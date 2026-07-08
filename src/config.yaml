@@ -1,6 +1,6 @@
 site:
   name: HDSP Research Group
-  site: 'https://hdspgroup.github.io'
+  site: 'https://hdspgroup.com'
   base: '/'
   trailingSlash: false
 
