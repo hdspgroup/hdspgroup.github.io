@@ -2,55 +2,30 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-05-15T20:53:37.573Z",
+  "fetchedAt": "2026-07-08T22:01:10.262Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 499,
-    "citedByCount": 4512,
+    "worksCount": 500,
+    "citedByCount": 4571,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
       "Industrial University of Santander",
       "Universidad de Santander",
-      "Universidad De Santander",
-      "University of Santander"
+      "Universidad De Santander"
     ]
   },
   "totals": {
-    "openAlexWorks": 499,
-    "worksWithDoi": 466,
-    "doiBackedWorks": 463,
-    "scholarWorks": 592,
-    "mergedWorks": 594,
+    "openAlexWorks": 494,
+    "worksWithDoi": 461,
+    "doiBackedWorks": 458,
+    "scholarWorks": 596,
+    "mergedWorks": 597,
     "omittedWithoutDoiCount": 33,
     "omittedUnavailableMetadataCount": 3
   },
   "publications": [
-    {
-      "id": "https://openalex.org/W4406342340",
-      "title": "Change Detection in Hyperspectral and Radar/Multispectral Images Using an Unmixing-Based Multivariate Manifold Estimation",
-      "publicationDate": "2025-01-01",
-      "publicationYear": 2025,
-      "doi": "10.2139/ssrn.5096892",
-      "doiUrl": "https://doi.org/10.2139/ssrn.5096892",
-      "type": "posted-content",
-      "typeCrossref": "posted-content",
-      "authors": [
-        "Laura  Viviana Galvis",
-        "Henry Arguello",
-        "Jean-Yves Tourneret"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.2139/ssrn.5096892",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "Elsevier BV",
-      "venueType": "posted-content",
-      "topics": []
-    },
     {
       "id": "https://openalex.org/W4410719638",
       "title": "Low-Cost Stereoscopic Optical-Coding Design for Depth Estimation Using End-to-End Optimization",
@@ -764,117 +739,6 @@
       "topics": []
     },
     {
-      "id": "https://openalex.org/W4298303151",
-      "title": "Compressive Multispectral Model For Spectrum Sensing In Cognitive Radio Networks",
-      "publicationDate": "2018-01-25",
-      "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159598",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159598",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Henry Arguello Fuentes",
-        "Leonardo Betancur",
-        "Jeison Marín",
-        "José ignacio Martinez"
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159598",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081675.pdf?arnumber=8081675"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081675",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081675.pdf?arnumber=8081675"
-      },
-      "venue": "Zenodo",
-      "venueType": "article-journal",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4300535305",
-      "title": "High-Dimensional Optimization Of Color Coded Apertures For Compressive Spectral Cameras",
-      "publicationDate": "2018-01-25",
-      "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159898",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159898",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Gonzalo Arce",
-        "Henry Arguello Fuentes",
-        "Hoover Rueda"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159898",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081250",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
-      },
-      "venue": "Zenodo",
-      "venueType": "article-journal",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4300019912",
-      "title": "Multi-Resolution Reconstruction Algorithm For Compressive Single Pixel Spectral Imaging",
-      "publicationDate": "2018-01-25",
-      "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159922",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159922",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Henry Arguello Fuentes",
-        "Claudia Correa-Pugliese",
-        "Hans Garcia",
-        "Samuel Pinilla",
-        "Ofelia Villarreal"
-      ],
-      "authorsCount": 5,
-      "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159922",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081251.pdf?arnumber=8081251"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081251",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081251.pdf?arnumber=8081251"
-      },
-      "venue": "Zenodo",
-      "venueType": "article-journal",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4300999844",
-      "title": "Spatio-Spectro-Temporal Coded Aperture Design For Multiresolution Compressive Spectral Video Sensing",
-      "publicationDate": "2018-01-25",
-      "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159916",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159916",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Henry Arguello Fuentes",
-        "Laura Galvis",
-        "Kareth León"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159916",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081303",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
-      },
-      "venue": "Zenodo",
-      "venueType": "article-journal",
-      "topics": []
-    },
-    {
       "id": "https://openalex.org/W2786200951",
       "title": "Snapshot Compressive Multispectral Cameras",
       "publicationDate": "2017-02-15",
@@ -1113,7 +977,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:GtLg2Ama23sC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:GtLg2Ama23sC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -1468,16 +1332,16 @@
       "typeCrossref": null,
       "authors": [
         "C Noriega",
-        "YHM Melgarejo",
-        "HA Fuentes"
+        "Y Mejía",
+        "H Arguello"
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:fQNAKQ3IYiAC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:fQNAKQ3IYiAC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Ingeniería 21 (2), 2-2",
+      "venue": "Ingeniería 21 (2), 201-213",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -1907,7 +1771,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:LXmCCkuhhTsC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:LXmCCkuhhTsC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -2137,7 +2001,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:U_HPUtbDl20C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:U_HPUtbDl20C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -2399,8 +2263,8 @@
       "title": "An algorithm for learning sparsifying transforms of multidimensional signals",
       "publicationDate": null,
       "publicationYear": 2017,
-      "doi": "10.17533/udea.redin.n83a10",
-      "doiUrl": "https://doi.org/10.17533/udea.redin.n83a10",
+      "doi": null,
+      "doiUrl": null,
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -2569,7 +2433,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:q-HalDI95KYC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:q-HalDI95KYC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -3447,6 +3311,31 @@
       },
       "bestOaLocation": null,
       "venue": "arXiv preprint arXiv:2407.17402",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:cNe27ouKFcQC",
+      "title": "Change detection in hyperspectral and radar/multispectral images using an unmixing-based multivariate manifold estimation",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": "10.1016/j.image.2026.117589",
+      "doiUrl": "https://doi.org/10.1016/j.image.2026.117589",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "L Galvis",
+        "H Arguello",
+        "JY Tourneret"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:cNe27ouKFcQC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "Signal Processing: Image Communication, 117589",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -4579,6 +4468,35 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:ipzZ9siozwsC",
+      "title": "Compressive multispectral model for spectrum sensing in cognitive radio networks",
+      "publicationDate": null,
+      "publicationYear": 2017,
+      "doi": "10.23919/eusipco.2017.8081675",
+      "doiUrl": "https://doi.org/10.23919/eusipco.2017.8081675",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "AJ Marín",
+        "TJI Martinez",
+        "L Betancur",
+        "H Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ipzZ9siozwsC",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081675.pdf?arnumber=8081675"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081675",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081675.pdf?arnumber=8081675"
+      },
+      "venue": "2017 25th European Signal Processing Conference (EUSIPCO), 2575-2571",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:uWiczbcajpAC",
       "title": "Compressive multispectral spectrum sensing for spectrum cartography",
       "publicationDate": null,
@@ -5274,7 +5192,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:rLGzs9wiiwIC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:rLGzs9wiiwIC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -6342,7 +6260,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:aEW5N-EHWIMC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:aEW5N-EHWIMC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -6767,7 +6685,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:J-pR_7NvFogC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:J-pR_7NvFogC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -6908,6 +6826,32 @@
       },
       "bestOaLocation": null,
       "venue": "Journal Fuentes el Reventón Energético 9 (1), 21-31",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:BW2nPTmhBn4C",
+      "title": "DIPA: Distilled Preconditioned Algorithms for Solving Imaging Inverse Problems",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "R Gualdrón-Hurtado",
+        "R Jacome",
+        "L Suarez",
+        "H Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:BW2nPTmhBn4C",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "arXiv preprint arXiv:2605.15456",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -7643,7 +7587,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "arXiv preprint arXiv:2603.29014",
+      "venue": "2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI), 1-5",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8038,7 +7982,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:IWHjjKOFINEC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:IWHjjKOFINEC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -8456,7 +8400,7 @@
       "authors": [
         "R Gualdrón-Hurtado",
         "R Jacome",
-        "RS Suarez",
+        "RS Suárez",
         "H Arguello"
       ],
       "authorsCount": 4,
@@ -8465,7 +8409,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "arXiv preprint arXiv:2602.20328",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8622,6 +8566,34 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:yB1At4FlUx8C",
+      "title": "High-dimensional optimization of color coded apertures for compressive spectral cameras",
+      "publicationDate": null,
+      "publicationYear": 2017,
+      "doi": "10.23919/eusipco.2017.8081250",
+      "doiUrl": "https://doi.org/10.23919/eusipco.2017.8081250",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "H Rueda",
+        "H Arguello",
+        "GR Arce"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:yB1At4FlUx8C",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081250",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
+      },
+      "venue": "2017 25th European Signal Processing Conference (EUSIPCO), 463-467",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:1sJd4Hv_s6UC",
       "title": "High-dynamic range compressive spectral imaging by adaptive filtering",
       "publicationDate": null,
@@ -8659,9 +8631,9 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "NE Diaz",
-        "HFR Chacon",
-        "HA Fuentes"
+        "N Diaz",
+        "H Rueda",
+        "H Arguello"
       ],
       "authorsCount": 3,
       "primaryLocation": {
@@ -8770,7 +8742,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:mVmsd5A6BfQC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:mVmsd5A6BfQC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -9149,6 +9121,30 @@
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9591664/9591665/09592017.pdf?arnumber=9592017"
       },
       "venue": "2021 XXIII Symposium on Image, Signal Processing and Artificial Vision …",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:cSdaV2aYdYsC",
+      "title": "Imaging guided pattern optimization for seismic acquisition geometries design with deep learning",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "A Mantilla-Dulcey",
+        "H Arguello"
+      ],
+      "authorsCount": 2,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:cSdaV2aYdYsC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -9672,7 +9668,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:qE4H1tSSYIIC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:qE4H1tSSYIIC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -9758,7 +9754,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:natZJ_-F0IUC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:natZJ_-F0IUC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -10201,7 +10197,7 @@
     },
     {
       "id": "google-scholar:R7gjbGIAAAAJ:uDGL6kOW6j0C",
-      "title": "Metabolic flows balance in Saccharomyces cerevisiae based on intracellular compartmentalization.",
+      "title": "Metabolic Flows Balance in Saccharomyces cerevisiae based on Intracellular Compartmentalization",
       "publicationDate": null,
       "publicationYear": 2013,
       "doi": null,
@@ -10220,7 +10216,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": null,
+      "venue": "Revista Colombiana de Biotecnología 15 (2), 18-28",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -10245,7 +10241,7 @@
       ],
       "authorsCount": 7,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:RJOyoaXV5v8C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:RJOyoaXV5v8C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -10711,6 +10707,36 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:0KyAp5RtaNEC",
+      "title": "Multi-resolution reconstruction algorithm for compressive single pixel spectral imaging",
+      "publicationDate": null,
+      "publicationYear": 2017,
+      "doi": "10.23919/eusipco.2017.8081251",
+      "doiUrl": "https://doi.org/10.23919/eusipco.2017.8081251",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "H Garcia",
+        "CV Correa",
+        "O Villarreal",
+        "S Pinilla",
+        "H Arguello"
+      ],
+      "authorsCount": 5,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:0KyAp5RtaNEC",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081251.pdf?arnumber=8081251"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081251",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081251.pdf?arnumber=8081251"
+      },
+      "venue": "2017 25th European Signal Processing Conference (EUSIPCO), 468-472",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:3bvyWxjaHKcC",
       "title": "Multi-resolution Reconstruction Algorithm for Phase Retrieval in X-ray Crystallography",
       "publicationDate": null,
@@ -11012,7 +11038,7 @@
       "id": "google-scholar:R7gjbGIAAAAJ:Tfl4UtY-dJUC",
       "title": "NOWA: Null-space Optical Watermark for Invisible Capture Fingerprinting and Tamper Localization",
       "publicationDate": null,
-      "publicationYear": 2025,
+      "publicationYear": 2026,
       "doi": null,
       "doiUrl": null,
       "type": "scholar-article",
@@ -11029,7 +11055,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "arXiv preprint arXiv:2512.22501",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -11390,6 +11416,33 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:K4-iKlO5MD4C",
+      "title": "Optically Authenticated Hyperspectral Imaging: Detection and Restoration of Manipulated Data",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "P Gomez",
+        "R Jacome",
+        "H Garcia",
+        "I Esnaola",
+        "H Arguello"
+      ],
+      "authorsCount": 5,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:K4-iKlO5MD4C",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:nPTYJWkExTIC",
       "title": "Optics lens design for privacy-preserving scene captioning",
       "publicationDate": null,
@@ -11614,7 +11667,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:eflP2zaiRacC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:eflP2zaiRacC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -13018,7 +13071,7 @@
       ],
       "authorsCount": 1,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:nVrZBo8bIpAC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:nVrZBo8bIpAC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -13128,7 +13181,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:PlWzFYVEG4EC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:PlWzFYVEG4EC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -13154,7 +13207,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:4fGpz3EwCPoC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:4fGpz3EwCPoC",
         "pdfUrl": "https://www.osapublishing.org/viewmedia.cfm?URI=ao-58-7-B28&am=y"
       },
       "bestOaLocation": {
@@ -13801,7 +13854,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Wq2b2clWBLsC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Wq2b2clWBLsC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -14225,6 +14278,34 @@
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/7406206/7416920/07418269.pdf?arnumber=7418269"
       },
       "venue": "2015 IEEE Global Conference on Signal and Information Processing (GlobalSIP …",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:4hFrxpcac9AC",
+      "title": "Spatio-spectro-temporal coded aperture design for multiresolution compressive spectral video sensing",
+      "publicationDate": null,
+      "publicationYear": 2017,
+      "doi": "10.23919/eusipco.2017.8081303",
+      "doiUrl": "https://doi.org/10.23919/eusipco.2017.8081303",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "KL López",
+        "L Galvis",
+        "HA Fuentes"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:4hFrxpcac9AC",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081303",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
+      },
+      "venue": "2017 25th European Signal Processing Conference (EUSIPCO), 728-732",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -15141,7 +15222,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:cK4Rrx0J3m0C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:cK4Rrx0J3m0C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -15304,7 +15385,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:q3oQSFYPqjQC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:q3oQSFYPqjQC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -15464,7 +15545,7 @@
       ],
       "authorsCount": 1,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:LgRImbQfgY4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:LgRImbQfgY4C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -15704,7 +15785,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:NXb4pA-qfm4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:NXb4pA-qfm4C",
         "pdfUrl": null
       },
       "bestOaLocation": null,

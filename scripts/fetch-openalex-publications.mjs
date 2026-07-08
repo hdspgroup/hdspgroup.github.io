@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 
@@ -437,14 +437,18 @@ async function fetchAllOpenAlexWorks() {
   return Array.from(new Map(works.map((work) => [work.id, work])).values());
 }
 
-async function fetchScholarPublications() {
-  if (SERPAPI_API_KEY) {
+async function fetchScholarViaSerpApi() {
+  const articles = [];
+
+  for (let start = 0; start < SCHOLAR_MAX_ARTICLES; start += SCHOLAR_PAGE_SIZE) {
+    const num = Math.min(SCHOLAR_PAGE_SIZE, SCHOLAR_MAX_ARTICLES - start);
     const url = buildUrl('https://serpapi.com/search.json', {
       engine: 'google_scholar_author',
       author_id: SCHOLAR_AUTHOR_ID,
       hl: 'en',
       sort: 'pubdate',
-      num: SCHOLAR_PAGE_SIZE,
+      start,
+      num,
       api_key: SERPAPI_API_KEY,
     });
 
@@ -454,12 +458,30 @@ async function fetchScholarPublications() {
       throw new Error(`SerpApi Google Scholar request failed: ${payload.error}`);
     }
 
-    return (payload.articles ?? []).map(normalizeScholarPublication).filter((publication) => publication.publicationYear);
+    const batch = payload.articles ?? [];
+    articles.push(...batch);
+
+    console.log(`Fetched ${batch.length} Google Scholar articles from SerpApi offset ${start}.`);
+
+    if (batch.length < num || !payload.serpapi_pagination?.next) {
+      break;
+    }
+
+    await sleep(SCHOLAR_PAGE_DELAY_MS);
+  }
+
+  return articles;
+}
+
+async function fetchScholarPublications() {
+  if (SERPAPI_API_KEY) {
+    const articles = await fetchScholarViaSerpApi();
+    return articles.map(normalizeScholarPublication).filter((publication) => publication.publicationYear);
   }
 
   console.log('SERPAPI_API_KEY is not configured. Using Google Scholar public profile fallback.');
-  return fetchScholarPublicProfileArticles()
-    .then((articles) => articles.map(normalizeScholarPublication).filter((publication) => publication.publicationYear));
+  const articles = await fetchScholarPublicProfileArticles();
+  return articles.map(normalizeScholarPublication).filter((publication) => publication.publicationYear);
 }
 
 async function fetchDoiMetadata(doi) {
@@ -494,12 +516,42 @@ async function mapInBatches(items, concurrency, mapper) {
   return results;
 }
 
+function isScholarPublication(publication) {
+  return publication?.source === 'google_scholar' || String(publication?.id ?? '').startsWith('google-scholar:');
+}
+
+async function readExistingScholarPublications(outputPath) {
+  try {
+    const parsed = JSON.parse(await readFile(outputPath, 'utf8'));
+    return (parsed.publications ?? []).filter(isScholarPublication);
+  } catch {
+    return [];
+  }
+}
+
 async function main() {
-  const [profile, works, scholarPublications] = await Promise.all([
+  const absoluteOutputPath = path.resolve(process.cwd(), OUTPUT_PATH);
+
+  const [profile, works, fetchedScholarPublications] = await Promise.all([
     fetchAuthorProfile(),
     fetchAllOpenAlexWorks(),
-    fetchScholarPublications(),
+    fetchScholarPublications().catch((error) => {
+      console.warn(`Google Scholar sync failed: ${error.message}`);
+      return [];
+    }),
   ]);
+
+  // If the Scholar sync failed or returned nothing (e.g. Google blocked the CI
+  // runner and no SERPAPI_API_KEY is configured), reuse the Scholar-only entries
+  // already stored so we never drop publications that OpenAlex does not have.
+  let scholarPublications = fetchedScholarPublications;
+  if (!scholarPublications.length) {
+    const preserved = await readExistingScholarPublications(absoluteOutputPath);
+    if (preserved.length) {
+      console.warn(`Preserving ${preserved.length} previously synced Google Scholar publications.`);
+      scholarPublications = preserved;
+    }
+  }
 
   const worksWithDoi = works.filter((work) => normalizeDoi(work.doi));
   const worksWithoutDoiCount = works.length - worksWithDoi.length;
@@ -541,7 +593,6 @@ async function main() {
     publications: cleanedPublications,
   };
 
-  const absoluteOutputPath = path.resolve(process.cwd(), OUTPUT_PATH);
   await mkdir(path.dirname(absoluteOutputPath), { recursive: true });
   await writeFile(absoluteOutputPath, `${JSON.stringify(data, null, 2)}\n`, 'utf8');
 
