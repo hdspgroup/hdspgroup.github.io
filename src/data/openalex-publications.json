@@ -2,7 +2,7 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-07-08T22:01:10.262Z",
+  "fetchedAt": "2026-07-08T22:24:59.330Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
@@ -5577,31 +5577,6 @@
       "source": "google_scholar"
     },
     {
-      "id": "google-scholar:R7gjbGIAAAAJ:wLxue7F8ec0C",
-      "title": "D UF: Deep Coded Aperture Design and Unrolling Algorithm for Compressive Spectral Image Fusion",
-      "publicationDate": null,
-      "publicationYear": 2022,
-      "doi": null,
-      "doiUrl": null,
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "R Jacome",
-        "J Bacca",
-        "H Arguello"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:wLxue7F8ec0C",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "IEEE Journal of Selected Topics in Signal Processing 17 (2), 502-512",
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
       "id": "google-scholar:R7gjbGIAAAAJ:Y0-TYkg6YM4C",
       "title": "D-HAN: An End-to-End Adaptive Neural Network for Snapshot Compressive Imaging",
       "publicationDate": null,
@@ -6857,6 +6832,29 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:8xutWZnSdmoC",
+      "title": "Diseño de aperturas codificadas adaptativas en escala de grises para una arquitectura compresiva multicaptura de imágenes espectrales",
+      "publicationDate": null,
+      "publicationYear": 2015,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "HA Fuentes"
+      ],
+      "authorsCount": 1,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:8xutWZnSdmoC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": null,
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:CdxZDUztZiMC",
       "title": "Diseno de la Matriz de un Sistema Compresivo en Imagenes Espectrales por Medio de un Algoritmo de Homogeneizacion.",
       "publicationDate": null,
@@ -6877,52 +6875,6 @@
       },
       "bestOaLocation": null,
       "venue": "Ingenieria 21 (2), 201-214",
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
-      "id": "google-scholar:R7gjbGIAAAAJ:u-coK7KVo8oC",
-      "title": "DISENO E IMPLEMENTACION DE UN PROTOTIPO PARA LA COMPARACION DE SECUENCIAS 2D DE PROTEINAS",
-      "publicationDate": null,
-      "publicationYear": 2008,
-      "doi": null,
-      "doiUrl": null,
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "HA Fuentes"
-      ],
-      "authorsCount": 1,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:u-coK7KVo8oC",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": null,
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
-      "id": "google-scholar:R7gjbGIAAAAJ:8xutWZnSdmoC",
-      "title": "Diseño de aperturas codificadas adaptativas en escala de grises para una arquitectura compresiva multicaptura de imágenes espectrales",
-      "publicationDate": null,
-      "publicationYear": 2015,
-      "doi": null,
-      "doiUrl": null,
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "HA Fuentes"
-      ],
-      "authorsCount": 1,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:8xutWZnSdmoC",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": null,
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -6993,6 +6945,29 @@
       },
       "bestOaLocation": null,
       "venue": "DYNA (Colombia) 80 (180), 67-76",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:u-coK7KVo8oC",
+      "title": "DISENO E IMPLEMENTACION DE UN PROTOTIPO PARA LA COMPARACION DE SECUENCIAS 2D DE PROTEINAS",
+      "publicationDate": null,
+      "publicationYear": 2008,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "HA Fuentes"
+      ],
+      "authorsCount": 1,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:u-coK7KVo8oC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": null,
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -7399,6 +7374,31 @@
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/10221936/10222935/10222988.pdf?arnumber=10222988"
       },
       "venue": "2023 Photonics North (PN), 1-2",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:wLxue7F8ec0C",
+      "title": "DUF: Deep Coded Aperture Design and Unrolling Algorithm for Compressive Spectral Image Fusion",
+      "publicationDate": null,
+      "publicationYear": 2022,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "R Jacome",
+        "J Bacca",
+        "H Arguello"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:wLxue7F8ec0C",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "IEEE Journal of Selected Topics in Signal Processing 17 (2), 502-512",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
