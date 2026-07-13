@@ -2,26 +2,24 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-07-08T22:24:59.330Z",
+  "fetchedAt": "2026-07-13T11:17:46.489Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 500,
-    "citedByCount": 4571,
+    "worksCount": 498,
+    "citedByCount": 4575,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
-      "Industrial University of Santander",
-      "Universidad de Santander",
-      "Universidad De Santander"
+      "Industrial University of Santander"
     ]
   },
   "totals": {
-    "openAlexWorks": 494,
-    "worksWithDoi": 461,
-    "doiBackedWorks": 458,
-    "scholarWorks": 596,
-    "mergedWorks": 597,
+    "openAlexWorks": 493,
+    "worksWithDoi": 460,
+    "doiBackedWorks": 457,
+    "scholarWorks": 597,
+    "mergedWorks": 596,
     "omittedWithoutDoiCount": 33,
     "omittedUnavailableMetadataCount": 3
   },
@@ -262,29 +260,6 @@
       "bestOaLocation": null,
       "venue": "Communications in Computer and Information Science",
       "venueType": "book-chapter",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4214577986",
-      "title": "Author Index",
-      "publicationDate": "2021-10-01",
-      "publicationYear": 2021,
-      "doi": "10.1109/iccv48922.2021.01619",
-      "doiUrl": "https://doi.org/10.1109/iccv48922.2021.01619",
-      "type": "proceedings-article",
-      "typeCrossref": "proceedings-article",
-      "authors": [],
-      "authorsCount": 0,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/iccv48922.2021.01619",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9709627/9709628/09711243.pdf?arnumber=9711243"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/iccv48922.2021.01619",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9709627/9709628/09711243.pdf?arnumber=9711243"
-      },
-      "venue": "2021 IEEE/CVF International Conference on Computer Vision (ICCV)",
-      "venueType": "proceedings-article",
       "topics": []
     },
     {
@@ -1337,7 +1312,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:fQNAKQ3IYiAC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:fQNAKQ3IYiAC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -2218,7 +2193,7 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "EAM Ortiz",
+        "EM Ortiz",
         "JS Mariño",
         "HA Fuentes"
       ],
@@ -2228,7 +2203,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Sistemas & Telemática 7 (13), 113-128",
+      "venue": "Sistemas y Telemática 7 (13), 113-128",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -3410,7 +3385,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:27LrP4qxOz0C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:27LrP4qxOz0C",
         "pdfUrl": "https://revistas.itm.edu.co/index.php/tecnologicas/article/download/1654/1844"
       },
       "bestOaLocation": {
@@ -3926,7 +3901,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:PoWvk5oyLR8C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:PoWvk5oyLR8C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -11242,7 +11217,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:-f6ydRqryjwC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:-f6ydRqryjwC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -12991,7 +12966,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:H7nrzBkawXsC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:H7nrzBkawXsC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/10289698/10289713/10290044.pdf?arnumber=10290044"
       },
       "bestOaLocation": {
