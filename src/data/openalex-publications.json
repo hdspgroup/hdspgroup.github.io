@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-07-20T10:57:23.048Z",
+  "fetchedAt": "2026-07-27T11:30:17.374Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 499,
-    "citedByCount": 4587,
+    "citedByCount": 4596,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -47,6 +47,32 @@
       "bestOaLocation": null,
       "venue": "Lecture Notes in Computer Science",
       "venueType": "book-chapter",
+      "topics": []
+    },
+    {
+      "id": "https://openalex.org/W4394004571",
+      "title": "Multi-antenna dual-blind deconvolution for joint radar-communications via SoMAN minimization",
+      "publicationDate": "2024-08-01",
+      "publicationYear": 2024,
+      "doi": "10.1016/j.sigpro.2024.109484",
+      "doiUrl": "https://doi.org/10.1016/j.sigpro.2024.109484",
+      "type": "journal-article",
+      "typeCrossref": "journal-article",
+      "authors": [
+        "Roman Jacome",
+        "Edwin Vargas",
+        "Kumar Vijay Mishra",
+        "Brian M. Sadler",
+        "Henry Arguello"
+      ],
+      "authorsCount": 5,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1016/j.sigpro.2024.109484",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "Signal Processing",
+      "venueType": "journal-article",
       "topics": []
     },
     {
@@ -151,6 +177,35 @@
       "topics": []
     },
     {
+      "id": "https://openalex.org/W4381785767",
+      "title": "Dual-Blind Deconvolution for Overlaid Radar-Communications Systems",
+      "publicationDate": "2023-01-01",
+      "publicationYear": 2023,
+      "doi": "10.1109/jsait.2023.3287823",
+      "doiUrl": "https://doi.org/10.1109/jsait.2023.3287823",
+      "type": "journal-article",
+      "typeCrossref": "journal-article",
+      "authors": [
+        "Edwin Vargas",
+        "Kumar Vijay Mishra",
+        "Roman Jacome",
+        "Brian M. Sadler",
+        "Henry Arguello"
+      ],
+      "authorsCount": 5,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/jsait.2023.3287823",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8700143/10153947/10159370.pdf?arnumber=10159370"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/jsait.2023.3287823",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8700143/10153947/10159370.pdf?arnumber=10159370"
+      },
+      "venue": "IEEE Journal on Selected Areas in Information Theory",
+      "venueType": "journal-article",
+      "topics": []
+    },
+    {
       "id": "https://openalex.org/W4285408284",
       "title": "Editorial: Introduction to the Special Issue on Deep Learning for High-Dimensional Sensing",
       "publicationDate": "2022-06-01",
@@ -207,34 +262,6 @@
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8859/9651998/09447008.pdf?arnumber=9447008"
       },
       "venue": "IEEE Geoscience and Remote Sensing Letters",
-      "venueType": "journal-article",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W3193235603",
-      "title": "Anomaly Detection and Classification in Multispectral Time Series Based on Hidden Markov Models",
-      "publicationDate": "2022-01-01",
-      "publicationYear": 2022,
-      "doi": "10.1109/tgrs.2021.3101127",
-      "doiUrl": "https://doi.org/10.1109/tgrs.2021.3101127",
-      "type": "journal-article",
-      "typeCrossref": "journal-article",
-      "authors": [
-        "Kareth M. Leon-Lopez",
-        "Florian Mouret",
-        "Henry Arguello",
-        "Jean-Yves Tourneret"
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2021.3101127",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9633014/09509347.pdf?arnumber=9509347"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2021.3101127",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9633014/09509347.pdf?arnumber=9509347"
-      },
-      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
       "venueType": "journal-article",
       "topics": []
     },
@@ -312,32 +339,6 @@
       "bestOaLocation": null,
       "venue": "Communications in Computer and Information Science",
       "venueType": "book-chapter",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W3028263484",
-      "title": "Nonlocal Low-Rank Abundance Prior for Compressive Spectral Image Fusion",
-      "publicationDate": "2021-01-01",
-      "publicationYear": 2021,
-      "doi": "10.1109/tgrs.2020.2993541",
-      "doiUrl": "https://doi.org/10.1109/tgrs.2020.2993541",
-      "type": "journal-article",
-      "typeCrossref": "journal-article",
-      "authors": [
-        "Tatiana Gelvez",
-        "Henry Arguello"
-      ],
-      "authorsCount": 2,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2020.2993541",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9306033/09099096.pdf?arnumber=9099096"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2020.2993541",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9306033/09099096.pdf?arnumber=9099096"
-      },
-      "venue": "IEEE Transactions on Geoscience and Remote Sensing",
-      "venueType": "journal-article",
       "topics": []
     },
     {
@@ -1515,7 +1516,7 @@
       "id": "google-scholar:R7gjbGIAAAAJ:SAZ1SQo2q1kC",
       "title": "A fast and accurate similarity-constrained subspace clustering algorithm for land cover segmentation",
       "publicationDate": null,
-      "publicationYear": 2023,
+      "publicationYear": 2021,
       "doi": "10.36227/techrxiv.14414789.v1",
       "doiUrl": "https://doi.org/10.36227/techrxiv.14414789.v1",
       "type": "scholar-article",
@@ -1527,11 +1528,11 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:SAZ1SQo2q1kC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:SAZ1SQo2q1kC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Authorea Preprints",
+      "venue": "TechRxiv 2021 (0416)",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -2600,6 +2601,35 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:zwpXiJ37cpgC",
+      "title": "Anomaly detection and classification in multispectral time series based on hidden Markov models",
+      "publicationDate": null,
+      "publicationYear": 2022,
+      "doi": "10.1109/tgrs.2021.3101127",
+      "doiUrl": "https://doi.org/10.1109/tgrs.2021.3101127",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "KM Leon-Lopez",
+        "F Mouret",
+        "H Arguello",
+        "JY Tourneret"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:zwpXiJ37cpgC",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9633014/09509347.pdf?arnumber=9509347"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2021.3101127",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9633014/09509347.pdf?arnumber=9509347"
+      },
+      "venue": "IEEE transactions on geoscience and remote sensing 60, 1-11",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:Y0pCki6q_DkC",
       "title": "Anomaly recovery from compressed spectral imagery via low-rank matrix minimization",
       "publicationDate": null,
@@ -2951,7 +2981,7 @@
       ],
       "authorsCount": 7,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:In6cVmBjs0IC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:In6cVmBjs0IC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -2990,7 +3020,7 @@
     },
     {
       "id": "google-scholar:R7gjbGIAAAAJ:OR75R8vi5nAC",
-      "title": "Balance de Flujos Metabólicos en Saccharomyces cerevisiae basado en Compartimentalización Intracelular",
+      "title": "Balance de Flujos metabólicos en Saccharomyces cerevisiae basado en Compartimentalización Intracelular.",
       "publicationDate": null,
       "publicationYear": 2013,
       "doi": "10.15446/rev.colomb.biote.v15n2.41263",
@@ -2998,10 +3028,10 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "CA Vargas García",
-        "CE García Sánchez",
-        "H Arguello Fuentes",
-        "..."
+        "CAV García",
+        "CEG Sánchez",
+        "HA Fuentes",
+        "RGT Sáez"
       ],
       "authorsCount": 4,
       "primaryLocation": {
@@ -3009,7 +3039,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Revista Colombiana de Biotecnología 15 (2), 18-28",
+      "venue": "Revista Colombiana de Biotecnología 15 (2), 18-29",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -3167,7 +3197,7 @@
       "typeCrossref": null,
       "authors": [
         "E Vargas",
-        "CV Correa",
+        "C Correa",
         "C Hinojosa",
         "H Arguello"
       ],
@@ -3180,7 +3210,7 @@
         "landingPageUrl": "http://dx.doi.org/10.1109/cvpr52733.2024.00543",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx8/10654794/10654797/10656854.pdf?arnumber=10656854"
       },
-      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern …",
+      "venue": "arXiv preprint arXiv:2404.01278",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -3300,10 +3330,10 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "N Diaz",
+        "N Dias",
         "A Basarab",
         "JY Tourneret",
-        "HA Fuentes"
+        "H Arguello"
       ],
       "authorsCount": 4,
       "primaryLocation": {
@@ -3314,7 +3344,7 @@
         "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2019.8903163",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8893974/8902336/08903163.pdf?arnumber=8903163"
       },
-      "venue": "2019 27th European Signal Processing Conference (EUSIPCO), 1-5",
+      "venue": "27th European Signal Processing Conference (EUSIPCO 2019), 1-5",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -5131,9 +5161,9 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "C Barajas-Solano",
-        "JM Ramirez",
-        "JIM Torre",
+        "C Barajas",
+        "JM Ramírez",
+        "JI Martinez Torre",
         "H Arguello"
       ],
       "authorsCount": 4,
@@ -5142,7 +5172,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Journal of Visual Communication and Image Representation 92, 103782",
+      "venue": "Journal of Visual Communication and Image Representation 92 (103782)",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -5449,10 +5479,9 @@
         "CV Correa",
         "Y Sun",
         "US Kamilov",
-        "B Wohlberg",
         "..."
       ],
-      "authorsCount": 7,
+      "authorsCount": 6,
       "primaryLocation": {
         "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Vr2j17o0sqMC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/10006360/10167682.pdf?arnumber=10167682"
@@ -5461,7 +5490,7 @@
         "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2023.3290468",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/10006360/10167682.pdf?arnumber=10167682"
       },
-      "venue": "IEEE Transactions on Geoscience and Remote Sensing 61, 1-12",
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing 61 (LA-UR--22-24453)",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -7374,36 +7403,6 @@
       "source": "google_scholar"
     },
     {
-      "id": "google-scholar:R7gjbGIAAAAJ:m4fbC6XIj1kC",
-      "title": "Dual-blind deconvolution for overlaid radar-communications systems",
-      "publicationDate": null,
-      "publicationYear": 2023,
-      "doi": "10.1109/jsait.2023.3287823",
-      "doiUrl": "https://doi.org/10.1109/jsait.2023.3287823",
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "E Vargas",
-        "KV Mishra",
-        "R Jacome",
-        "BM Sadler",
-        "H Arguello"
-      ],
-      "authorsCount": 5,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:m4fbC6XIj1kC",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8700143/10153947/10159370.pdf?arnumber=10159370"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1109/jsait.2023.3287823",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8700143/10153947/10159370.pdf?arnumber=10159370"
-      },
-      "venue": "IEEE Journal on Selected Areas in Information Theory 4, 75-93",
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
       "id": "google-scholar:R7gjbGIAAAAJ:E7VqQtBCVmcC",
       "title": "Dual-blind deconvolution in ISAC receiver using multi-dimensional Beurling-Selberg functions",
       "publicationDate": null,
@@ -7670,7 +7669,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "2026 IEEE 23rd International Symposium on Biomedical Imaging (ISBI), 1-5",
+      "venue": "arXiv preprint arXiv:2603.29014",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8492,7 +8491,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …",
+      "venue": "arXiv preprint arXiv:2602.20328",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8507,10 +8506,10 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "C Barajas-Solano",
-        "S Muñoz",
-        "N Santos",
-        "H Arguello"
+        "CB Solano",
+        "SFM Navarro",
+        "MNS da Silva",
+        "HA Fuentes"
       ],
       "authorsCount": 4,
       "primaryLocation": {
@@ -8686,9 +8685,9 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "N Diaz",
-        "H Rueda",
-        "H Arguello"
+        "NE Diaz",
+        "HFR Chacon",
+        "HA Fuentes"
       ],
       "authorsCount": 3,
       "primaryLocation": {
@@ -9449,11 +9448,11 @@
       "typeCrossref": null,
       "authors": [
         "X Yuan",
-        "DJ Brady",
+        "D BRADY",
         "J Suo",
         "H Arguello",
         "M Rodrigues",
-        "AK Katsaggelos"
+        "A KATSAGGELOS"
       ],
       "authorsCount": 6,
       "primaryLocation": {
@@ -10342,7 +10341,7 @@
       "authors": [
         "J Bacca",
         "C Arcos",
-        "JM Ramírez",
+        "JM Ramirez",
         "H Arguello"
       ],
       "authorsCount": 4,
@@ -10351,7 +10350,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Signal Processing: Image Communication 132, 117247",
+      "venue": "Signal Processing: Image Communication 132 (117247), 1-10",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -10584,33 +10583,6 @@
       },
       "bestOaLocation": null,
       "venue": null,
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
-      "id": "google-scholar:R7gjbGIAAAAJ:6VlyvFCUEfcC",
-      "title": "Multi-antenna dual-blind deconvolution for joint radar-communications via soman minimization",
-      "publicationDate": null,
-      "publicationYear": 2024,
-      "doi": "10.1016/j.sigpro.2024.109484",
-      "doiUrl": "https://doi.org/10.1016/j.sigpro.2024.109484",
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "R Jacome",
-        "E Vargas",
-        "KV Mishra",
-        "BM Sadler",
-        "H Arguello"
-      ],
-      "authorsCount": 5,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:6VlyvFCUEfcC",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "Signal Processing 221, 109484",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -10940,9 +10912,9 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "KML López",
-        "LVG Carreño",
-        "HA Fuentes"
+        "KM León-López",
+        "L Galvis-Carreño",
+        "H Arguello-Fuentes"
       ],
       "authorsCount": 3,
       "primaryLocation": {
@@ -11037,6 +11009,33 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:65Yg0jNCQDAC",
+      "title": "Nonlocal low-rank abundance prior for compressive spectral image fusion",
+      "publicationDate": null,
+      "publicationYear": 2021,
+      "doi": "10.1109/tgrs.2020.2993541",
+      "doiUrl": "https://doi.org/10.1109/tgrs.2020.2993541",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "T Gelvez",
+        "H Arguello"
+      ],
+      "authorsCount": 2,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:65Yg0jNCQDAC",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9306033/09099096.pdf?arnumber=9099096"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/tgrs.2020.2993541",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/9306033/09099096.pdf?arnumber=9099096"
+      },
+      "venue": "IEEE Transactions on Geoscience and Remote Sensing 59 (1), 415-425",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:CaZNVDsoPx4C",
       "title": "Nota Técnica: Intereses Intercalarios y el Diseño de la Empresa Modelo–El Caso Sanitario",
       "publicationDate": null,
@@ -11063,7 +11062,7 @@
       "id": "google-scholar:R7gjbGIAAAAJ:Tfl4UtY-dJUC",
       "title": "NOWA: Null-space Optical Watermark for Invisible Capture Fingerprinting and Tamper Localization",
       "publicationDate": null,
-      "publicationYear": 2026,
+      "publicationYear": 2025,
       "doi": null,
       "doiUrl": null,
       "type": "scholar-article",
@@ -11080,7 +11079,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …",
+      "venue": "arXiv preprint arXiv:2512.22501",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -11991,9 +11990,9 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "CA Vargas García",
-        "H Arguello Fuentes",
-        "RG Torres Sáez"
+        "CAV García",
+        "HA Fuentes",
+        "RGT Sáez"
       ],
       "authorsCount": 3,
       "primaryLocation": {
@@ -12208,7 +12207,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:5MTHONV0fEkC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:5MTHONV0fEkC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -12730,7 +12729,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:rOcdG6UcVlcC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:rOcdG6UcVlcC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/10289698/10289713/10290023.pdf?arnumber=10290023"
       },
       "bestOaLocation": {
@@ -14001,20 +14000,20 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "Ó Espitia Mendoza",
-        "Y Mejía Melgarejo",
-        "H Arguello Fuentes"
+        "ÓE Mendoza",
+        "YHM Melgarejo",
+        "HA Fuentes"
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:XiVPGOgt02cC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:XiVPGOgt02cC",
         "pdfUrl": "http://revistas.javeriana.edu.co/index.php/iyu/article/viewFile/12222/13773"
       },
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.11144/javeriana.iyu20-2.scaa",
         "pdfUrl": "http://revistas.javeriana.edu.co/index.php/iyu/article/viewFile/12222/13773"
       },
-      "venue": "Ingeniería y Universidad 20 (2), 411-431",
+      "venue": "Ingeniería y universidad 20 (2), 411-431",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -14541,7 +14540,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:7Hz3ACDFbsoC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:7Hz3ACDFbsoC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/36/8744645/08657365.pdf?arnumber=8657365"
       },
       "bestOaLocation": {
@@ -14667,9 +14666,9 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "HF Rueda",
-        "A Parada",
-        "H Arguello"
+        "HFR Chacon",
+        "AP Mayorga",
+        "HA Fuentes"
       ],
       "authorsCount": 3,
       "primaryLocation": {
@@ -14677,7 +14676,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "Ingenieria e investigacion 34 (3), 50-55",
+      "venue": "Ingenieria e investigacion 34 (3), 50",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -14721,19 +14720,19 @@
       "typeCrossref": null,
       "authors": [
         "H Vargas",
-        "A Camacho",
-        "H Arguello"
+        "AC Velasco",
+        "HA Fuentes"
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:wKETBy42zhYC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:wKETBy42zhYC",
         "pdfUrl": "https://revistas.itm.edu.co/index.php/tecnologicas/article/download/1228/1192"
       },
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.22430/22565337.1228",
         "pdfUrl": "https://revistas.itm.edu.co/index.php/tecnologicas/article/download/1228/1192"
       },
-      "venue": "TecnoLógicas 22 (45), 131-145",
+      "venue": "TecnoLógicas 22 (45), 129-143",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
