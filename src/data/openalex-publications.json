@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-08-03T11:30:27.212Z",
+  "fetchedAt": "2026-08-10T09:27:23.399Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 500,
-    "citedByCount": 4602,
+    "citedByCount": 4605,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -11015,7 +11015,7 @@
       "id": "google-scholar:R7gjbGIAAAAJ:Tfl4UtY-dJUC",
       "title": "NOWA: Null-space Optical Watermark for Invisible Capture Fingerprinting and Tamper Localization",
       "publicationDate": null,
-      "publicationYear": 2025,
+      "publicationYear": 2026,
       "doi": null,
       "doiUrl": null,
       "type": "scholar-article",
@@ -11032,7 +11032,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "arXiv preprint arXiv:2512.22501",
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern …",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -11042,8 +11042,8 @@
       "title": "NPN: Non-Linear Projections of the Null-Space for Imaging Inverse Problems",
       "publicationDate": null,
       "publicationYear": 2026,
-      "doi": "10.48550/ARXIV.2510.01608",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2510.01608",
+      "doi": "10.52202/085713-3973",
+      "doiUrl": "https://doi.org/10.52202/085713-3973",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
