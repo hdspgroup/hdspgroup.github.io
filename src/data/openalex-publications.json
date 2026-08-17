@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-08-10T09:27:23.399Z",
+  "fetchedAt": "2026-08-17T08:49:21.889Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 500,
-    "citedByCount": 4605,
+    "worksCount": 496,
+    "citedByCount": 4645,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -15,11 +15,11 @@
     ]
   },
   "totals": {
-    "openAlexWorks": 499,
-    "worksWithDoi": 465,
-    "doiBackedWorks": 462,
-    "scholarWorks": 597,
-    "mergedWorks": 595,
+    "openAlexWorks": 500,
+    "worksWithDoi": 466,
+    "doiBackedWorks": 463,
+    "scholarWorks": 598,
+    "mergedWorks": 596,
     "omittedWithoutDoiCount": 34,
     "omittedUnavailableMetadataCount": 3
   },
@@ -2355,8 +2355,8 @@
       "title": "An algorithm for learning sparsifying transforms of multidimensional signals",
       "publicationDate": null,
       "publicationYear": 2017,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.17533/udea.redin.n83a10",
+      "doiUrl": "https://doi.org/10.17533/udea.redin.n83a10",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -2954,7 +2954,7 @@
       ],
       "authorsCount": 7,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:In6cVmBjs0IC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:In6cVmBjs0IC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -4407,7 +4407,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:AXPGKjj_ei8C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:AXPGKjj_ei8C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/7694910/7743290/07743302.pdf?arnumber=7743302"
       },
       "bestOaLocation": {
@@ -5816,7 +5816,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:-6RzNnnwWf8C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:-6RzNnnwWf8C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/6745852/9318600/09585372.pdf?arnumber=9585372"
       },
       "bestOaLocation": {
@@ -6413,6 +6413,32 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:ojlX30-wUrgC",
+      "title": "Depth-Aware Implicit Neural Representation Priors for 3D Gravity Inversion",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "L Suarez-Rodriguez",
+        "P Goyes-Peñafiel",
+        "J Torres-Quintero",
+        "H Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ojlX30-wUrgC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "arXiv preprint arXiv:2608.08959",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:FAceZFleit8C",
       "title": "DESARROLLO DE UN PROTOTIPO PARA EL ANáLISIS DE RADIOPROPAGACIóN DE REDES INALáMBRICAS EN EDIFICIOS UTILIZANDO ARCHICAD",
       "publicationDate": null,
@@ -6713,19 +6739,19 @@
       "typeCrossref": null,
       "authors": [
         "CER Sierra",
-        "C Correa",
-        "H Arguello"
+        "CV Correa",
+        "HA Fuentes"
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ce2CqMG-AY4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ce2CqMG-AY4C",
         "pdfUrl": "https://revistas.utp.edu.co/index.php/revistaciencia/article/download/17731/14441"
       },
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.22517/23447214.17731",
         "pdfUrl": "https://revistas.utp.edu.co/index.php/revistaciencia/article/download/17731/14441"
       },
-      "venue": "Scientia et technica 24 (3), 463-471",
+      "venue": "Scientia et technica 24 (3), 455-463",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8617,7 +8643,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:e5wmG9Sq2KIC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:e5wmG9Sq2KIC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
