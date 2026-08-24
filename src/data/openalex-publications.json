@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-08-17T08:49:21.889Z",
+  "fetchedAt": "2026-08-24T08:53:21.349Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 496,
-    "citedByCount": 4645,
+    "citedByCount": 4658,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -18,8 +18,8 @@
     "openAlexWorks": 500,
     "worksWithDoi": 466,
     "doiBackedWorks": 463,
-    "scholarWorks": 598,
-    "mergedWorks": 596,
+    "scholarWorks": 600,
+    "mergedWorks": 598,
     "omittedWithoutDoiCount": 34,
     "omittedUnavailableMetadataCount": 3
   },
@@ -394,7 +394,7 @@
     },
     {
       "id": "https://openalex.org/W2974202205",
-      "title": "ADMM-based <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si9.svg\"><mml:mrow><mml:msub><mml:mi>ℓ</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mspace width=\"0.16em\"/><mml:mo linebreak=\"goodbreak\">−</mml:mo><mml:mspace width=\"0.16em\"/><mml:msub><mml:mi>ℓ</mml:mi><mml:mn>1</mml:mn></mml:msub></mml:mrow></mml:math> optimization algorithm for robust sparse channel estimation in OFDM systems",
+      "title": "ADMM-based\n                    <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" altimg=\"si9.svg\">\n                      <mml:mrow>\n                        <mml:msub>\n                          <mml:mi>ℓ</mml:mi>\n                          <mml:mn>1</mml:mn>\n                        </mml:msub>\n                        <mml:mspace width=\"0.16em\"/>\n                        <mml:mo linebreak=\"goodbreak\">−</mml:mo>\n                        <mml:mspace width=\"0.16em\"/>\n                        <mml:msub>\n                          <mml:mi>ℓ</mml:mi>\n                          <mml:mn>1</mml:mn>\n                        </mml:msub>\n                      </mml:mrow>\n                    </mml:math>\n                    optimization algorithm for robust sparse channel estimation in OFDM systems",
       "publicationDate": "2020-02-01",
       "publicationYear": 2020,
       "doi": "10.1016/j.sigpro.2019.107296",
@@ -1302,6 +1302,33 @@
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9897158/9897159/09897295.pdf?arnumber=9897295"
       },
       "venue": "2022 IEEE International Conference on Image Processing (ICIP), 4053-4057",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:DIubQTN3OvUC",
+      "title": "3D Unsupervised Sparse Gravimetry Imaging Guided by a Physics-Consistent Neural Field",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "A Mantilla-Dulcey",
+        "Y Gharedaghi",
+        "D Quintero",
+        "A Ortega",
+        "H Arguello"
+      ],
+      "authorsCount": 5,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:DIubQTN3OvUC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "2026 IEEE International Conference on Image Processing (ICIP), 1-6",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -3204,7 +3231,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:hFOr9nPyWt4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:hFOr9nPyWt4C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -4683,7 +4710,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:A8cqit5AE6sC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:A8cqit5AE6sC",
         "pdfUrl": "https://www.nature.com/articles/s41598-021-89788-y.pdf"
       },
       "bestOaLocation": {
@@ -9823,6 +9850,32 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:Nufq_to8ts0C",
+      "title": "Learning Geometry-Consistent Graphs for Multi-Modal Geophysical Data Interpolation",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "K Arias",
+        "P Goyes-Peñafiel",
+        "A Ortega",
+        "H Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Nufq_to8ts0C",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "2026 IEEE International Conference on Image Processing (ICIP), 1-6",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:lbI08cpqPnQC",
       "title": "Learning of bayesian networks equivalence classes based on competitive search of artificial ants.",
       "publicationDate": null,
@@ -10083,7 +10136,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Y5dfb0dijaUC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Y5dfb0dijaUC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/7694910/7743290/07743316.pdf?arnumber=7743316"
       },
       "bestOaLocation": {
@@ -10299,7 +10352,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:xGWFX6Gbr9MC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:xGWFX6Gbr9MC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -10896,7 +10949,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:tkaPQYYpVKoC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:tkaPQYYpVKoC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/7694910/7743290/07743325.pdf?arnumber=7743325"
       },
       "bestOaLocation": {
@@ -11002,7 +11055,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:nRpfm8aw39MC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:nRpfm8aw39MC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/4609443/8686367/08672159.pdf?arnumber=8672159"
       },
       "bestOaLocation": {
@@ -11406,7 +11459,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:TesyEGJKHF4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:TesyEGJKHF4C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/10350357/10350360/10350664.pdf?arnumber=10350664"
       },
       "bestOaLocation": {
@@ -11567,7 +11620,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:mB3voiENLucC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:mB3voiENLucC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -12653,7 +12706,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:PYBJJbyH-FwC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:PYBJJbyH-FwC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730276.pdf?arnumber=8730276"
       },
       "bestOaLocation": {
