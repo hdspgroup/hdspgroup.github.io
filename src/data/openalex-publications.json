@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-08-24T08:53:21.349Z",
+  "fetchedAt": "2026-08-31T16:00:53.572Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 496,
-    "citedByCount": 4658,
+    "citedByCount": 4667,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -18,8 +18,8 @@
     "openAlexWorks": 500,
     "worksWithDoi": 466,
     "doiBackedWorks": 463,
-    "scholarWorks": 600,
-    "mergedWorks": 598,
+    "scholarWorks": 601,
+    "mergedWorks": 599,
     "omittedWithoutDoiCount": 34,
     "omittedUnavailableMetadataCount": 3
   },
@@ -1183,7 +1183,7 @@
       ],
       "authorsCount": 7,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:VRfTbSk87rEC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:VRfTbSk87rEC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -3061,7 +3061,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:z6xuaG2dYH0C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:z6xuaG2dYH0C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9413349/9413350/09414781.pdf?arnumber=9414781"
       },
       "bestOaLocation": {
@@ -5427,7 +5427,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:CB2v5VPnA5kC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:CB2v5VPnA5kC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730285.pdf?arnumber=8730285"
       },
       "bestOaLocation": {
@@ -6629,7 +6629,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:_B80troHkn4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:_B80troHkn4C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/7694910/7743290/07743343.pdf?arnumber=7743343"
       },
       "bestOaLocation": {
@@ -6766,19 +6766,19 @@
       "typeCrossref": null,
       "authors": [
         "CER Sierra",
-        "CV Correa",
-        "HA Fuentes"
+        "C Correa",
+        "H Arguello"
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ce2CqMG-AY4C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ce2CqMG-AY4C",
         "pdfUrl": "https://revistas.utp.edu.co/index.php/revistaciencia/article/download/17731/14441"
       },
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.22517/23447214.17731",
         "pdfUrl": "https://revistas.utp.edu.co/index.php/revistaciencia/article/download/17731/14441"
       },
-      "venue": "Scientia et technica 24 (3), 455-463",
+      "venue": "Scientia et technica 24 (3), 463-471",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8310,6 +8310,31 @@
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/78/8894184/08890893.pdf?arnumber=8890893"
       },
       "venue": "IEEE Transactions on Signal Processing 67 (23), 6121-6132",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:sJK75vZXtG0C",
+      "title": "Frozen CLIP Priors for Robust Self-Supervised Poisson Inverse Problems",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "LC Diaz-Delgado",
+        "E Martinez",
+        "H Arguello"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:sJK75vZXtG0C",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "arXiv preprint arXiv:2608.20524",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -14195,7 +14220,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:owLR8QvbtFgC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:owLR8QvbtFgC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730251.pdf?arnumber=8730251"
       },
       "bestOaLocation": {
@@ -14247,7 +14272,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:umqufdRvDiIC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:umqufdRvDiIC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
