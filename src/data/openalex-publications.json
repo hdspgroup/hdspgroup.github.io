@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-09-21T14:58:18.654Z",
+  "fetchedAt": "2026-09-28T16:37:58.237Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 496,
-    "citedByCount": 4688,
+    "worksCount": 504,
+    "citedByCount": 4813,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -15,12 +15,12 @@
     ]
   },
   "totals": {
-    "openAlexWorks": 500,
-    "worksWithDoi": 466,
-    "doiBackedWorks": 463,
+    "openAlexWorks": 508,
+    "worksWithDoi": 473,
+    "doiBackedWorks": 470,
     "scholarWorks": 601,
     "mergedWorks": 599,
-    "omittedWithoutDoiCount": 34,
+    "omittedWithoutDoiCount": 35,
     "omittedUnavailableMetadataCount": 3
   },
   "publications": [
@@ -2058,8 +2058,8 @@
       "title": "AgriDOE: End-to-End DOE Optimization for Single-Shot Agricultural Spatial Classification",
       "publicationDate": null,
       "publicationYear": 2025,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.1109/lagirs68367.2025.11414796",
+      "doiUrl": "https://doi.org/10.1109/lagirs68367.2025.11414796",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -2071,9 +2071,12 @@
       "authorsCount": 4,
       "primaryLocation": {
         "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Gpwnp1kGG20C",
-        "pdfUrl": null
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11414419/11414756/11414796.pdf?arnumber=11414796"
       },
-      "bestOaLocation": null,
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/lagirs68367.2025.11414796",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11414419/11414756/11414796.pdf?arnumber=11414796"
+      },
       "venue": "2025 Latin American GRSS & ISPRS Remote Sensing Conference (LAGIRS), 1-8",
       "venueType": null,
       "topics": [],
@@ -2115,7 +2118,7 @@
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
-        "JL Bacca",
+        "JLB Acosta",
         "HA Fuentes"
       ],
       "authorsCount": 2,
@@ -2124,7 +2127,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "TecnoLógicas, 1-14",
+      "venue": "TecnoLógicas 22 (46), 1-14",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -5128,8 +5131,8 @@
       "title": "Compressive spectral video by dynamic spatial-spectral-temporal windowed codification",
       "publicationDate": null,
       "publicationYear": 2026,
-      "doi": "10.1364/opticaopen.24760644",
-      "doiUrl": "https://doi.org/10.1364/opticaopen.24760644",
+      "doi": "10.1364/oe.567787",
+      "doiUrl": "https://doi.org/10.1364/oe.567787",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -6949,8 +6952,8 @@
       "title": "DIPA: Distilled Preconditioned Algorithms for Solving Imaging Inverse Problems",
       "publicationDate": null,
       "publicationYear": 2026,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.48550/ARXIV.2605.15456",
+      "doiUrl": "https://doi.org/10.48550/ARXIV.2605.15456",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -7765,8 +7768,8 @@
       "title": "End-to-End Shutter Design and Reconstruction for Dynamic Scene Imaging",
       "publicationDate": null,
       "publicationYear": 2025,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.1109/lagirs68367.2025.11414770",
+      "doiUrl": "https://doi.org/10.1109/lagirs68367.2025.11414770",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -7777,9 +7780,12 @@
       "authorsCount": 3,
       "primaryLocation": {
         "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:T8_be82Iz5gC",
-        "pdfUrl": null
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11414419/11414756/11414770.pdf?arnumber=11414770"
       },
-      "bestOaLocation": null,
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/lagirs68367.2025.11414770",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11414419/11414756/11414770.pdf?arnumber=11414770"
+      },
       "venue": "2025 Latin American GRSS & ISPRS Remote Sensing Conference (LAGIRS), 1-6",
       "venueType": null,
       "topics": [],
@@ -8319,8 +8325,8 @@
       "title": "Frozen CLIP Priors for Robust Self-Supervised Poisson Inverse Problems",
       "publicationDate": null,
       "publicationYear": 2026,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.1007/978-3-032-37255-0_32",
+      "doiUrl": "https://doi.org/10.1007/978-3-032-37255-0_32",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -8532,8 +8538,8 @@
       "title": "GSNR: Graph Smooth Null-Space Representation for Inverse Problems",
       "publicationDate": null,
       "publicationYear": 2026,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.48550/ARXIV.2602.20328",
+      "doiUrl": "https://doi.org/10.48550/ARXIV.2602.20328",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -11711,8 +11717,8 @@
       "title": "Performance Bounds On Parameter Estimation for Relative Phases In Multi-Agent Wireless Systems",
       "publicationDate": null,
       "publicationYear": 2026,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.1109/icassp55912.2026.11463326",
+      "doiUrl": "https://doi.org/10.1109/icassp55912.2026.11463326",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -11725,9 +11731,12 @@
       "authorsCount": 5,
       "primaryLocation": {
         "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:cB__R-XWw9UC",
-        "pdfUrl": null
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11463326.pdf?arnumber=11463326"
       },
-      "bestOaLocation": null,
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1109/icassp55912.2026.11463326",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx8/11460365/11460314/11463326.pdf?arnumber=11463326"
+      },
       "venue": "ICASSP 2026-2026 IEEE International Conference on Acoustics, Speech and …",
       "venueType": null,
       "topics": [],
