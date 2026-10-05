@@ -2,23 +2,24 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-09-28T16:37:58.237Z",
+  "fetchedAt": "2026-10-05T16:59:12.905Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 504,
-    "citedByCount": 4813,
+    "worksCount": 496,
+    "citedByCount": 4804,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
-      "Industrial University of Santander"
+      "Industrial University of Santander",
+      "Universidad De Santander"
     ]
   },
   "totals": {
-    "openAlexWorks": 508,
-    "worksWithDoi": 473,
-    "doiBackedWorks": 470,
-    "scholarWorks": 601,
+    "openAlexWorks": 496,
+    "worksWithDoi": 461,
+    "doiBackedWorks": 458,
+    "scholarWorks": 603,
     "mergedWorks": 599,
     "omittedWithoutDoiCount": 35,
     "omittedUnavailableMetadataCount": 3
@@ -98,30 +99,6 @@
       },
       "venue": "IEEE Transactions on Geoscience and Remote Sensing",
       "venueType": "journal-article",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4404088523",
-      "title": "Physically Guided Deep Unsupervised Inversion for 1D Magnetotelluric Models",
-      "publicationDate": "2024-01-01",
-      "publicationYear": 2024,
-      "doi": "10.48550/ARXIV.2410.15274",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2410.15274",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Paul Goyes-Peñafiel",
-        "Umair bin Waheed",
-        "Henry Arguello"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://arxiv.org/abs/2410.15274",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "arXiv",
-      "venueType": "article-journal",
       "topics": []
     },
     {
@@ -312,31 +289,6 @@
       },
       "venue": "IEEE Transactions on Geoscience and Remote Sensing",
       "venueType": "journal-article",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W3131163261",
-      "title": "Subspace-Based Feature Fusion From Hyperspectral And Multispectral Image For Land Cover Classification",
-      "publicationDate": "2021-01-01",
-      "publicationYear": 2021,
-      "doi": "10.48550/ARXIV.2102.11228",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2102.11228",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Juan Ramírez",
-        "Héctor Vargas",
-        "José Ignacio Martínez",
-        "Henry Arguello"
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "https://arxiv.org/abs/2102.11228",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "arXiv",
-      "venueType": "article-journal",
       "topics": []
     },
     {
@@ -5355,7 +5307,7 @@
       ],
       "authorsCount": 1,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:_FM0Bhl9EiAC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=600&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:_FM0Bhl9EiAC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -5835,8 +5787,8 @@
       "title": "Deep coded aperture design: An end-to-end approach for computational imaging tasks",
       "publicationDate": null,
       "publicationYear": 2021,
-      "doi": "10.48550/ARXIV.2105.03390",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2105.03390",
+      "doi": "10.1109/tci.2021.3122285",
+      "doiUrl": "https://doi.org/10.1109/tci.2021.3122285",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -6405,7 +6357,7 @@
       ],
       "authorsCount": 6,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:TQgYirikUcIC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:TQgYirikUcIC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -6579,7 +6531,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:FsLZdJ3BAzkC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:FsLZdJ3BAzkC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -6721,7 +6673,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:2VqYfGB8ITEC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:2VqYfGB8ITEC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/7694910/7743290/07743301.pdf?arnumber=7743301"
       },
       "bestOaLocation": {
@@ -7392,7 +7344,7 @@
       ],
       "authorsCount": 6,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Y9VhQm-5nPIC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:Y9VhQm-5nPIC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/10436122/10436123/10436309.pdf?arnumber=10436309"
       },
       "bestOaLocation": {
@@ -7615,7 +7567,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:NxmKEeNBbOMC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:NxmKEeNBbOMC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -8555,6 +8507,35 @@
       },
       "bestOaLocation": null,
       "venue": "arXiv preprint arXiv:2602.20328",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:eFf2swCANGcC",
+      "title": "Guided Diffusion Models for Seismic Data Reconstruction via Deep Image Priors and Restoration Operators",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": "10.1190/tle-2026-1080",
+      "doiUrl": "https://doi.org/10.1190/tle-2026-1080",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "L Rodríguez-López",
+        "P Goyes-Peñaf",
+        "L Galvis",
+        "H Arguello"
+      ],
+      "authorsCount": 4,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:eFf2swCANGcC",
+        "pdfUrl": "https://pubs.geoscienceworld.org/seg/tle/article-pdf/doi/10.1190/tle-2026-1080/8369488/tle-2026-1080.pdf"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.1190/tle-2026-1080",
+        "pdfUrl": "https://pubs.geoscienceworld.org/seg/tle/article-pdf/doi/10.1190/tle-2026-1080/8369488/tle-2026-1080.pdf"
+      },
+      "venue": "The Leading Edge",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -10029,7 +10010,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:9shLKfS_uJEC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:9shLKfS_uJEC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -12234,8 +12215,8 @@
       "title": "Privhar: Recognizing human actions from privacy-preserving lens",
       "publicationDate": null,
       "publicationYear": 2022,
-      "doi": "10.48550/ARXIV.2206.03891",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2206.03891",
+      "doi": "10.1007/978-3-031-19772-7_19",
+      "doiUrl": "https://doi.org/10.1007/978-3-031-19772-7_19",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -12556,7 +12537,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ZfRJV9d4-WMC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:ZfRJV9d4-WMC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -12798,7 +12779,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:jU7OWUQzBzMC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:jU7OWUQzBzMC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730279.pdf?arnumber=8730279"
       },
       "bestOaLocation": {
@@ -13701,7 +13682,7 @@
       ],
       "authorsCount": 1,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:gVv57TyPmFsC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=600&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:gVv57TyPmFsC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -14747,6 +14728,31 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:a2necdfpwlEC",
+      "title": "Spectral Security Imaging System (SSIS): Optical Authenticity for Hyperspectral Pushbroom Imaging",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "H Garcia",
+        "GR Arce",
+        "HA Fuentes"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:a2necdfpwlEC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "2026 IEEE International Conference on Robotics and Automation (ICRA), 2227-2234",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:HIFyuExEbWQC",
       "title": "Spectral selectivity in compressive spectral imaging based on grayscale coded apertures",
       "publicationDate": null,
@@ -15230,7 +15236,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:L1USKYWJimsC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:L1USKYWJimsC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730284.pdf?arnumber=8730284"
       },
       "bestOaLocation": {
@@ -15658,7 +15664,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:MIg0yeAD4ggC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:MIg0yeAD4ggC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9413349/9413350/09413903.pdf?arnumber=9413903"
       },
       "bestOaLocation": {
