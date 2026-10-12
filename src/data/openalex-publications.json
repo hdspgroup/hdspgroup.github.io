@@ -2,24 +2,24 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-10-05T16:59:12.905Z",
+  "fetchedAt": "2026-10-12T17:36:22.760Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 496,
-    "citedByCount": 4804,
+    "worksCount": 494,
+    "citedByCount": 4756,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
-      "Industrial University of Santander",
+      "Universidad Industrial de Santander",
       "Universidad De Santander"
     ]
   },
   "totals": {
-    "openAlexWorks": 496,
-    "worksWithDoi": 461,
-    "doiBackedWorks": 458,
-    "scholarWorks": 603,
+    "openAlexWorks": 471,
+    "worksWithDoi": 436,
+    "doiBackedWorks": 433,
+    "scholarWorks": 604,
     "mergedWorks": 599,
     "omittedWithoutDoiCount": 35,
     "omittedUnavailableMetadataCount": 3
@@ -644,8 +644,8 @@
       "title": "Compressive Multispectral Model For Spectrum Sensing In Cognitive Radio Networks",
       "publicationDate": "2018-01-25",
       "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159598",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159598",
+      "doi": "10.5281/ZENODO.1159597",
+      "doiUrl": "https://doi.org/10.5281/ZENODO.1159597",
       "type": "article-journal",
       "typeCrossref": "article-journal",
       "authors": [
@@ -656,7 +656,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159598",
+        "landingPageUrl": "https://zenodo.org/record/1159597",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081675.pdf?arnumber=8081675"
       },
       "bestOaLocation": {
@@ -672,8 +672,8 @@
       "title": "High-Dimensional Optimization Of Color Coded Apertures For Compressive Spectral Cameras",
       "publicationDate": "2018-01-25",
       "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159898",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159898",
+      "doi": "10.5281/ZENODO.1159897",
+      "doiUrl": "https://doi.org/10.5281/ZENODO.1159897",
       "type": "article-journal",
       "typeCrossref": "article-journal",
       "authors": [
@@ -683,7 +683,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159898",
+        "landingPageUrl": "https://zenodo.org/record/1159897",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
       },
       "bestOaLocation": {
@@ -699,8 +699,8 @@
       "title": "Multi-Resolution Reconstruction Algorithm For Compressive Single Pixel Spectral Imaging",
       "publicationDate": "2018-01-25",
       "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159922",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159922",
+      "doi": "10.5281/ZENODO.1159921",
+      "doiUrl": "https://doi.org/10.5281/ZENODO.1159921",
       "type": "article-journal",
       "typeCrossref": "article-journal",
       "authors": [
@@ -712,7 +712,7 @@
       ],
       "authorsCount": 5,
       "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159922",
+        "landingPageUrl": "https://zenodo.org/record/1159921",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081251.pdf?arnumber=8081251"
       },
       "bestOaLocation": {
@@ -728,8 +728,8 @@
       "title": "Spatio-Spectro-Temporal Coded Aperture Design For Multiresolution Compressive Spectral Video Sensing",
       "publicationDate": "2018-01-25",
       "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159916",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159916",
+      "doi": "10.5281/ZENODO.1159915",
+      "doiUrl": "https://doi.org/10.5281/ZENODO.1159915",
       "type": "article-journal",
       "typeCrossref": "article-journal",
       "authors": [
@@ -739,7 +739,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159916",
+        "landingPageUrl": "https://zenodo.org/record/1159915",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
       },
       "bestOaLocation": {
@@ -1906,8 +1906,8 @@
       "title": "Adaptive multisensor acquisition via spatial contextual information for compressive spectral image classification",
       "publicationDate": null,
       "publicationYear": 2021,
-      "doi": "10.36227/techrxiv.14988804.v1",
-      "doiUrl": "https://doi.org/10.36227/techrxiv.14988804.v1",
+      "doi": "10.1109/jstars.2021.3111508",
+      "doiUrl": "https://doi.org/10.1109/jstars.2021.3111508",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -7141,8 +7141,8 @@
       "title": "Distilling knowledge for designing computational imaging systems",
       "publicationDate": null,
       "publicationYear": 2025,
-      "doi": "10.48550/ARXIV.2501.17898",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2501.17898",
+      "doi": "10.1109/tci.2025.3612849",
+      "doiUrl": "https://doi.org/10.1109/tci.2025.3612849",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -10261,7 +10261,7 @@
       ],
       "authorsCount": 1,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:HeT0ZceujKMC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=600&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:HeT0ZceujKMC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -14157,7 +14157,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:XUvXOeBm_78C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:XUvXOeBm_78C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730242.pdf?arnumber=8730242"
       },
       "bestOaLocation": {
@@ -14184,7 +14184,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:XD-gHx7UXLsC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:XD-gHx7UXLsC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -15101,7 +15101,7 @@
       ],
       "authorsCount": 4,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:eAlLMO4JVmQC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:eAlLMO4JVmQC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/9553015/9553016/09554465.pdf?arnumber=9554465"
       },
       "bestOaLocation": {
@@ -15636,7 +15636,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:lSLTfruPkqcC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:lSLTfruPkqcC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/6630487/6644900/06644927.pdf?arnumber=6644927"
       },
       "bestOaLocation": {
