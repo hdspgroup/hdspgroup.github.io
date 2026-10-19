@@ -54,7 +54,6 @@ interface PublicationsDataset {
 const dataset = publicationsData as PublicationsDataset;
 const publications = (dataset.publications ?? []).filter((publication) => (publication.publicationYear ?? 0) >= 2010);
 const profile = dataset.profile;
-const totals = dataset.totals;
 const scholarProfileUrl = 'https://scholar.google.com/citations?user=R7gjbGIAAAAJ&hl=en';
 const normalizeArguello = (value: string) => value.replaceAll('Argüello', 'Arguello');
 const profileName = normalizeArguello(profile.name);
@@ -133,16 +132,20 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
   <Stats
     title="At a glance"
     stats={[
-      { title: 'Visible works', amount: String(publications.length), classes: { amount: 'text-hdsp-logo-stat text-primary' } },
       {
-        title: 'Profile works',
-        amount: String(totals.openAlexWorks ?? profile.worksCount),
+        title: 'Publications listed',
+        amount: String(publications.length),
         classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
       { title: 'Years covered', amount: String(years.length), classes: { amount: 'text-hdsp-logo-stat text-primary' } },
       {
         title: 'Works with DOI',
-        amount: String(totals.worksWithDoi ?? totals.doiBackedWorks),
+        amount: String(publications.filter((publication) => publication.doi).length),
+        classes: { amount: 'text-hdsp-logo-stat text-primary' },
+      },
+      {
+        title: `Published in ${groupedPublications[0]?.year ?? '—'}`,
+        amount: String(groupedPublications[0]?.publications.length ?? 0),
         classes: { amount: 'text-hdsp-logo-stat text-primary' },
       },
     ]}
@@ -161,7 +164,9 @@ const latestUpdate = new Date(dataset.fetchedAt).toLocaleDateString('en-US', {
             <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 class="text-xl font-bold font-heading dark:text-white">{year}</h2>
-                <p class="text-sm text-muted">{items.length} publications</p>
+                <p class="text-sm text-muted">
+                  {items.length} {items.length === 1 ? 'publication' : 'publications'}
+                </p>
               </div>
               <span class="text-sm font-semibold text-primary">Toggle year</span>
             </summary>

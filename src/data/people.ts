@@ -24,29 +24,26 @@ type PersonSeed = Omit<Person, 'links'> & {
   links?: PersonLink[];
 };
 
-const scholarPlaceholder = 'https://scholar.google.com/';
-const linkedinPlaceholder = 'https://www.linkedin.com/';
-
-const scholarLink = (href: string = scholarPlaceholder): PersonLink => ({
+const scholarLink = (href: string): PersonLink => ({
   label: 'Scholar',
   href,
   icon: 'tabler:school',
 });
 
-const linkedinLink = (href: string = linkedinPlaceholder): PersonLink => ({
+const linkedinLink = (href: string): PersonLink => ({
   label: 'LinkedIn',
   href,
   icon: 'tabler:brand-linkedin',
 });
 
-const buildPerson = ({
-  scholarHref = scholarPlaceholder,
-  linkedinHref = linkedinPlaceholder,
-  links = [],
-  ...person
-}: PersonSeed): Person => ({
+// Only real profiles get a button; people without one simply show no links.
+const buildPerson = ({ scholarHref, linkedinHref, links = [], ...person }: PersonSeed): Person => ({
   ...person,
-  links: [scholarLink(scholarHref), linkedinLink(linkedinHref), ...links],
+  links: [
+    ...(scholarHref ? [scholarLink(scholarHref)] : []),
+    ...(linkedinHref ? [linkedinLink(linkedinHref)] : []),
+    ...links,
+  ],
 });
 
 export const principalInvestigator: Person & { interests: string[]; image: string } = {
@@ -92,60 +89,60 @@ export const peopleCategories: PeopleCategory[] = [
     members: [
       buildPerson({
         name: 'Paul Goyes',
-        title: 'Ph.D. in Computer Science',
+        title: 'Ph.D. student in Computer Science',
         scholarHref: 'https://scholar.google.com/citations?user=xrnAAhwAAAAJ&hl=es&oi=ao',
         linkedinHref: 'https://www.linkedin.com/in/paul-goyes-0212b810/',
       }),
       buildPerson({
         name: 'Jhon Lopez',
-        title: 'Ph.D. in Computer Science',
+        title: 'Ph.D. student in Computer Science',
         scholarHref: 'https://scholar.google.com/citations?user=d1QOBbYAAAAJ&hl=es&oi=ao',
         linkedinHref: 'https://www.linkedin.com/in/jhon-lopez-cs/',
       }),
       buildPerson({
         name: 'Kevin Arias',
-        title: 'Ph.D. in Computer Science',
+        title: 'Ph.D. student in Computer Science',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=xna9azgAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/kevin-ademir-arias-rojas-436592203/',
       }),
       buildPerson({
         name: 'Emmanuel Martinez',
-        title: 'Ph.D. in Computer Science',
+        title: 'Ph.D. student in Computer Science',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=2cuVkZMAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/emmanuel-mart%C3%ADnez-77391216b/',
       }),
       buildPerson({
         name: 'Leon Suarez',
-        title: 'Ph.D. in Computer Science',
+        title: 'Ph.D. student in Computer Science',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=FAT4XIUAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/leon-suarez24/',
       }),
       buildPerson({
         name: 'Juan Carlos Vega',
-        title: 'Ph.D. in Computer Science',
+        title: 'Ph.D. student in Computer Science',
         linkedinHref: 'https://www.linkedin.com/in/juan-carlos-vega-bb3894277/',
       }),
       buildPerson({
         name: 'Sergio Urrea',
-        title: 'Ph.D. in Engineering',
+        title: 'Ph.D. student in Engineering',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=AJziGNMAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/sergioaurrea/',
       }),
       buildPerson({
         name: 'Pablo Gomez',
-        title: 'Ph.D. in Engineering',
+        title: 'Ph.D. student in Engineering',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=t7WlM0QAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/pablo-andres-gomez-toloza-42601a226/',
       }),
       buildPerson({
         name: 'Roman Jacome',
-        title: 'Ph.D. in Engineering',
+        title: 'Ph.D. student in Engineering',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=n3cPHTMAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/roman-alejandro-j%C3%A1come-carrascal-9ab1b71aa/',
       }),
       buildPerson({
         name: 'Karen Fonseca',
-        title: 'Ph.D. in Engineering',
+        title: 'Ph.D. student in Engineering',
         scholarHref: 'https://scholar.google.com/citations?user=KQCZTqAAAAAJ&hl=en',
         linkedinHref: 'https://www.linkedin.com/in/karen--fonseca/',
       }),
@@ -158,19 +155,19 @@ export const peopleCategories: PeopleCategory[] = [
     members: [
       buildPerson({
         name: 'Javier Torres',
-        title: 'M.Sc. in Systems and Computer Engineering',
+        title: 'M.Sc. student in Systems and Computer Engineering',
         scholarHref: 'https://scholar.google.com/citations?user=wVkX0BAAAAAJ&hl=es&oi=ao',
         linkedinHref: 'https://www.linkedin.com/in/javier-torres-b2244a222/',
       }),
       buildPerson({
         name: 'Sebastian Ardila',
-        title: 'M.Sc. in Electronic Engineering',
+        title: 'M.Sc. student in Electronic Engineering',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=1YJfjKgAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/sebastian-ardila-leal-702581274/',
       }),
       buildPerson({
         name: 'Ana Mantilla',
-        title: 'M.Sc. in Geophysics',
+        title: 'M.Sc. student in Geophysics',
         scholarHref: 'https://scholar.google.com/citations?hl=es&user=y_kOylMAAAAJ',
         linkedinHref: 'https://www.linkedin.com/in/ana-gabriela-mantilla-24377a21a/',
       }),
@@ -202,10 +199,10 @@ export const peopleCategories: PeopleCategory[] = [
   },
   {
     title: 'Administrative and Professionals',
-    description: 'Management and professional support that sustains the group\'s projects and operations.',
+    description: "Management and professional support that sustains the group's projects and operations.",
     icon: 'tabler:briefcase',
     members: [
-      buildPerson({ name: 'Ana Gutierrez', title: 'Master\'s in Project Management' }),
+      buildPerson({ name: 'Ana Gutierrez', title: "Master's in Project Management" }),
       buildPerson({ name: 'Marcela Rincon', title: 'Industrial Engineer | Specialist in Strategic Management' }),
     ],
   },
