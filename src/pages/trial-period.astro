@@ -116,6 +116,7 @@ const labs = [
     date: 'July 29, 2026',
     pages: 11,
     pdf: 'deep-learning-inverse-problems.pdf',
+    notebook: 'https://drive.google.com/file/d/1-dsPcjC4lF7VuSVCkVuvt4vcPgT0nUUn/view?usp=sharing',
     summary:
       'From linear models to MLPs and CNNs in PyTorch, ending with a CNN autoencoder that restores blurred images. Every experiment runs on CPU; a GPU is optional.',
     pipeline: ['Images', 'Forward model', 'Training', 'Metrics'],
@@ -130,7 +131,7 @@ const labs = [
       'Report (PDF) with one figure per experiment, metrics tables, and answers to all questions.',
       'results/ folder inside a .zip file with exported images.',
     ],
-    tools: 'Python, PyTorch, the provided starter notebook',
+    tools: 'Python, PyTorch, the starter notebook (students work on their own copy)',
   },
 ];
 ---
@@ -182,15 +183,28 @@ const labs = [
                 </p>
                 <p class="mt-3 text-sm leading-6 text-muted dark:text-slate-300">{lab.summary}</p>
               </div>
-              <Button
-                href={getAsset(`/labs/${lab.pdf}`)}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="secondary"
-                icon="tabler:download"
-              >
-                Download PDF
-              </Button>
+              <div class="flex flex-wrap gap-3 lg:flex-col">
+                <Button
+                  href={getAsset(`/labs/${lab.pdf}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="secondary"
+                  icon="tabler:download"
+                >
+                  Download PDF
+                </Button>
+                {lab.notebook && (
+                  <Button
+                    href={lab.notebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="secondary"
+                    icon="tabler:notebook"
+                  >
+                    Starter notebook
+                  </Button>
+                )}
+              </div>
             </div>
 
             <div class="mt-5 flex flex-wrap items-center gap-2">
