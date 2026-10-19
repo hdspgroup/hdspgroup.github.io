@@ -52,10 +52,10 @@ Sin la variable, el script intenta el scraping público de Scholar como último 
 
 ## Variables de entorno del script
 
-| Variable                   | Por defecto            | Descripción                                   |
-| -------------------------- | ---------------------- | --------------------------------------------- |
-| `SERPAPI_API_KEY`          | —                      | Clave de SerpApi para sincronizar Scholar.    |
-| `OPENALEX_AUTHOR_ID`       | `A5081714132`          | Autor de OpenAlex a consultar.                |
-| `GOOGLE_SCHOLAR_AUTHOR_ID` | `R7gjbGIAAAAJ`         | Perfil de Google Scholar a consultar.         |
-| `OPENALEX_MAILTO`          | —                      | Email para el "polite pool" de OpenAlex.      |
-| `OPENALEX_API_KEY`         | —                      | API key opcional de OpenAlex.                 |
+| Variable                   | Por defecto    | Descripción                                |
+| -------------------------- | -------------- | ------------------------------------------ |
+| `SERPAPI_API_KEY`          | —              | Clave de SerpApi para sincronizar Scholar. |
+| `OPENALEX_AUTHOR_ID`       | `A5081714132`  | Autor de OpenAlex a consultar.             |
+| `GOOGLE_SCHOLAR_AUTHOR_ID` | `R7gjbGIAAAAJ` | Perfil de Google Scholar a consultar.      |
+| `OPENALEX_MAILTO`          | —              | Email para el "polite pool" de OpenAlex.   |
+| `OPENALEX_API_KEY`         | —              | API key opcional de OpenAlex.              |

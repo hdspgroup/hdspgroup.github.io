@@ -2,3 +2,5 @@ dist
 node_modules
 .github
 .changeset
+# generated weekly by scripts/fetch-openalex-publications.mjs
+src/data/openalex-publications.json

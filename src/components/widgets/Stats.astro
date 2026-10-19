@@ -29,19 +29,17 @@ const {
                 <Icon name={icon} class="w-10 h-10" />
               </div>
             )}
-            {
-              amount && (
-                <div
-                  class:list={[
-                    'font-heading text-3xl font-bold lg:text-4xl',
-                    { 'text-primary': !statClasses.amount },
-                    statClasses.amount,
-                  ]}
-                >
-                  {amount}
-                </div>
-              )
-            }
+            {amount && (
+              <div
+                class:list={[
+                  'font-heading text-3xl font-bold lg:text-4xl',
+                  { 'text-primary': !statClasses.amount },
+                  statClasses.amount,
+                ]}
+              >
+                {amount}
+              </div>
+            )}
             {title && <div class="text-sm font-semibold uppercase text-muted lg:text-base">{title}</div>}
           </div>
         ))
