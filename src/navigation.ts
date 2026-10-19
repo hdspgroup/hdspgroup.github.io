@@ -28,6 +28,11 @@ export const headerData = {
       icon: 'tabler:calendar-event',
     },
     {
+      text: 'Trial Period',
+      href: getPermalink('/trial-period'),
+      icon: 'tabler:flask',
+    },
+    {
       text: 'DIRECTOR App',
       href: getPermalink('/homes/director-app'),
       disabled: true,

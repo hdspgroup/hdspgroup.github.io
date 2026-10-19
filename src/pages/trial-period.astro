@@ -1,0 +1,233 @@
+---
+import { Icon } from 'astro-icon/components';
+import HeroText from '~/components/widgets/HeroText.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Button from '~/components/ui/Button.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getAsset } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Trial Period',
+  description: 'Lab workshops that HDSP tutors assign to students during their trial period.',
+};
+
+// Evidence every lab asks for, so tutors know what to request.
+const expectations = [
+  {
+    title: 'Code',
+    description: 'A notebook (.ipynb) or scripts with executable code and intermediate figures.',
+    icon: 'tabler:code',
+  },
+  {
+    title: 'Report',
+    description: 'A short PDF with key figures, a small metrics table, and answers to the analysis questions.',
+    icon: 'tabler:file-type-pdf',
+  },
+  {
+    title: 'Decisions and fixes',
+    description: 'A short paragraph on what was changed during the lab and why.',
+    icon: 'tabler:checklist',
+  },
+  {
+    title: 'Results',
+    description: 'A results/ folder with the exported images.',
+    icon: 'tabler:folder',
+  },
+];
+
+// Ordered by the date printed on each workshop guide.
+const labs = [
+  {
+    title: 'Image Formation and Spectral Acquisition',
+    area: 'Optics',
+    date: 'June 11, 2026',
+    pages: 21,
+    pdf: 'image-formation-spectral-acquisition.pdf',
+    summary:
+      'Students build a simple spectral imaging setup on the optical breadboard, acquire a 31-band reference cube with the monochromator and about 20 filter-wheel measurements, and reconstruct the spectrum.',
+    pipeline: [
+      'Components',
+      'Image formation',
+      'Spectral GT (31 bands)',
+      'Filters (N ≈ 20)',
+      'Reconstruction',
+      'Metrics',
+    ],
+    goals: [
+      'Validate focus on an optical rail using the thin lens model.',
+      'Assemble and align the test scene, lens, and monochrome camera.',
+      'Acquire the hyperspectral ground truth and the filter-based measurements.',
+      'Model acquisition as a linear system and reconstruct spectra (pseudoinverse, Tikhonov).',
+    ],
+    deliverables: [
+      'Report (2–4 pages) with 3–5 key figures, one metrics table, and analysis answers.',
+      'Capture log with exposure and gain per band.',
+      'results/ folder with exported figures and a README.txt.',
+    ],
+    tools: 'Optical lab: monochrome camera, imaging lens, monochromator, filter wheel, broadband lamp',
+  },
+  {
+    title: 'Basic Optimization and Introduction to Inverse Problems',
+    area: 'Optimization',
+    date: 'July 22, 2026',
+    pages: 13,
+    pdf: 'optimization-inverse-problems.pdf',
+    summary:
+      'From calculus-based optimization in 1D and 2D to least squares and the pseudoinverse, then linear inverse problems y = Ax + e, deconvolution instability, and regularized reconstruction with ISTA.',
+    pipeline: ['Optimization 1D/2D', 'Least squares', 'Pseudoinverse', 'Inverse problems', 'Deconvolution', 'ISTA'],
+    goals: [
+      'Read optimization notation and classify critical points with derivative and Hessian tests.',
+      'Derive the gradient of ‖Ax − y‖² and compare the pseudoinverse with lstsq.',
+      'Show why direct deconvolution is unstable under noise.',
+      'Implement ISTA with a sparse wavelet prior and study the effect of λ.',
+    ],
+    deliverables: [
+      'Written solution (PDF) with calculations, explanations, and answers.',
+      'Notebook or scripts with reproducible figures and PSNR/SSIM.',
+      'Short discussion on conditioning, priors, and reconstruction quality.',
+    ],
+    tools: 'numpy, scipy, matplotlib, scikit-image, pywt',
+  },
+  {
+    title: 'Gamma Corrections, Geometric Transformations, and Representation in Another Basis',
+    area: 'Image processing',
+    date: 'July 29, 2026',
+    pages: 7,
+    pdf: 'gamma-geometric-transformations-dct.pdf',
+    summary:
+      'Students learn to apply each operation in the right domain: exposure in linear vs. gamma, affine warps with different interpolators, and DCT sparsification for compression. Plan 20–30 minutes per block.',
+    pipeline: ['Linear', 'Exposure', 'Gamma', 'Warp', 'DCT', 'Metrics'],
+    goals: [
+      'Implement gamma correction and its inverse, and show its effect on histograms.',
+      'Apply affine transformations and compare nearest, bilinear, and bicubic interpolation.',
+      'Compress an image by keeping only the largest DCT coefficients.',
+    ],
+    deliverables: [
+      'Notebook (.ipynb) with conclusions per experiment and a decisions/fixes block.',
+      'Report (2–4 pages) with one figure per experiment and a PSNR/SSIM table.',
+      'Must use a personal image, not a standard course image.',
+    ],
+    tools: 'Python 3.10+, numpy, matplotlib, scikit-image, scipy (opencv-python optional)',
+  },
+  {
+    title: 'Deep Learning and Inverse Problems',
+    area: 'Deep learning',
+    date: 'July 29, 2026',
+    pages: 11,
+    pdf: 'deep-learning-inverse-problems.pdf',
+    summary:
+      'From linear models to MLPs and CNNs in PyTorch, ending with a CNN autoencoder that restores blurred images. Every experiment runs on CPU; a GPU is optional.',
+    pipeline: ['Images', 'Forward model', 'Training', 'Metrics'],
+    goals: [
+      'Describe inverse problems mathematically and recognize common cases.',
+      'Train an MLP for regression and classification.',
+      'Build and train a CNN autoencoder for image restoration.',
+      'Read loss curves, spot overfitting, and apply basic regularization.',
+    ],
+    deliverables: [
+      'Notebook (.ipynb) with conclusions per experiment and a decisions/fixes block.',
+      'Report (PDF) with one figure per experiment, metrics tables, and answers to all questions.',
+      'results/ folder inside a .zip file with exported images.',
+    ],
+    tools: 'Python, PyTorch, the provided starter notebook',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Trial Period"
+    title={`Lab workshops for the <span class="text-primary">trial period</span>`}
+    subtitle="A guide for tutors: the workshops that students who want to join HDSP complete during their trial period, with what each one covers and the evidence to request."
+  />
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto">
+    <Headline
+      title="What to request"
+      subtitle="Every workshop asks for the same kind of evidence. The specific figures and metrics are listed in each lab."
+      tagline="For tutors"
+    />
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        expectations.map((item) => (
+          <div class="tech-panel p-4">
+            <Icon name={item.icon} class="h-6 w-6 text-primary" />
+            <h3 class="mt-3 font-heading text-base font-semibold text-heading dark:text-white">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-muted">{item.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </WidgetWrapper>
+
+  <WidgetWrapper containerClass="max-w-7xl mx-auto">
+    <Headline
+      title="Workshops"
+      subtitle="Download the full guide of each lab to share it with the student."
+      tagline="Labs"
+    />
+
+    <div class="space-y-6">
+      {
+        labs.map((lab) => (
+          <article class="tech-panel p-5 md:p-6">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div class="max-w-3xl">
+                <p class="tech-kicker mb-3">{lab.area}</p>
+                <h2 class="font-heading text-xl font-bold text-heading dark:text-white md:text-2xl">{lab.title}</h2>
+                <p class="mt-1 text-sm text-muted">
+                  Guide dated {lab.date} · {lab.pages} pages
+                </p>
+                <p class="mt-3 text-sm leading-6 text-muted dark:text-slate-300">{lab.summary}</p>
+              </div>
+              <Button
+                href={getAsset(`/labs/${lab.pdf}`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="secondary"
+                icon="tabler:download"
+              >
+                Download PDF
+              </Button>
+            </div>
+
+            <div class="mt-5 flex flex-wrap items-center gap-2">
+              {lab.pipeline.map((step, index) => (
+                <>
+                  {index > 0 && <Icon name="tabler:arrow-right" class="h-4 w-4 text-muted" />}
+                  <span class="tech-chip px-3 py-1.5 text-xs">{step}</span>
+                </>
+              ))}
+            </div>
+
+            <div class="mt-6 grid gap-6 md:grid-cols-2">
+              <div>
+                <h3 class="text-sm font-semibold uppercase text-secondary">Learning goals</h3>
+                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-muted dark:text-slate-300">
+                  {lab.goals.map((goal) => (
+                    <li>{goal}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold uppercase text-secondary">Deliverables</h3>
+                <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-6 text-muted dark:text-slate-300">
+                  {lab.deliverables.map((deliverable) => (
+                    <li>{deliverable}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-5 border-t border-primary/20 pt-3 text-sm text-muted">
+              <span class="font-semibold text-heading dark:text-white">Tools:</span>
+              {lab.tools}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </WidgetWrapper>
+</Layout>
