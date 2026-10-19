@@ -22,3 +22,6 @@ pnpm-debug.log*
 pnpm-lock.yaml
 
 .astro
+
+# local browser profiles (screenshot tooling)
+.chrome-tmp/
