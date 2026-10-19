@@ -73,7 +73,11 @@ async function fetchText(url, headers = {}, attempt = 0) {
 
 function normalizeDoi(doiValue) {
   if (!doiValue) return null;
-  return String(doiValue).replace(/^https?:\/\/doi\.org\//i, '').trim() || null;
+  return (
+    String(doiValue)
+      .replace(/^https?:\/\/doi\.org\//i, '')
+      .trim() || null
+  );
 }
 
 function decodeHtmlEntities(value) {
@@ -190,7 +194,10 @@ function extractPdfUrl(metadata) {
   const pdfLike = links.find(
     (link) =>
       typeof link.URL === 'string' &&
-      (link.URL.toLowerCase().includes('.pdf') || String(link['content-type'] ?? '').toLowerCase().includes('pdf'))
+      (link.URL.toLowerCase().includes('.pdf') ||
+        String(link['content-type'] ?? '')
+          .toLowerCase()
+          .includes('pdf'))
   );
   return pdfLike?.URL ?? null;
 }
@@ -207,19 +214,13 @@ function normalizeAuthorProfile(author) {
     citedByCount: author.cited_by_count ?? 0,
     openAlexUrl: author.id ?? null,
     orcid: author.orcid ?? author.ids?.orcid ?? null,
-    institutions: (author.last_known_institutions ?? [])
-      .map((institution) => institution.display_name)
-      .filter(Boolean),
+    institutions: (author.last_known_institutions ?? []).map((institution) => institution.display_name).filter(Boolean),
   };
 }
 
 function normalizePublication(openalexWork, doiMetadata) {
   const doi = normalizeDoi(doiMetadata.DOI) ?? normalizeDoi(openalexWork.doi);
-  const authors =
-    (doiMetadata.author ?? [])
-      .map(formatAuthor)
-      .filter(Boolean) ||
-    [];
+  const authors = (doiMetadata.author ?? []).map(formatAuthor).filter(Boolean) || [];
   const publicationDate = extractPublicationDate(doiMetadata);
   const landingPageUrl = extractLandingPageUrl(doiMetadata, doi);
   const pdfUrl = extractPdfUrl(doiMetadata);
@@ -348,7 +349,8 @@ async function fetchScholarPublicProfileArticles() {
 function publicationKeys(publication) {
   const keys = [];
   const doi = normalizeDoi(publication.doi);
-  const title = normalizeText(publication.title);
+  // Ignore spacing so "aperturebased" / "aperture-based" or "SpectralImaging" / "Spectral Imaging" match.
+  const title = normalizeText(publication.title).replaceAll(' ', '');
 
   if (doi) keys.push(`doi:${doi.toLowerCase()}`);
   if (title) keys.push(`title:${title}`);
@@ -372,7 +374,7 @@ function mergePublicationDetails(existing, incoming) {
       landingPageUrl: base.primaryLocation?.landingPageUrl ?? supplemental.primaryLocation?.landingPageUrl ?? null,
       pdfUrl: base.primaryLocation?.pdfUrl ?? supplemental.primaryLocation?.pdfUrl ?? null,
     },
-    topics: base.topics?.length ? base.topics : supplemental.topics ?? [],
+    topics: base.topics?.length ? base.topics : (supplemental.topics ?? []),
   };
 }
 
@@ -389,6 +391,9 @@ function mergePublications(openAlexPublications, scholarPublications) {
     }
 
     const next = mergePublicationDetails(existing, publication);
+    // Re-point every key of the old entry too, or it survives as a duplicate when the merged DOI/title changes.
+    // ponytail: O(n²) scan; fine for ~1k works, keep a key index per entry if this grows.
+    for (const [key, value] of merged) if (value === existing) merged.set(key, next);
     publicationKeys(next).forEach((key) => merged.set(key, next));
   }
 
@@ -411,13 +416,14 @@ async function fetchAuthorProfile() {
 
 async function fetchAllOpenAlexWorks() {
   const works = [];
-  let cursor = '*';
 
-  while (cursor) {
+  // OpenAlex requires an API key for cursor paging; basic page= paging works without one.
+  // ponytail: page= paging caps at 10,000 results; switch back to cursor= (with OPENALEX_API_KEY) past that.
+  for (let page = 1; ; page += 1) {
     const url = buildUrl('https://api.openalex.org/works', {
       filter: `authorships.author.id:${AUTHOR_ID},is_paratext:false`,
       sort: 'publication_date:desc',
-      cursor,
+      page,
       'per-page': PER_PAGE,
       mailto: MAILTO,
       api_key: API_KEY,
@@ -427,9 +433,7 @@ async function fetchAllOpenAlexWorks() {
     const batch = payload.results ?? [];
     works.push(...batch);
 
-    cursor = payload.meta?.next_cursor ?? null;
-
-    if (!batch.length) {
+    if (batch.length < PER_PAGE) {
       break;
     }
   }
