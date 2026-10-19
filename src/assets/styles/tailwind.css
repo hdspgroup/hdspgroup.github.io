@@ -794,6 +794,11 @@
     box-shadow: 0 10px 32px rgb(0 209 255 / 22%);
   }
 
+  /* `.tech-panel p` would otherwise win and paint the kicker text muted. */
+  .tech-panel .tech-kicker {
+    color: rgb(255 255 255);
+  }
+
   .dark .tech-panel .tech-kicker {
     color: rgb(2 8 23);
   }
