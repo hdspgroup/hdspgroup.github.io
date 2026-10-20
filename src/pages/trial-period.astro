@@ -36,12 +36,10 @@ const expectations = [
   },
 ];
 
-// Ordered by the date printed on each workshop guide.
 const labs = [
   {
     title: 'Image Formation and Spectral Acquisition',
     area: 'Optics',
-    date: 'June 11, 2026',
     pages: 21,
     pdf: 'image-formation-spectral-acquisition.pdf',
     summary:
@@ -68,9 +66,28 @@ const labs = [
     tools: 'Optical lab: monochrome camera, imaging lens, monochromator, filter wheel, broadband lamp',
   },
   {
+    title: 'Gamma Corrections, Geometric Transformations, and Representation in Another Basis',
+    area: 'Image processing',
+    pages: 7,
+    pdf: 'gamma-geometric-transformations-dct.pdf',
+    summary:
+      'Students learn to apply each operation in the right domain: exposure in linear vs. gamma, affine warps with different interpolators, and DCT sparsification for compression. Plan 20–30 minutes per block.',
+    pipeline: ['Linear', 'Exposure', 'Gamma', 'Warp', 'DCT', 'Metrics'],
+    goals: [
+      'Implement gamma correction and its inverse, and show its effect on histograms.',
+      'Apply affine transformations and compare nearest, bilinear, and bicubic interpolation.',
+      'Compress an image by keeping only the largest DCT coefficients.',
+    ],
+    deliverables: [
+      'Notebook (.ipynb) with conclusions per experiment and a decisions/fixes block.',
+      'Report (2–4 pages) with one figure per experiment and a PSNR/SSIM table.',
+      'Must use a personal image, not a standard course image.',
+    ],
+    tools: 'Python 3.10+, numpy, matplotlib, scikit-image, scipy (opencv-python optional)',
+  },
+  {
     title: 'Basic Optimization and Introduction to Inverse Problems',
     area: 'Optimization',
-    date: 'July 22, 2026',
     pages: 13,
     pdf: 'optimization-inverse-problems.pdf',
     summary:
@@ -90,30 +107,8 @@ const labs = [
     tools: 'numpy, scipy, matplotlib, scikit-image, pywt',
   },
   {
-    title: 'Gamma Corrections, Geometric Transformations, and Representation in Another Basis',
-    area: 'Image processing',
-    date: 'July 29, 2026',
-    pages: 7,
-    pdf: 'gamma-geometric-transformations-dct.pdf',
-    summary:
-      'Students learn to apply each operation in the right domain: exposure in linear vs. gamma, affine warps with different interpolators, and DCT sparsification for compression. Plan 20–30 minutes per block.',
-    pipeline: ['Linear', 'Exposure', 'Gamma', 'Warp', 'DCT', 'Metrics'],
-    goals: [
-      'Implement gamma correction and its inverse, and show its effect on histograms.',
-      'Apply affine transformations and compare nearest, bilinear, and bicubic interpolation.',
-      'Compress an image by keeping only the largest DCT coefficients.',
-    ],
-    deliverables: [
-      'Notebook (.ipynb) with conclusions per experiment and a decisions/fixes block.',
-      'Report (2–4 pages) with one figure per experiment and a PSNR/SSIM table.',
-      'Must use a personal image, not a standard course image.',
-    ],
-    tools: 'Python 3.10+, numpy, matplotlib, scikit-image, scipy (opencv-python optional)',
-  },
-  {
     title: 'Deep Learning and Inverse Problems',
     area: 'Deep learning',
-    date: 'July 29, 2026',
     pages: 11,
     pdf: 'deep-learning-inverse-problems.pdf',
     notebook: 'https://drive.google.com/file/d/1-dsPcjC4lF7VuSVCkVuvt4vcPgT0nUUn/view?usp=sharing',
@@ -178,9 +173,7 @@ const labs = [
               <div class="max-w-3xl">
                 <p class="tech-kicker mb-3">{lab.area}</p>
                 <h2 class="font-heading text-xl font-bold text-heading dark:text-white md:text-2xl">{lab.title}</h2>
-                <p class="mt-1 text-sm text-muted">
-                  Guide dated {lab.date} · {lab.pages} pages
-                </p>
+                <p class="mt-1 text-sm text-muted">{lab.pages} pages</p>
                 <p class="mt-3 text-sm leading-6 text-muted dark:text-slate-300">{lab.summary}</p>
               </div>
               <div class="flex flex-wrap gap-3 lg:flex-col">
