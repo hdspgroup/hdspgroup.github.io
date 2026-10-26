@@ -2,17 +2,16 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-10-12T17:36:22.760Z",
+  "fetchedAt": "2026-10-26T15:05:20.886Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 494,
-    "citedByCount": 4756,
+    "worksCount": 471,
+    "citedByCount": 4805,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
-      "Universidad Industrial de Santander",
-      "Universidad De Santander"
+      "Universidad Industrial de Santander"
     ]
   },
   "totals": {
@@ -20,7 +19,7 @@
     "worksWithDoi": 436,
     "doiBackedWorks": 433,
     "scholarWorks": 604,
-    "mergedWorks": 599,
+    "mergedWorks": 596,
     "omittedWithoutDoiCount": 35,
     "omittedUnavailableMetadataCount": 3
   },
@@ -889,32 +888,6 @@
       "topics": []
     },
     {
-      "id": "https://openalex.org/W2096680323",
-      "title": "Spatial super-resolution in coded aperturebased optical compressive hyperspectral imaging systems",
-      "publicationDate": "2013-08-16",
-      "publicationYear": 2013,
-      "doi": "10.17533/udea.redin.16306",
-      "doiUrl": "https://doi.org/10.17533/udea.redin.16306",
-      "type": "journal-article",
-      "typeCrossref": "journal-article",
-      "authors": [
-        "Henry Arguello Fuentes",
-        "Hoover Fabian Rueda Chacón"
-      ],
-      "authorsCount": 2,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.17533/udea.redin.16306",
-        "pdfUrl": "https://revistas.udea.edu.co/index.php/ingenieria/article/download/16306/14130"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.17533/udea.redin.16306",
-        "pdfUrl": "https://revistas.udea.edu.co/index.php/ingenieria/article/download/16306/14130"
-      },
-      "venue": "Revista Facultad de Ingeniería Universidad de Antioquia",
-      "venueType": "journal-article",
-      "topics": []
-    },
-    {
       "id": "google-scholar:R7gjbGIAAAAJ:J_g5lzvAfSwC",
       "title": "2014 Index IEEE Transactions on Geoscience and Remote Sensing Vol. 52",
       "publicationDate": null,
@@ -1390,31 +1363,6 @@
       "source": "google_scholar"
     },
     {
-      "id": "google-scholar:R7gjbGIAAAAJ:fQNAKQ3IYiAC",
-      "title": "A Compressive System Matrix Design in Spectral Imaging by a Homogenization Algorithm",
-      "publicationDate": null,
-      "publicationYear": 2016,
-      "doi": null,
-      "doiUrl": null,
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "C Noriega",
-        "Y Mejía",
-        "H Arguello"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:fQNAKQ3IYiAC",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "Ingeniería 21 (2), 201-213",
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
       "id": "google-scholar:R7gjbGIAAAAJ:nPT8s1NX_-sC",
       "title": "A Compressive System Matrix Design in SpectralImaging by a Homogenization Algorithm",
       "publicationDate": null,
@@ -1526,8 +1474,8 @@
       "title": "A fast and accurate similarity-constrained subspace clustering algorithm for land cover segmentation",
       "publicationDate": null,
       "publicationYear": 2021,
-      "doi": "10.36227/techrxiv.14414789.v1",
-      "doiUrl": "https://doi.org/10.36227/techrxiv.14414789.v1",
+      "doi": "10.36227/techrxiv.14414789",
+      "doiUrl": "https://doi.org/10.36227/techrxiv.14414789",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -2791,8 +2739,8 @@
       "title": "Arquitectura de almacenamiento masivo de datos en la infraestructura grid usando el middleware glite",
       "publicationDate": null,
       "publicationYear": 2012,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.14483/udistrital.jour.tecnura.2012.4.a02",
+      "doiUrl": "https://doi.org/10.14483/udistrital.jour.tecnura.2012.4.a02",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -2804,39 +2752,13 @@
       "authorsCount": 4,
       "primaryLocation": {
         "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:F1b5ZUV5XREC",
-        "pdfUrl": null
-      },
-      "bestOaLocation": null,
-      "venue": "Ingenium 13 (25), 84-94",
-      "venueType": null,
-      "topics": [],
-      "source": "google_scholar"
-    },
-    {
-      "id": "google-scholar:R7gjbGIAAAAJ:isC4tDSrTZIC",
-      "title": "Arquitectura de almacenamiento masivo de datos en la infraestructura Grid usando el middlewareglite",
-      "publicationDate": null,
-      "publicationYear": 2012,
-      "doi": "10.14483/udistrital.jour.tecnura.2012.4.a02",
-      "doiUrl": "https://doi.org/10.14483/udistrital.jour.tecnura.2012.4.a02",
-      "type": "scholar-article",
-      "typeCrossref": null,
-      "authors": [
-        "IF Gómez Pedraza",
-        "CA Varela Garzón",
-        "H Arguello Fuentes",
-        "..."
-      ],
-      "authorsCount": 4,
-      "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:isC4tDSrTZIC",
         "pdfUrl": "http://revistas.udistrital.edu.co/ojs/index.php/Tecnura/article/viewFile/6850/8434"
       },
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.14483/udistrital.jour.tecnura.2012.4.a02",
         "pdfUrl": "http://revistas.udistrital.edu.co/ojs/index.php/Tecnura/article/viewFile/6850/8434"
       },
-      "venue": "Tecnura 16 (34), 28-42",
+      "venue": "Ingenium 13 (25), 84-94",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -14252,8 +14174,8 @@
       "title": "Spatial super-resolution in coded aperture-based optical compressive hyperspectral imaging systems",
       "publicationDate": null,
       "publicationYear": 2013,
-      "doi": null,
-      "doiUrl": null,
+      "doi": "10.17533/udea.redin.16306",
+      "doiUrl": "https://doi.org/10.17533/udea.redin.16306",
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -14263,9 +14185,12 @@
       "authorsCount": 2,
       "primaryLocation": {
         "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:umqufdRvDiIC",
-        "pdfUrl": null
+        "pdfUrl": "https://revistas.udea.edu.co/index.php/ingenieria/article/download/16306/14130"
       },
-      "bestOaLocation": null,
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.17533/udea.redin.16306",
+        "pdfUrl": "https://revistas.udea.edu.co/index.php/ingenieria/article/download/16306/14130"
+      },
       "venue": "Revista Facultad de Ingeniería Universidad de Antioquia, 7-18",
       "venueType": null,
       "topics": [],
@@ -15356,9 +15281,9 @@
     },
     {
       "id": "google-scholar:R7gjbGIAAAAJ:g_UdREhPGEoC",
-      "title": "Systems and Methods for Privacy-Preserving Optics",
+      "title": "Systems and methods for privacy-preserving optics",
       "publicationDate": null,
-      "publicationYear": 2024,
+      "publicationYear": 2026,
       "doi": null,
       "doiUrl": null,
       "type": "scholar-article",
@@ -15374,7 +15299,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "US Patent App. 18/571,592",
+      "venue": "US Patent 12,651,379",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
