@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-11-02T18:02:07.995Z",
+  "fetchedAt": "2026-11-09T18:32:44.189Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
-    "worksCount": 471,
-    "citedByCount": 4829,
+    "worksCount": 453,
+    "citedByCount": 5015,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -15,12 +15,12 @@
     ]
   },
   "totals": {
-    "openAlexWorks": 471,
-    "worksWithDoi": 436,
-    "doiBackedWorks": 433,
-    "scholarWorks": 604,
-    "mergedWorks": 596,
-    "omittedWithoutDoiCount": 35,
+    "openAlexWorks": 453,
+    "worksWithDoi": 432,
+    "doiBackedWorks": 429,
+    "scholarWorks": 605,
+    "mergedWorks": 598,
+    "omittedWithoutDoiCount": 21,
     "omittedUnavailableMetadataCount": 3
   },
   "publications": [
@@ -47,6 +47,32 @@
       "bestOaLocation": null,
       "venue": "Elsevier BV",
       "venueType": "posted-content",
+      "topics": []
+    },
+    {
+      "id": "https://openalex.org/W2737556149",
+      "title": "Analysis of the Potential for Wind Power Generation in the Cermin Beach Area as An Energy Reserve",
+      "publicationDate": "2025-01-17",
+      "publicationYear": 2025,
+      "doi": "10.22373/crc.v9i1.26773",
+      "doiUrl": "https://doi.org/10.22373/crc.v9i1.26773",
+      "type": "journal-article",
+      "typeCrossref": "journal-article",
+      "authors": [
+        "Purnama Helena T Hutabarat",
+        "Darma Yanti"
+      ],
+      "authorsCount": 2,
+      "primaryLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.22373/crc.v9i1.26773",
+        "pdfUrl": "https://jurnal.ar-raniry.ac.id/index.php/circuit/article/download/26773/10355"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.22373/crc.v9i1.26773",
+        "pdfUrl": "https://jurnal.ar-raniry.ac.id/index.php/circuit/article/download/26773/10355"
+      },
+      "venue": "Circuit: Jurnal Ilmiah Pendidikan Teknik Elektro",
+      "venueType": "journal-article",
       "topics": []
     },
     {
@@ -667,33 +693,6 @@
       "topics": []
     },
     {
-      "id": "https://openalex.org/W4300535305",
-      "title": "High-Dimensional Optimization Of Color Coded Apertures For Compressive Spectral Cameras",
-      "publicationDate": "2018-01-25",
-      "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159897",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159897",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Gonzalo Arce",
-        "Henry Arguello Fuentes",
-        "Hoover Rueda"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159897",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081250",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
-      },
-      "venue": "Zenodo",
-      "venueType": "article-journal",
-      "topics": []
-    },
-    {
       "id": "https://openalex.org/W4300019912",
       "title": "Multi-Resolution Reconstruction Algorithm For Compressive Single Pixel Spectral Imaging",
       "publicationDate": "2018-01-25",
@@ -717,33 +716,6 @@
       "bestOaLocation": {
         "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081251",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081251.pdf?arnumber=8081251"
-      },
-      "venue": "Zenodo",
-      "venueType": "article-journal",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W4300999844",
-      "title": "Spatio-Spectro-Temporal Coded Aperture Design For Multiresolution Compressive Spectral Video Sensing",
-      "publicationDate": "2018-01-25",
-      "publicationYear": 2018,
-      "doi": "10.5281/ZENODO.1159915",
-      "doiUrl": "https://doi.org/10.5281/ZENODO.1159915",
-      "type": "article-journal",
-      "typeCrossref": "article-journal",
-      "authors": [
-        "Henry Arguello Fuentes",
-        "Laura Galvis",
-        "Kareth León"
-      ],
-      "authorsCount": 3,
-      "primaryLocation": {
-        "landingPageUrl": "https://zenodo.org/record/1159915",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081303",
-        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
       },
       "venue": "Zenodo",
       "venueType": "article-journal",
@@ -2285,8 +2257,8 @@
       "title": "An algorithm for learning sparsifying transforms of multidimensional signals",
       "publicationDate": null,
       "publicationYear": 2017,
-      "doi": "10.17533/udea.redin.n83a10",
-      "doiUrl": "https://doi.org/10.17533/udea.redin.n83a10",
+      "doi": null,
+      "doiUrl": null,
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -3617,7 +3589,7 @@
       ],
       "authorsCount": 2,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:vV6vV6tmYwMC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:vV6vV6tmYwMC",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/6630487/6644900/06644909.pdf?arnumber=6644909"
       },
       "bestOaLocation": {
@@ -5956,8 +5928,8 @@
       "title": "Deep optical coding design in computational imaging",
       "publicationDate": null,
       "publicationYear": 2022,
-      "doi": "10.48550/ARXIV.2207.00164",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2207.00164",
+      "doi": null,
+      "doiUrl": null,
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -6026,7 +5998,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:-uzm3Y7AvW0C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:-uzm3Y7AvW0C",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -6338,6 +6310,34 @@
       },
       "bestOaLocation": null,
       "venue": "arXiv preprint arXiv:2608.08959",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:1EqfMoDn7-AC",
+      "title": "DepthShield: Optical Depth Encoding for Image Tampering Detection",
+      "publicationDate": null,
+      "publicationYear": 2026,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "J Lopez",
+        "E Vargas",
+        "J Wang",
+        "S Khan",
+        "H Arguello",
+        "A Veeraraghavan"
+      ],
+      "authorsCount": 6,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:1EqfMoDn7-AC",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "IEEE Transactions on Pattern Analysis & Machine Intelligence, 1-12",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -8444,7 +8444,7 @@
       "typeCrossref": null,
       "authors": [
         "L Rodríguez-López",
-        "P Goyes-Peñaf",
+        "P Goyes-Peñafiel",
         "L Galvis",
         "H Arguello"
       ],
@@ -8609,6 +8609,34 @@
       },
       "bestOaLocation": null,
       "venue": "2013 IEEE International Conference on Acoustics, Speech and Signal …",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:yB1At4FlUx8C",
+      "title": "High-dimensional optimization of color coded apertures for compressive spectral cameras",
+      "publicationDate": null,
+      "publicationYear": 2017,
+      "doi": "10.23919/eusipco.2017.8081250",
+      "doiUrl": "https://doi.org/10.23919/eusipco.2017.8081250",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "H Rueda",
+        "H Arguello",
+        "GR Arce"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:yB1At4FlUx8C",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081250",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081250.pdf?arnumber=8081250"
+      },
+      "venue": "2017 25th European Signal Processing Conference (EUSIPCO), 463-467",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -10828,7 +10856,7 @@
       ],
       "authorsCount": 6,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=200&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:prdVHNxh-e8C",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:prdVHNxh-e8C",
         "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8719845/8730213/08730233.pdf?arnumber=8730233"
       },
       "bestOaLocation": {
@@ -11928,8 +11956,8 @@
       "title": "Poststack Seismic Data Preconditioning via Dynamic Guided Learning",
       "publicationDate": null,
       "publicationYear": 2025,
-      "doi": "10.48550/ARXIV.2502.00887",
-      "doiUrl": "https://doi.org/10.48550/ARXIV.2502.00887",
+      "doi": null,
+      "doiUrl": null,
       "type": "scholar-article",
       "typeCrossref": null,
       "authors": [
@@ -13627,7 +13655,7 @@
       ],
       "authorsCount": 1,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=500&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:r_AWSJRzSzQC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=600&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:r_AWSJRzSzQC",
         "pdfUrl": null
       },
       "bestOaLocation": null,
@@ -14253,6 +14281,34 @@
       "source": "google_scholar"
     },
     {
+      "id": "google-scholar:R7gjbGIAAAAJ:4hFrxpcac9AC",
+      "title": "Spatio-spectro-temporal coded aperture design for multiresolution compressive spectral video sensing",
+      "publicationDate": null,
+      "publicationYear": 2017,
+      "doi": "10.23919/eusipco.2017.8081303",
+      "doiUrl": "https://doi.org/10.23919/eusipco.2017.8081303",
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "KL López",
+        "L Galvis",
+        "HA Fuentes"
+      ],
+      "authorsCount": 3,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:4hFrxpcac9AC",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
+      },
+      "bestOaLocation": {
+        "landingPageUrl": "http://dx.doi.org/10.23919/eusipco.2017.8081303",
+        "pdfUrl": "http://xplorestaging.ieee.org/ielx7/8067434/8081145/08081303.pdf?arnumber=8081303"
+      },
+      "venue": "2017 25th European Signal Processing Conference (EUSIPCO), 728-732",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
       "id": "google-scholar:R7gjbGIAAAAJ:HE397vMXCloC",
       "title": "Spatiotemporal blue noise coded aperture design for multi-shot compressive spectral imaging",
       "publicationDate": null,
@@ -14268,7 +14324,7 @@
       ],
       "authorsCount": 3,
       "primaryLocation": {
-        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=300&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:HE397vMXCloC",
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=400&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:HE397vMXCloC",
         "pdfUrl": "https://www.osapublishing.org/viewmedia.cfm?URI=josaa-33-12-2312&am=y"
       },
       "bestOaLocation": {
