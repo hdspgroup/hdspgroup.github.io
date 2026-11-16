@@ -2,12 +2,12 @@
   "source": "DOI.org metadata with OpenAlex DOI discovery, plus Google Scholar profile sync",
   "authorId": "A5081714132",
   "scholarAuthorId": "R7gjbGIAAAAJ",
-  "fetchedAt": "2026-11-09T18:32:44.189Z",
+  "fetchedAt": "2026-11-16T18:10:59.980Z",
   "profile": {
     "id": "https://openalex.org/A5081714132",
     "name": "Henry Arguello",
     "worksCount": 453,
-    "citedByCount": 5015,
+    "citedByCount": 5776,
     "openAlexUrl": "https://openalex.org/A5081714132",
     "orcid": "https://orcid.org/0000-0002-2202-253X",
     "institutions": [
@@ -15,9 +15,9 @@
     ]
   },
   "totals": {
-    "openAlexWorks": 453,
-    "worksWithDoi": 432,
-    "doiBackedWorks": 429,
+    "openAlexWorks": 452,
+    "worksWithDoi": 431,
+    "doiBackedWorks": 428,
     "scholarWorks": 605,
     "mergedWorks": 598,
     "omittedWithoutDoiCount": 21,
@@ -719,35 +719,6 @@
       },
       "venue": "Zenodo",
       "venueType": "article-journal",
-      "topics": []
-    },
-    {
-      "id": "https://openalex.org/W2786200951",
-      "title": "Snapshot Compressive Multispectral Cameras",
-      "publicationDate": "2017-02-15",
-      "publicationYear": 2017,
-      "doi": "10.1002/047134608x.w8345",
-      "doiUrl": "https://doi.org/10.1002/047134608x.w8345",
-      "type": "other",
-      "typeCrossref": "other",
-      "authors": [
-        "Gonzalo R. Arce",
-        "Hoover Rueda",
-        "Claudia V. Correa",
-        "Ana Ramirez",
-        "Henry Arguello"
-      ],
-      "authorsCount": 5,
-      "primaryLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1002/047134608x.w8345",
-        "pdfUrl": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F047134608X.W8345"
-      },
-      "bestOaLocation": {
-        "landingPageUrl": "http://dx.doi.org/10.1002/047134608x.w8345",
-        "pdfUrl": "https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1002%2F047134608X.W8345"
-      },
-      "venue": "Wiley Encyclopedia of Electrical and Electronics Engineering",
-      "venueType": "other",
       "topics": []
     },
     {
@@ -6337,7 +6308,7 @@
         "pdfUrl": null
       },
       "bestOaLocation": null,
-      "venue": "IEEE Transactions on Pattern Analysis & Machine Intelligence, 1-12",
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
@@ -13827,6 +13798,33 @@
       },
       "bestOaLocation": null,
       "venue": "Journal of the Optical Society of America A 32 (10), 1754-1763",
+      "venueType": null,
+      "topics": [],
+      "source": "google_scholar"
+    },
+    {
+      "id": "google-scholar:R7gjbGIAAAAJ:hkOj_22Ku90C",
+      "title": "Snapshot compressive multispectral cameras",
+      "publicationDate": null,
+      "publicationYear": 1999,
+      "doi": null,
+      "doiUrl": null,
+      "type": "scholar-article",
+      "typeCrossref": null,
+      "authors": [
+        "GR Arce",
+        "H Rueda",
+        "CV Correa",
+        "A Ramirez",
+        "H Arguello"
+      ],
+      "authorsCount": 5,
+      "primaryLocation": {
+        "landingPageUrl": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7gjbGIAAAAJ&cstart=600&pagesize=100&sortby=pubdate&citation_for_view=R7gjbGIAAAAJ:hkOj_22Ku90C",
+        "pdfUrl": null
+      },
+      "bestOaLocation": null,
+      "venue": "Wiley Encyclopedia of Electrical and Electronics Engineering, 1-22",
       "venueType": null,
       "topics": [],
       "source": "google_scholar"
